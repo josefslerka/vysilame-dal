@@ -82,10 +82,44 @@
 @media(max-width:540px){.defender-setup details>summary{padding:9px}.defender-setup summary>span:first-child{gap:5px}.defender-setup summary strong{font-size:10px}.defender-setup summary small{font-size:9px}.map-list{grid-template-columns:repeat(2,minmax(0,1fr));padding:0 8px 7px;gap:1px}.map-card{grid-template-columns:53px minmax(0,1fr);padding:6px!important;min-height:46px;border:0;background:#2b362b}.map-card>svg{width:53px;height:33px}.map-card-heading b{font-size:10px}.map-medals{font-size:11px;margin-top:1px}.shift-controls{padding:8px;gap:7px}.shift-controls>label{width:100%;justify-content:space-between;font-size:10px}.shift-controls select{max-width:208px;flex:1;height:33px;font-size:11px}.shift-button{flex:1;font-size:10px;min-height:33px}.shift-code{order:4;flex:1;width:auto;font-size:9px}.shift-controls .text-button{order:5;font-size:10px;margin-left:auto}.map-rule{padding:8px;font-size:10px;line-height:1.5}.defender-action-bar{gap:9px;padding:0 8px 7px}.flock-button{font-size:10px;gap:5px;padding:7px;min-height:35px}.flock-button kbd{display:none}.defender-action-bar>span{font-size:9px;line-height:1.45}.flock-button b{min-width:17px;font-size:10px}.wave-preview>strong{font-size:12px;margin-left:10px}.preview-enemy{font-size:10px}.crow-note .note-label{font-size:9px}.crow-note p{font-size:11px}.briefing-card{padding:19px 13px}.briefing-card h2{font-size:26px}.briefing-card>p:not(.eyebrow){font-size:11px}.bonus-choice{padding:9px;gap:9px}.bonus-choice strong{font-size:13px}.bonus-choice small{font-size:11px}.bonus-choice em{font-size:10px}.bonus-icon{width:26px;height:30px;font-size:20px}.result-actions{gap:15px}.result-medals{font-size:25px}.result-actions>.text-button{font-size:10px}.enemy-file{padding:12px}.enemy-file h3{font-size:16px}.enemy-file:before{font-size:8px;right:9px;top:13px}.enemy-portrait{width:64px;height:64px;padding:3px}#dialog-content .enemy-file p{font-size:10px}.enemy-album{margin-top:19px}}
 
 </style>
-  
-  
-  
-  
+  <style>
+/* OVĚŘENO / směnová kniha, redakční pošta a mechanická razítka. */
+.verify-setup{margin:0 0 13px;background:#242c27;border-left:3px solid #84b8ed}
+.verify-setup summary{list-style:none;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:9px 12px;cursor:pointer}
+.verify-setup summary::-webkit-details-marker{display:none}.verify-setup summary>span:first-child{display:flex;gap:18px;align-items:baseline;flex-wrap:wrap}
+.verify-setup summary strong{font:700 11px var(--mono);color:#f4f7eb;text-transform:uppercase}.verify-setup summary small{font:10px var(--mono);color:#afc1ad}
+.verify-desks{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));padding:0 12px 10px;gap:6px}
+.verify-desk{position:relative;display:grid;grid-template-columns:29px minmax(0,1fr);align-items:center;gap:3px 9px;text-align:left;padding:9px;background:#293c43;color:#dce7e7;border:1px solid #819795;min-height:69px}
+.verify-desk>i{grid-row:1/3;font:700 25px var(--mono);font-style:normal;color:#84b8ed}.verify-desk strong{font:700 12px/1.2 var(--mono)}.verify-desk small{font:9px/1.4 var(--mono);color:#b2c7c6}.verify-desk .desk-medals{position:absolute;bottom:5px;right:6px;font:10px var(--mono);letter-spacing:1px;color:#edfa45}
+.verify-desk:hover:not(:disabled){background:#40565d}.verify-desk.selected{background:#84b8ed;border-color:#c5e2f8;color:#101e2a}.verify-desk.selected>i,.verify-desk.selected small{color:#18364b}.verify-desk.selected .desk-medals{color:#18364b}.verify-desk:disabled{opacity:.5;cursor:default}.verify-desk.selected:disabled{opacity:1}
+.verify-shift-controls{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:8px 12px;border-top:1px solid #536562}
+.verify-shift-controls label{display:flex;align-items:center;gap:7px;font:11px var(--mono);color:#d0ddd2;min-height:31px}.verify-shift-controls input{accent-color:#84b8ed;width:16px;height:16px;margin:0}
+.verify-shift-rule{padding:8px 12px;margin:0;border-top:1px solid #536562;font:11px/1.5 var(--mono);color:#c7d4ca}
+.is-verify .verify-view{display:flex;flex-direction:column;justify-content:flex-start;align-items:center;gap:16px;padding:17px 24px 37px;min-height:560px;height:auto;background-color:#59717a;background-image:repeating-linear-gradient(0deg,#0000 0 23px,#b9d0d212 23px 24px)}
+.verify-desk-strip{display:flex;justify-content:space-between;gap:10px;width:100%;font:700 10px/1.4 var(--mono);color:#e7eeeb;letter-spacing:.5px}
+.is-verify .news-card{width:min(590px,100%);padding:24px 27px;background:#f7f6e8;border-color:#13292d;box-shadow:6px 6px 0 #203c48;position:relative}
+.is-verify .news-card-top{color:#29474e;border-color:#29474e;font-size:10px}.is-verify .story-label{margin-top:17px;color:#557476;font-weight:700}.is-verify .news-card h2{font-size:30px;line-height:1.15;margin-bottom:19px;text-wrap:pretty}
+.is-verify .source-box{background:#e3e8df;border-left:3px solid #6a8888;padding:12px;gap:9px}.is-verify .source-box small{color:#38585a}.is-verify .source-box p{font-size:13px;line-height:1.65;color:#263e3c}
+.verify-inspect{display:flex;align-items:center;gap:7px;width:100%;background:none;color:#2a525d;border:0;border-bottom:1px dashed #859998;padding:11px 1px;font:700 11px/1.4 var(--mono);text-align:left;min-height:41px}.verify-inspect>span{margin-left:auto;font-size:10px}.verify-inspect:hover:not(:disabled){color:#0a1924;background:#e1e9df}.verify-inspect:disabled{color:#73817a;cursor:default}
+.verify-detail{border:1px dashed #5a8490;background:#e1edf1;padding:11px 13px;margin-top:12px;font:12px/1.6 var(--mono);color:#284854}.verify-detail>strong{font-size:9px;letter-spacing:.5px}.verify-detail p{margin:5px 0 0}
+.is-verify .verify-feedback{border:2px solid #476b37;border-left-width:6px;position:relative}.is-verify .verify-feedback.wrong{border-color:#a64d2d}.verify-verdict{display:flex!important;align-items:baseline;justify-content:space-between;gap:10px;font-size:13px}.verify-verdict>span{font-size:11px;white-space:nowrap}.verify-feedback .feedback-action{display:block;margin:7px 0 0;font-size:10px;font-weight:700}
+.is-verify .verify-choices{margin-top:14px}.is-verify .choice{font-size:12px;min-height:48px}.verify-editor{display:flex;align-items:flex-start;gap:10px;width:min(590px,100%);padding:0 6px;color:#f2f6e9}.verify-editor>span{flex:none;font:700 10px var(--mono);padding:5px 4px;background:#edfa45;color:#142419;transform:rotate(-6deg)}.verify-editor p{font:12px/1.6 var(--mono);margin:1px 0}
+.is-verify .fiction-note{font-size:9px;bottom:10px;color:#dbe6de}
+.verify-live-score{display:flex;gap:12px;border-top:1px solid #63776e;border-bottom:1px solid #63776e;padding:11px 0;margin:15px 0;font:9px/1.5 var(--mono);color:#b3c7b8}.verify-live-score>span{flex:1}.verify-live-score strong{display:block;font:700 23px/1.1 var(--mono);color:#edfa45;margin-top:5px}
+.verify-stamps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.verify-stamp{padding:8px 4px;border:2px solid #667a6e;outline:1px solid #667a6e;outline-offset:-5px;text-align:center;font:9px/1.3 var(--mono);color:#92a89a;min-height:58px}.verify-stamp.earned{border-color:#84b8ed;color:#c1e0f6;transform:rotate(-2deg)}.verify-stamp:nth-child(even).earned{transform:rotate(2deg)}.verify-stamp b{display:block;letter-spacing:3px;font-size:15px;margin-top:4px}
+.is-verify .editor-rules{margin:14px 0}.is-verify .editor-rules li{padding:11px 0;gap:9px}.is-verify .editor-rules strong{font-size:12px}.is-verify .editor-rules p{font-size:10px}.verify-notebook{color:#84b8ed!important;font-size:11px!important;padding:4px 0}
+.is-verify .board-wrap:has(.board-overlay:not([hidden])) .verify-view{display:none}
+.is-verify .board-overlay:not([hidden]){position:relative;min-height:520px;padding:30px 24px;background:#435e68}
+.is-verify .overlay-card{width:min(500px,100%);max-width:500px}.verify-result-title{font-size:27px!important}.verify-welcome-spec{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;font:700 10px var(--mono);margin:18px 0}.verify-welcome-spec span{background:#d6e4da;padding:6px 8px;color:#2c4a48}
+.verify-result-stamp{display:inline-block;border:3px double #284f5c;padding:7px 11px;color:#284f5c;transform:rotate(-5deg);font:700 15px var(--mono);margin:5px 0;letter-spacing:3px}.verify-result-actions{display:flex;flex-wrap:wrap;gap:7px;justify-content:center;margin-top:10px}.verify-result-actions .text-button{margin:0!important;padding:5px!important;color:#2e5260}
+.verify-result-badges{display:flex;justify-content:center;gap:6px;flex-wrap:wrap;margin:12px 0}.verify-result-badges span{font:9px var(--mono);padding:5px;border:1px solid #829590;color:#325148}
+.verify-review-item{padding:15px 0;border-top:1px solid #647c6a}.verify-review-item h3{font:700 16px/1.4 Georgia,serif;margin:5px 0;color:#f2f5e8}.verify-review-item>small{font:10px/1.5 var(--mono);color:#edfa45}.verify-review-item p{margin:6px 0!important;font-size:12px!important}.verify-review-item .review-source{color:#a8c2b6!important}.verify-review-item .review-right{color:#c4e4a6!important}.verify-review-item .review-wrong{color:#ffae8c!important}
+.verify-badge-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:20px 0}.verify-badge{border:1px dashed #637a69;padding:13px;color:#b7c9b8}.verify-badge.earned{border:2px solid #84b8ed;background:#213c3f;color:#e6f3ec}.verify-badge strong{font:700 12px/1.4 var(--mono);display:block}.verify-badge p{font-size:11px!important;margin:6px 0 0!important}.verify-notebook-stats{font:700 14px/1.7 var(--mono);color:#edfa45}
+@media(max-width:1100px){.verify-desks{gap:4px}.verify-desk{padding:8px 7px;gap:4px;grid-template-columns:24px 1fr}.verify-desk strong{font-size:11px}.verify-desk>i{font-size:21px}.is-verify .news-card{padding:21px}.is-verify .news-card h2{font-size:28px}}
+@media(max-width:850px){.is-verify .verify-view{min-height:520px}.is-verify .verify-feedback{font-size:12px}.verify-stamps{grid-template-columns:repeat(4,minmax(0,1fr))}.verify-live-score{max-width:400px}.is-verify .editor-rules li{flex-direction:row}.is-verify .board-overlay:not([hidden]){min-height:480px}}
+@media(max-width:540px){.verify-setup summary{padding:9px 10px}.verify-setup summary>span:first-child{gap:7px}.verify-setup summary strong{font-size:10px}.verify-setup summary small{font-size:9px}.verify-desks{grid-template-columns:repeat(2,minmax(0,1fr));padding:0 8px 9px;gap:5px}.verify-desk{min-height:67px;padding:8px;gap:5px;grid-template-columns:23px 1fr}.verify-desk strong{font-size:11px}.verify-desk small{font-size:9px;padding-bottom:5px}.verify-desk .desk-medals{bottom:4px;font-size:9px}.verify-shift-controls{padding:8px;gap:7px}.verify-shift-controls label{font-size:10px}.verify-shift-controls .shift-button{font-size:10px;padding:7px;min-height:35px}.verify-shift-controls .shift-code{width:100%;margin:0;font-size:9px}.verify-shift-rule{font-size:10px;padding:8px}.is-verify .verify-view{padding:13px 12px 33px;gap:14px;min-height:550px}.verify-desk-strip{font-size:9px}.is-verify .news-card{padding:18px 16px;box-shadow:4px 4px #203c48}.is-verify .news-card h2{font-size:26px;line-height:1.17;margin-bottom:16px}.is-verify .news-card-top{font-size:9px;gap:5px}.is-verify .source-box{padding:10px;gap:6px}.is-verify .source-symbol{display:none}.is-verify .source-box p{font-size:12px;line-height:1.65}.is-verify .source-box small{font-size:9px}.verify-inspect{font-size:10px;min-height:44px}.verify-inspect kbd{display:none}.verify-detail{font-size:11px;padding:10px}.is-verify .choice{font-size:10px;gap:5px;min-height:47px;padding:10px 6px}.is-verify .verify-feedback{font-size:12px;padding:10px}.verify-verdict{font-size:12px;flex-wrap:wrap}.verify-editor{padding:0 3px;gap:8px}.verify-editor p{font-size:11px}.is-verify .board-overlay:not([hidden]){padding:25px 14px;min-height:520px}.is-verify .overlay-card{padding:22px 16px}.is-verify .overlay-card p{font-size:12px}.verify-welcome-spec{font-size:9px;gap:5px}.verify-welcome-spec span{padding:6px}.verify-stamps{gap:7px}.verify-stamp{font-size:8px;padding:8px 2px;min-height:54px}.verify-stamp b{font-size:12px;letter-spacing:1px}.is-verify .editor-rules{display:block}.is-verify .editor-rules li{gap:10px;padding:10px 0}.is-verify .editor-rules p{font-size:11px}.verify-badge-grid{grid-template-columns:1fr}.verify-review-item h3{font-size:17px}.is-verify .keyboard-hint span:nth-child(2){display:inline}.is-verify .control-bar .primary-button{font-size:10px;padding:9px 8px}}
+
+</style>
 </head>
 <body>
   <a class="skip-link" href="#game-title">Přejít ke hře</a>
@@ -119,6 +153,15 @@
         <p class="map-rule" id="map-rule"></p>
       </section>
 
+      <section class="verify-setup" id="verify-setup" aria-label="Výběr redakční směny" hidden>
+        <details id="verify-desk-picker" open>
+          <summary><span><strong id="verify-picker-title">ROZPIS SLUŽEB</strong><small id="verify-collection">SPISOVNA 0 / 80</small></span><span class="picker-arrow" aria-hidden="true">⌄</span></summary>
+          <div class="verify-desks" id="verify-desks" role="group" aria-label="Vyber směnu"></div>
+        </details>
+        <div class="verify-shift-controls"><label><input type="checkbox" id="verify-practice"> Bez časovače</label><button class="shift-button" id="verify-daily">◷ Dnešní vydání</button><button class="shift-button" id="verify-new">↻ Jiná směna</button><span class="shift-code" id="verify-code"></span></div>
+        <p class="verify-shift-rule" id="verify-shift-rule"></p>
+      </section>
+
       <div class="game-metrics" aria-label="Stav hry">
         <div class="metric"><span class="metric-icon" id="metric-icon-1" aria-hidden="true">◉</span><span><small id="metric-label-1">SÍLA SIGNÁLU</small><strong id="metric-value-1">100<span> %</span></strong></span><div class="health-track" id="health-track"><i></i></div></div>
         <div class="metric"><span class="metric-icon support-icon" id="metric-icon-2" aria-hidden="true">✳</span><span><small id="metric-label-2">PODPORA</small><strong id="metric-value-2">200</strong></span></div>
@@ -130,7 +173,18 @@
           <div class="board-wrap" id="board-wrap">
             <canvas id="defender-canvas" width="960" height="576" tabindex="0" aria-label="Herní mapa. Klávesy 1–3 vyberou obranu, šipky stanoviště, Enter staví, K přivolá kavčí nálet."></canvas>
             <section id="verify-view" class="verify-view" aria-label="Ověřování zpráv" hidden>
-              <div class="news-card" id="news-card"><div class="news-card-top"><span><span class="live-dot"></span> REDAKČNÍ STŮL</span><span id="story-number">01 / 08</span></div><p class="story-label">ZPRÁVA K VYDÁNÍ</p><h2 id="story-headline"></h2><div class="source-box"><span class="source-symbol" aria-hidden="true">↳</span><div><small>CO ZATÍM VÍME</small><p id="story-source"></p></div></div><div class="verify-feedback" id="verify-feedback" hidden></div><div class="verify-choices" id="verify-choices"><button id="hold-story" class="choice hold"><span aria-hidden="true">↺</span> Ještě ověřit<kbd>F</kbd></button><button id="publish-story" class="choice publish"><span aria-hidden="true">✓</span> Může ven<kbd>J</kbd></button></div><button id="next-story" class="primary-button next-story" hidden>Další zpráva <span aria-hidden="true">→</span></button></div>
+              <div class="verify-desk-strip"><span id="verify-desk-label">RANNÍ SMĚNA</span><span id="verify-chain">SÉRIE 0</span></div>
+              <div class="news-card" id="news-card">
+                <div class="news-card-top"><span id="story-category">PŮVOD ZPRÁVY</span><span id="story-number">01 / 10</span></div>
+                <p class="story-label" id="story-label">ZPRÁVA K VYDÁNÍ</p><h2 id="story-headline"></h2>
+                <div class="source-box"><span class="source-symbol" aria-hidden="true">↳</span><div><small>CO MÁME NA STOLE</small><p id="story-source"></p></div></div>
+                <div class="verify-detail" id="verify-detail" hidden><strong>DOHLEDANÝ DETAIL</strong><p id="verify-detail-text"></p></div>
+                <button class="verify-inspect" id="verify-inspect">☎ Dohledat detail <kbd>D</kbd><span id="verify-inspect-count">3×</span></button>
+                <div class="verify-feedback" id="verify-feedback" role="status" aria-live="polite" hidden></div>
+                <div class="verify-choices" id="verify-choices"><button id="hold-story" class="choice hold"><span aria-hidden="true">↺</span> Ještě ověřit<kbd>F</kbd></button><button id="publish-story" class="choice publish"><span aria-hidden="true">✓</span> Může ven<kbd>J</kbd></button></div>
+                <button id="next-story" class="primary-button next-story" hidden>Další zpráva <span aria-hidden="true">→</span></button>
+              </div>
+              <div class="verify-editor"><span aria-hidden="true">KRÁ</span><p id="verify-quip">Káva je ověřená. Zbytek je na tobě.</p></div>
               <span class="fiction-note">Smyšlené situace. Skutečné redakční návyky.</span>
             </section>
             <section id="signal-view" class="signal-view" aria-label="Propojování signálu" hidden>
@@ -154,9 +208,17 @@
             <div class="wave-preview"><span class="note-label" id="wave-preview-label">PŘÍŠTÍ VLNA</span><strong id="wave-preview-title"></strong><div id="wave-preview-list"></div></div>
             <div class="field-note crow-note"><span class="crow-note-icon" aria-hidden="true">⌁</span><span class="note-label">KVÍDO / REŽIE</span><p id="defender-tip">Začni u zatáček. Rozpočet zatáčky neumí.</p></div>
           </div>
-          <div id="verify-tools" class="tool-panel" hidden><div class="sidebar-heading"><h2>Než to pustíš ven</h2><span>CHECK</span></div><p class="sidebar-intro">Za titulkem je vždycky ještě jeden krok.</p><ol class="editor-rules"><li><span>01</span><div><strong>Najdi původ.</strong><p>Kdo je zdroj a může to vědět?</p></div></li><li><span>02</span><div><strong>Čti kontext.</strong><p>Sedí datum, místo a rozsah tvrzení?</p></div></li><li><span>03</span><div><strong>Přiznej nejistotu.</strong><p>Tip ještě není ověřená zpráva.</p></div></li></ol><div class="field-note"><span class="note-label">PRAVIDLO HRY</span><p>Máš 60 sekund čistého času na osm zpráv. Při vysvětlení se čas zastaví.</p></div></div>
+          <div id="verify-tools" class="tool-panel" hidden>
+            <div class="sidebar-heading"><h2>Redakční nástěnka</h2><span>P200</span></div>
+            <p class="sidebar-intro" id="verify-desk-description"></p>
+            <div class="verify-live-score"><span>BODY ZA SMĚNU<strong id="verify-score">0</strong></span><span>NEJDELŠÍ SÉRIE<strong id="verify-best-chain">0</strong></span></div>
+            <div class="verify-stamps" id="verify-stamps" aria-label="Razítka za redakční směny"></div>
+            <div class="field-note"><span class="note-label">DOHLEDÁVÁNÍ</span><p id="verify-check-rule"></p></div>
+            <ol class="editor-rules"><li><span>01</span><div><strong>Čti i podklady.</strong><p>Stejný titulek může mít různé důkazy.</p></div></li><li><span>02</span><div><strong>Drž rozsah.</strong><p>„V anketě“ není „v celé republice“.</p></div></li><li><span>03</span><div><strong>Pak se nadechni.</strong><p>Při vysvětlení čas stojí. Káva může téct.</p></div></li></ol>
+            <button id="verify-notebook" class="text-button verify-notebook">Spisovna a odznaky ↗</button>
+          </div>
           <div id="signal-tools" class="tool-panel" hidden><div class="sidebar-heading"><h2>Ve spojení</h2><span>FM 03</span></div><p class="sidebar-intro">Otoč dílky a doveď nepřerušený signál ze studia k veřejnosti.</p><div class="signal-legend"><span class="wire-sample connected"></span><div><strong>Živý signál</strong><p>Navazuje na studio.</p></div><span class="wire-sample"></span><div><strong>Čeká na spojení</strong><p>Otoč kliknutím nebo Enterem.</p></div></div><div class="field-note"><span class="note-label">TŘI OKRUHY</span><p>Na každý máš 90 sekund. Začni u studia vlevo a postupuj po zelené lince.</p><button id="signal-restart-round" class="text-button">Znovu tento okruh ↺</button></div></div>
-          <div class="best-score"><span>TVŮJ REKORD</span><strong id="best-score">—</strong><small>Ukládá se v tomto prohlížeči.</small></div>
+          <div class="best-score"><span id="best-score-label">TVŮJ REKORD</span><strong id="best-score">—</strong><small>Ukládá se v tomto prohlížeči.</small></div>
         </aside>
       </div>
 
@@ -309,33 +371,304 @@
 
 </script>
 <script>
+(function(root){
+  'use strict';
+  const VERIFY_CATEGORIES={
+    origin:{name:'Původ zprávy',glyph:'↳'},time:{name:'Čas a místo',glyph:'◷'},numbers:{name:'Čísla a měřítka',glyph:'%'},polls:{name:'Ankety a výběry',glyph:'▥'},context:{name:'Citace a kontext',glyph:'„“'},images:{name:'Obraz a zvuk',glyph:'▣'},research:{name:'Výzkum a závěry',glyph:'⌕'},ethics:{name:'Redakční odpovědnost',glyph:'§'}
+  };
+  const VERIFY_DESKS={
+    morning:{id:'morning',name:'Ranní směna',label:'VŠECHNO SE HODÍ',glyph:'☀',count:10,seconds:120,checks:3,categories:Object.keys(VERIFY_CATEGORIES),description:'Od výluky po vědecký objev. Deset zpráv, jeden hrnek a telefon, který neumí mlčet.',quip:'Káva je ověřená. Zbytek je na tobě.'},
+    data:{id:'data',name:'Čísla a čáry',label:'DATOVÁ REDAKCE',glyph:'%',count:8,seconds:110,checks:2,categories:['numbers','polls','research'],description:'Procenta, ankety a výzkumy. Kalkulačka nedává rozhovory, ale má co říct.',quip:'Graf stoupá. Možná jen někdo otočil monitor.'},
+    picture:{id:'picture',name:'Obrazová redakce',label:'VIDĚT ≠ VĚDĚT',glyph:'▣',count:8,seconds:110,checks:2,categories:['images','time','context'],description:'Staré fotky, nové popisky, ustřižené věty. Osm zásilek z oddělení „vždyť je to vidět“.',quip:'Šest prstů? Třeba jen dvě ruce v koalici.'},
+    night:{id:'night',name:'Noční uzávěrka',label:'POSLEDNÍ VYDÁNÍ',glyph:'☾',count:12,seconds:120,checks:2,categories:Object.keys(VERIFY_CATEGORIES),description:'Dvanáct zpráv napříč redakcí. Na konci uzávěrkový chyták. Automat na bagety už nespolupracuje.',quip:'Je 23:58. Šéfredaktor napsal „jen drobnost“.'}
+  };
+  // Each dossier has two independently playable versions: supported / unsupported.
+  // The headline alone never determines the answer. All cases are fictional.
+  function dossier(id,category,headline,source,why,detail,quip,level=1){return {id,category,headline,source,why,detail,quip,level};}
+  const VERIFY_FILES=[
+    dossier('tramvaj','origin','Od pondělí pojede tramvaj číslo 7 přes náměstí.',
+      ['Dopravní podnik zveřejnil aktuální výlukový jízdní řád. Sedí linka, zastávky i datum začátku.','Přeposlaný obrázek jízdního řádu nemá datum ani autora. V platném oznámení podniku změna není.'],
+      ['Aktuální primární zdroj potvrzuje přesně tu změnu, kterou titulek popisuje.','Nejdřív ověř platnost a původ jízdního řádu. Přeposlání nenahradí dopravní podnik.'],
+      ['Dispečer potvrdil, že oznámení platí pro linku 7 od příštího pondělí.','Soubor se jmenuje final_FINAL_2019.png. Dispečer o aktuální výluce neví.'],
+      'Tramvaj může mít zpoždění. Ověření nemusí.'),
+    dossier('skoly','origin','Město zítra zavře všechny své základní školy.',
+      ['Městský krizový štáb vydal dnešní rozhodnutí kvůli poruše vody. Seznam zahrnuje všechny městské základní školy.','Screenshot z rodičovského chatu tvrdí „všechny školy“. Autora neznáme, škola ani město uzavření nepotvrdily.'],
+      ['Máme aktuální rozhodnutí a správně omezený rozsah: městské základní školy.','Rodičovský chat je tip, nikoli rozhodnutí o provozu všech škol.'],
+      ['Ředitelé uvedených škol informaci nezávisle potvrdili.','Původní pisatel napsal jen „u nás zítra neteče voda“.'],
+      'Třídní chat zvládne vyhlásit prázdniny rychleji než ministerstvo.'),
+    dossier('rozpocet','origin','Zastupitelstvo schválilo dva miliony na knihovnu.',
+      ['Zveřejněné usnesení z včerejška uvádí schválené dva miliony. Ověřili jsme i výsledek hlasování.','Dva miliony jsou v návrhu rozpočtu. O něm se teprve bude hlasovat příští týden.'],
+      ['Schválení dokládá platné usnesení. Titulek popisuje rozhodnutí, nikoli jeho budoucí splnění.','Návrh a schválené rozhodnutí jsou dvě různé zprávy. Titulek předbíhá hlasování.'],
+      ['Bod 12 usnesení prošel 17 hlasy. Částka souhlasí.','V hlavičce dokumentu je „pracovní návrh k projednání“.'],
+      'Knihovna má ráda fikci. Rozpočtové zpravodajství o něco méně.'),
+    dossier('triweby','origin','Plovárna se v sobotu otevře po rekonstrukci.',
+      ['Provozovatel oznámil termín. Stavební úřad potvrdil povolení provozu a správce uvedl sobotní otevírací dobu.','Tři weby mají stejný text z jednoho anonymního příspěvku. Provozovatel zatím termín otevření nepotvrdil.'],
+      ['Máme relevantní zdroje pro termín i možnost provozu.','Tři kopie jednoho tvrzení nejsou tři nezávislá potvrzení.'],
+      ['Správce i úřad odpověděli vlastními slovy a popsali svou část věci.','Všechny tři články mají stejný překlep „bazén s vyhřívanou vodkou“.'],
+      'Ctrl+C není terénní reportér.'),
+    dossier('agentura','origin','Svoz odpadu se ve čtvrtek přesune na pátek.',
+      ['Zpráva agentury odkazuje na aktuální harmonogram technických služeb. Otevřeli jsme ho a ověřili naši čtvrť.','Automatické shrnutí bez odkazů tvrdí, že svoz bude v pátek. Neuvádí město, datum ani původ informace.'],
+      ['Převzatá informace může být použitelná, když ověříme její původ a platnost.','Plynulá věta z generátoru nedokládá harmonogram svozu. Potřebujeme konkrétní podklad.'],
+      ['V originálu je naše čtvrť a stejný termín.','Generátor na dotaz nabídl tři různé termíny a přál hezký víkend.'],
+      'Halucinující popelnice pořád není veřejná služba.'),
+
+    dossier('povoden','time','Fotografie ukazuje dnešní zaplavené nádraží.',
+      ['Fotograf dodal původní snímky z dnešního rána. Místo odpovídá nádraží a zaplavení potvrdil místní reportér.','Stejný snímek dohledáváme v článku starém šest let. Aktuální stav nádraží jsme nezjistili.'],
+      ['Čas i místo fotografie potvrzují další podklady.','Autentická stará fotografie nedokazuje dnešní událost. Popisek potřebuje opravu.'],
+      ['Reportér poznal i nově postavený podchod a poslal vlastní záběr.','V původním článku je navíc jiné město.'],
+      'Archiv není časostroj. Jen v něm člověk stráví celé odpoledne.'),
+    dossier('festival','time','Letošní festival navštívilo 12 tisíc lidí.',
+      ['Pořadatel dodal závěrečnou bilanci právě skončeného ročníku. Číslo odpovídá evidovaným vstupům a nezahrnuje opakované průchody.','V tiskové zprávě stojí „příští rok očekáváme 12 tisíc návštěvníků“. Letošní bilance chybí.'],
+      ['Číslo se týká dokončeného letošního ročníku a víme, co počítá.','Očekávání pro příští rok není letošní výsledek.'],
+      ['Datovaný závěrečný přehled uvádí unikátní návštěvníky.','Pořadatel potvrdil, že jde o cíl do příštího roku.'],
+      'Výhledy návštěvnosti se zatím u vstupu nekontrolují.'),
+    dossier('most','time','Most bude o tomto víkendu zavřený.',
+      ['Správce silnice zveřejnil aktuální uzavírku od soboty do neděle. Město potvrdilo stejný most i termín.','Sdílená zpráva neobsahuje rok. Původní oznámení se týká uzavírky, která skončila loni.'],
+      ['Ověřili jsme konkrétní místo i platné časové rozmezí.','Stará uzavírka potřebuje nové ověření. Datum sdílení není datum události.'],
+      ['V aktuální evidenci uzavírek je tento most i tento víkend.','Pod článkem je sice dnešní komentář, ale oznámení je rok staré.'],
+      'Most přes minulost nemá schválenou objízdnou trasu.'),
+    dossier('primenos','time','Záběr ukazuje právě probíhající jednání rady.',
+      ['Živý přenos na webu města má dnešní program. Obraz odpovídá současnému bodu, který potvrzuje přítomný reportér.','Video má červený nápis LIVE, ale v originálu jde o záznam jednání z minulého měsíce.'],
+      ['Aktuálnost záběru ověřuje program i člověk na místě.','Nápis LIVE lze vložit do libovolného videa. Tady neodpovídá skutečnému času.'],
+      ['Reportér právě slyšel stejnou otázku jako diváci přenosu.','Původní video má v názvu datum minulého měsíce.'],
+      'Červená tečka umí svítit i při repríze.'),
+    dossier('casovazona','time','Start soutěže je v sobotu v 18 hodin našeho času.',
+      ['Pořadatel uvádí sobotu 16:00 UTC. Pro datum konání jsme ověřili český letní čas UTC+2.','Pořadatel uvádí 18:00 UTC. Redakce přepsala čas jako 18:00 v Česku, kde v daný den platí UTC+2.'],
+      ['Převod odpovídá konkrétnímu datu i časovému pásmu.','UTC a místní čas nejsou totéž. V popsaném případě by český čas byl 20:00.'],
+      ['Kontrola kalendáře potvrzuje, že se ten den čas nemění.','V originálu je za časem výslovně UTC, nikoli místní čas.'],
+      'Časová pásma: jediná věc, která přidá dvě hodiny i bez porady.',2),
+
+    dossier('parkovne','numbers','Parkovné v centru zdražilo o polovinu.',
+      ['Platné ceníky centrální zóny ukazují zvýšení z 20 na 30 korun za hodinu. Srovnáváme stejný typ stání.','Platné ceníky centrální zóny ukazují zvýšení z 30 na 40 korun za hodinu. Srovnáváme stejný typ stání.'],
+      ['Rozdíl 10 korun vůči původním 20 činí 50 %. Tady titulek sedí.','Rozdíl 10 korun vůči původním 30 je přibližně třetina, nikoli polovina. Titulek potřebuje opravu.'],
+      ['Výpočet je (30 − 20) / 20 = 0,5.','Výpočet je (40 − 30) / 30, tedy přibližně 33,3 %.'],
+      'Parkování zdražilo. Jmenovatel se nezměnil.',2),
+    dossier('procentnibody','numbers','Podíl cyklistů vzrostl o pět procentních bodů.',
+      ['Stejná metodika měření ukazuje růst z 10 % na 15 %. Titulek výslovně mluví o procentních bodech.','Podíl vzrostl z 10 % na 10,5 %. Autor zaměnil pětiprocentní relativní růst za pět procentních bodů.'],
+      ['Rozdíl mezi 10 a 15 procenty je pět procentních bodů.','Z 10 % na 10,5 % je půl procentního bodu. Procenta a procentní body se nedají zaměňovat.'],
+      ['Relativní růst by byl 50 %, to ale titulek netvrdí.','Pět procent z původních deseti procent je 0,5 procentního bodu.'],
+      'Procentní bod není puntík za procentem.',2),
+    dossier('prumer','numbers','Medián odměny v podniku činí 35 tisíc korun.',
+      ['Ověřená tabulka odměn má prostřední hodnotu 35 tisíc. Titulek správně používá medián, nikoli průměr.','Podnik uvedl pouze aritmetický průměr 35 tisíc. Rozložení odměn ani prostřední hodnotu neznáme.'],
+      ['Medián označuje prostřední hodnotu uspořádaných dat. Máme ho skutečně spočítaný.','Z průměru medián nevyčteme. Titulek přisuzuje datům údaj, který nemáme.'],
+      ['Polovina uvedených odměn je nejvýše na této hodnotě a polovina nejméně na ní.','Jedna vysoká odměna může průměr výrazně zvednout, aniž víme, kde leží medián.'],
+      'Průměrný redaktor má jednu ruku v kávě a druhou v tabulce.',2),
+    dossier('obyvatele','numbers','Obec A má více knihoven na obyvatele než obec B.',
+      ['A má dvě knihovny na 2 000 obyvatel, B tři na 9 000. Definice knihovny i rok údajů jsou stejné.','A má dvě knihovny, B tři. Počet obyvatel redakce nedohledala.'],
+      ['A má jednu knihovnu na tisíc obyvatel, B jednu na tři tisíce. Srovnání sedí.','Absolutní počty nestačí k závěru na obyvatele. Chybí jmenovatel.'],
+      ['Přepočet na tisíc obyvatel vychází 1 proti přibližně 0,33.','Bez velikosti obou obcí nelze tento poměr spočítat.'],
+      'Obyvatelstvo se do grafu samo nedopočítá.'),
+    dossier('kumulace','numbers','V květnu přibylo 40 žádostí o komunitní zahrádku.',
+      ['Kumulativní přehled měl na konci dubna 100 žádostí a na konci května 140. Jde o stejnou evidenci.','Kumulativní přehled uvádí na konci května celkem 40 žádostí od ledna. Dubnový stav neznáme.'],
+      ['Rozdíl dvou srovnatelných kumulativních stavů dokládá květnový přírůstek.','Celkový stav od ledna není přírůstek za květen. Chybí předchozí stav.'],
+      ['Evidence nepřesouvala ani nemaže starší žádosti, hodnoty jsou srovnatelné.','Číslo 40 zahrnuje i žádosti z ledna, února, března a dubna.'],
+      'Kumulativní graf je jako dřez: ukazuje i včerejší hrnky.',2),
+
+    dossier('anketa','polls','Většina obyvatel města podporuje novou kašnu.',
+      ['Reprezentativní výzkum dospělých obyvatel s popsaným výběrem a otázkou uvádí 72 % podpory. Známe termín i nejistotu ±3 body.','Pro kašnu hlasovalo 72 % z 28 členů facebookové skupiny Milujeme nové kašny.'],
+      ['Výzkum je vymezený na obyvatele města a výsledek je s rezervou nad polovinou.','Dobrovolná anketa mezi příznivci kašny nevypovídá o většině města.'],
+      ['Zveřejněná metodika potvrzuje výběr napříč městem, nikoli jen příznivce projektu.','Skupinu založil prodejce zahradních fontán. Počet členů města v ní neznáme.'],
+      'Ve skupině Kašna navždy vyhrála překvapivě kašna.'),
+    dossier('tesnypruzkum','polls','Ve vzorku průzkumu získal návrh A o dva body víc než B.',
+      ['Tabulka uvádí A 31 %, B 29 %, nejistota je přibližně ±3 body. Text výslovně upozorňuje, že těsný rozdíl může být náhodný.','Tisková zpráva říká „A jasně vítězí“. Tabulku ani údaje o vzorku nemáme a nejistotu jsme nezjišťovali.'],
+      ['Přesně popsaný výsledek vzorku s upozorněním na nejistotu můžeme uvést. Není to jistý výsledek celé populace.','Bez tabulky a metodiky nemáme podklad ani pro přesný rozdíl. Reklamní shrnutí ho nenahrazuje.'],
+      ['V titulku není tvrzení o jistém vítězi, pouze popis naměřeného vzorku.','Na dotaz po číslech agentura zatím neodpověděla.'],
+      'Statistická nejistota neodejde, když ji napíšeme menším písmem.',2),
+    dossier('otazka','polls','V anketě webu volilo 60 % hlasujících opravu parku.',
+      ['Anketa nabídla opravu parku, parkoviště a možnost ani jedno. Uvádíme počet hlasů a to, že nejde o reprezentativní výzkum.','Otázka zněla „Jste pro opravu zanedbaného parku, nebo pro další odporné parkoviště?“ Text toto znění zatajuje.'],
+      ['Omezený výsledek ankety lze popsat s jasnými hranicemi a zněním otázky.','Sugestivní otázka ovlivňuje odpovědi. Bez jejího znění je prezentace ankety zavádějící.'],
+      ['Článek obsahuje přesné znění otázky i všechny možnosti.','Obě možnosti obsahují hodnotící slova a článek je vydává za neutrální volbu.'],
+      'Otázka už hlasovala. Respondenti přišli jen podržet urnu.'),
+    dossier('navratnost','polls','Devět z deseti oslovených knihoven má otevřeno v sobotu.',
+      ['Oslovili jsme deset konkrétních knihoven a všech deset odpovědělo. Devět uvedlo sobotní provoz; článek je všechny jmenuje.','Oslovili jsme sto knihoven, odpovědělo deset a devět z nich otevírá v sobotu. Titulek mluví o všech oslovených.'],
+      ['Titulek se přesně omezuje na deset oslovených a úplný soubor odpovědí.','Devět z deseti odpovídajících není devět z deseti oslovených. Devadesát odpovědí chybí.'],
+      ['V tabulce je deset oslovených i deset doložených odpovědí.','V evidenci je 100 oslovení a jen 10 odpovědí.'],
+      'Mlčení není souhlas. Ani vyplněný dotazník.',2),
+    dossier('trend','polls','Podpora návrhu v průzkumu od března vzrostla.',
+      ['Stejná agentura stejnou otázkou a metodikou naměřila v březnu 30 % a v červnu 45 %. Nejistota je v obou případech ±3 body.','V březnu jsme měřili podporu celého návrhu, v červnu jen jedné oblíbené části. Vzorky a otázky nejsou srovnatelné.'],
+      ['Srovnatelné měření a dostatečně velká změna podporují tvrzení o růstu.','Změna otázky může změnit výsledek. Bez srovnatelných měření nemáme časový trend.'],
+      ['Metodické listy potvrzují stejné cílové skupiny i doslovné znění otázky.','Březnová otázka řešila zdražení, červnová výsadbu stromů.'],
+      'Jablka s hruškami jsou kompot. Ne časová řada.',2),
+
+    dossier('citace','context','Radní: „Opravu stihneme do konce roku.“',
+      ['Celý záznam potvrzuje přesnou větu bez podmínky. Článek ji připisuje radní a nepředstírá, že jde o hotovou opravu.','Celá věta zní „Kdybychom získali povolení, mohli bychom říct: opravu stihneme do konce roku.“ Povolení zatím není.'],
+      ['Přesný a správně připsaný výrok lze publikovat jako slib.','Ustřižená podmínka mění smysl výroku. Citace potřebuje doplnit.'],
+      ['Předchozí ani následující věta slib nepodmiňují.','Krátký klip vynechal prvních sedm sekund s podmínkou.'],
+      'Nůžky jsou kancelářská pomůcka, ne spoluautor citace.'),
+    dossier('satira','context','Město zřídilo úřad pro kontrolu délky tkaniček.',
+      ['Město zveřejnilo platné usnesení o malém úřadu pro kontrolu délky tkaniček na městském kluzišti. Titulek doplňuje přesný účel v podtitulku.','Jediným zdrojem je rubrika Satirické pondělí. Stránka výslovně označuje text za vymyšlený vtip.'],
+      ['Podivnost sama není důvod k odmítnutí. Tady máme dokument i vysvětlený kontext.','Satiru nemůžeme předat jako skutečnou zprávu. Nejdřív opravit rámování.'],
+      ['Tiskové oddělení potvrdilo usnesení i kontrolu na kluzišti.','Pod článkem je „všechny citované tkaničky jsou smyšlené“.'],
+      'Realita občas ukradne satiře pracovní místo.',2),
+    dossier('slib','context','Město dokončilo nový cyklostojan u úřadu.',
+      ['Reportér stojan viděl na místě, pořídil aktuální snímek a správce potvrdil převzetí hotové instalace.','Radní v rozhovoru slíbila „do měsíce tu stojan bude“. Na místě zatím nic není.'],
+      ['Dokončenou instalaci potvrzuje pozorování i převzetí.','Slib budoucí instalace není hotový stojan. Titulek musí odpovídat stavu.'],
+      ['Na reportérově snímku je stojan i dnešní vydání místních novin.','Objednávka byla teprve odeslána dodavateli.'],
+      'Slib zamčené kolo neudrží.'),
+    dossier('porovnani','context','Citovaný odborník doporučuje pro srovnání delší období.',
+      ['Máme celý rozhovor. Odborník mluví o této datové řadě a výslovně doporučuje více let. Citace i odbornost sedí.','Klip spojil dvě různé odpovědi. Odborník větu o delším období řekl o jiné otázce a jiných datech.'],
+      ['Máme přesný výrok relevantního odborníka ve správném kontextu.','Slepením odpovědí vznikl nový význam. Potřebujeme původní kontext.'],
+      ['Nezkrácená odpověď zůstává u stejného grafu.','Mezi oběma větami je v originálu šest minut a změna tématu.'],
+      'Střižna zvládne vytvořit experta na cokoliv. Redakce by neměla.'),
+    dossier('parodie','context','Ředitel divadla oznámil, že vstupenky zlevní.',
+      ['Jde o ověřený profil skutečného ředitele, celé oznámení je i na webu divadla a obsahuje nový ceník.','Příspěvek pochází z účtu ŘeditelSkoroPravý. V popisu je „parodický účet“, divadlo změnu nepotvrdilo.'],
+      ['Identitu mluvčího i konkrétní změnu máme potvrzené.','Podobné jméno účtu není ověření identity. Tady jde výslovně o parodii.'],
+      ['Odkaz na profil vede přímo z oficiálního webu divadla.','Profil má stejnou fotografii, ale odlišné uživatelské jméno a popis parodie.'],
+      'Modrá fajfka neumí hrát Hamleta. Ani ověřit kontext.'),
+
+    dossier('orez','images','Na náměstí se sešly stovky lidí.',
+      ['Současné široké snímky i reportér na místě potvrzují zaplněné náměstí. Odhad řádově stovek odpovídá ploše i hustotě.','Těsný výřez ukazuje dvacet lidí. Celkový záběr chybí a nikdo počet na místě neověřil.'],
+      ['Obraz má kontext a odhad podporuje i pozorování na místě.','Těsný výřez nedokládá počet mimo záběr. Odhad stovek zatím nemáme z čeho udělat.'],
+      ['Široký záběr pokrývá celé místo a reportér popsal způsob odhadu.','Za hranou snímku může být dav i stánek s langoši. Zatím to nevíme.'],
+      'Zoom je optika. Sčítání lidu je jiná živnost.'),
+    dossier('generovano','images','Fotografie ukazuje novou kašnu před radnicí.',
+      ['Autorka dodala původní sérii z místa. Reportér kašnu navštívil a její podobu ověřil.','Obrázek pochází z generátoru, autor ho označil jako návrh. Na místě se zatím nic nestaví.'],
+      ['Místo i skutečnou podobu kašny ověřují další podklady.','Vizualizace návrhu není fotografie hotové stavby. Obrázek lze použít jen se správným označením.'],
+      ['Na dalších snímcích je instalace z více úhlů.','Původní popisek zní „můj AI sen pro město“.'],
+      'Voda na obrázku redakční kávovar nedoplní.'),
+    dossier('detektor','images','Video z depozitu zachycuje skutečný historický vlak.',
+      ['Máme původní soubor od kameramana. Muzeum potvrdilo konkrétní vůz, místo i datum natáčení.','Jediným podkladem je automatický detektor s výsledkem „92 % autentické“. Původ souboru ani místo neznáme.'],
+      ['Původ a obsah ověřují lidé i konkrétní identifikace místa a vozidla.','Skóre detektoru samo autenticitu nedokazuje. Potřebujeme původ a další ověření.'],
+      ['Inventární číslo vozu odpovídá záběru a záznamu muzea.','Detektor nepřipojil původní soubor, metadata ani vysvětlení výsledku.'],
+      'Devadesát dva procent přesvědčivě zní i od kávovaru.',2),
+    dossier('dabing','images','Nahrávka zachycuje starostovo vyjádření k plovárně.',
+      ['Celou tiskovou konferenci zaznamenali dva přítomní reportéři. Výrok souhlasí s oběma nahrávkami i zveřejněným přenosem.','Krátký hlasový soubor přišel anonymně. Neznáme originál a máme jen dojem, že hlas zní podobně.'],
+      ['Výrok potvrzuje plný kontext a více nezávislých záznamů stejné události.','Podobnost hlasu není ověření nahrávky. Potřebujeme původ, kontext a potvrzení.'],
+      ['Oba reportéři výrok slyšeli na místě a mají navazující otázky.','Odesílatel odmítl uvést, kde a kdy měl záznam vzniknout.'],
+      'Hlas může být známý. Původ souboru zatím cizí.'),
+    dossier('geolokace','images','Záběry ukazují sníh na naší hlavní třídě.',
+      ['Reportér porovnal domy a značení, získal původní dnešní záběr a na místě stav potvrdil.','Záběry mají stejný název ulice, ale jiný jazyk na obchodech. Původní autor je pořídil v jiném městě.'],
+      ['Ověřili jsme konkrétní místo, datum i současný stav.','Stejný název ulice nezaručuje stejné město. Titulek má nesprávnou lokaci.'],
+      ['Rohový dům i tramvajová zastávka přesně odpovídají místu.','Původní příspěvek označuje město vzdálené osm set kilometrů.'],
+      'Hlavní třída je překvapivě populární adresa.'),
+
+    dossier('robot','research','V testu robot roztřídil sponky rychleji než člověk.',
+      ['Zpráva popisuje konkrétní laboratorní test: stejný počet sponek, stejný úkol, zveřejněné časy. Nezobecňuje na jiné činnosti.','Test porovnal robota se spícím figurantem. Titulek zamlčuje, že člověk úkol vůbec neprováděl.'],
+      ['Úzce vymezené tvrzení odpovídá srovnatelnému experimentu.','Nesrovnatelné podmínky nedokládají běžný rozdíl rychlosti člověka a robota.'],
+      ['Oběma běžely hodiny od stejného okamžiku a měli stejný úkol.','V protokolu je u figuranta napsáno „po noční, nereaguje“.'],
+      'Robot nemá odbory. Zatím má jen zásobník na sponky.'),
+    dossier('souvislost','research','V datech spolu souvisejí prodej zmrzliny a návštěvy koupaliště.',
+      ['Datový soubor ukazuje společný růst. Text upozorňuje na teplé počasí a výslovně netvrdí, že jedno způsobuje druhé.','Autor bez kontroly dalších vlivů tvrdí v podkladech, že prodej zmrzliny způsobuje návštěvy koupaliště. V článku to chce uvést jako dokázaný závěr.'],
+      ['Pozorovanou souvislost můžeme popsat, pokud jasně vymezíme, co neprokazuje.','Zpráva chystá nepodložený kauzální závěr. Podklady a text potřebují opravu před vydáním.'],
+      ['Závěr se omezuje na korelaci v popsaném souboru.','Teplota nebyla do analýzy zahrnuta a žádný kauzální test neproběhl.'],
+      'Nanuk není tajný ředitel plovárny.',2),
+    dossier('preprint','research','Předběžný výzkum popisuje nový způsob třídění knoflíků.',
+      ['Máme plný preprint, jasně uvádíme, že neprošel odborným posouzením. Nezávislá expertka popsala jeho omezení.','Máme jen reklamní větu výrobce „věda potvrzuje revoluci“. Studii, metodu ani výsledky nám neposlal.'],
+      ['I předběžný výzkum lze zpravodajsky popsat s jasným označením a ověřenými omezeními.','Marketingová věta nenahrazuje dostupný výzkum. Zatím nemáme co věcně popsat.'],
+      ['Text nepředstírá vědecký konsenzus ani definitivní průlom.','Za odkazem na studii je formulář „objednat 10 000 knoflíků“.'],
+      'Knoflíková revoluce zatím nemá zapnutý peer review.',2),
+    dossier('vzorek','research','V malém testu uspělo nové řazení katalogu u osmi z deseti účastníků.',
+      ['Test měl deset účastníků, osm dokončilo úkol. Text uvádí malý vzorek a nepřenáší výsledek na všechny uživatele.','Test měl deset účastníků, ale zveřejněny byly jen dva vybrané úspěšné pokusy. Výsledky ostatních osmi chybí.'],
+      ['Přesný popis omezeného testu je v pořádku. Malý vzorek vyžaduje přiznané hranice.','Neúplná data nedokládají výsledek osmi z deseti. Potřebujeme celý průběh a výsledky.'],
+      ['V anonymizované tabulce je všech deset pokusů včetně dvou neúspěchů.','Výzkumník potvrdil, že zatím poslal jen sestřih dvou demonstrací.'],
+      'Dva povedené pokusy a osm schovaných: to umí i redakční tiskárna.'),
+    dossier('replikace','research','Druhý tým zopakoval výsledek pokusu s papírovými letadly.',
+      ['Nezávislý tým použil popsaný postup a publikoval srovnatelné měření. Ověřili jsme, že jde o nový experiment.','Druhý tým pouze přeložil tiskovou zprávu prvního. Žádná další letadla nevypouštěl.'],
+      ['Máme skutečné nezávislé opakování, nikoli jen převzetí informace.','Překlad výsledku není replikace experimentu. Titulek připisuje výzkum týmu, který ho neprovedl.'],
+      ['Druhý tým má vlastní datovou sadu, jinou laboratoř i datum měření.','Veškeré časy letu i fotografie jsou totožné s první zprávou.'],
+      'Papírové letadlo potřebuje druhý hod. Ne druhý tiskový mluvčí.'),
+
+    dossier('anonym','ethics','Kontrola zjistila chyby v zakázce na kancelářské židle.',
+      ['Tip přišel anonymně, ale pravost úplné kontrolní zprávy jsme ověřili u vydavatele. Dotčený úřad dostal konkrétní otázky a jeho odpověď je v textu.','Máme anonymní neúplnou přílohu bez ověřené pravosti. Dotčeného úřadu jsme se zatím neptali.'],
+      ['Anonymní tip může vést k ověřené zprávě. Podstatná je následná práce s důkazy a férový kontext.','Tip je začátek práce. Potřebujeme ověřit dokument, úplnost i vyjádření dotčených.'],
+      ['Závěry v titulku odpovídají úplné zprávě a nepřidávají trestní obvinění.','Příloha začíná stranou 4 a končí uprostřed věty „nejde však o…“.'],
+      'Zdroj chráníme. Pravost přílohy tím nevznikne.',2),
+    dossier('reklama','ethics','Partnerský text: nový kávovar v redakci šetří čas.',
+      ['Placený text je od začátku výrazně označen jako reklama. Konkrétní údaj o době přípravy je doložený srovnatelným testem.','Výrobce zaplatil text, ale chce odstranit označení reklamy. Srovnávací test nikdo neprovedl.'],
+      ['Komerční povaha je jasná a věcné tvrzení doložené. V rámci hry může takto označený text ven.','Skrytá reklama a nedoložený údaj potřebují opravu. Platba není zdroj ověření.'],
+      ['Označení reklamy je i ve výpisu článků a tvrzení se omezuje na podmínky testu.','V e-mailu stojí „ať to působí jako vaše nezávislá recenze“.'],
+      'Kávovar může sponzorovat kávu. Pravdu má bez provize.'),
+    dossier('soukromi','ethics','Reportáž popisuje spor nájemníků o hlučný výtah.',
+      ['Máme ověřené podklady i stanoviska stran. Fotografie dokumentů zakrývají rodná čísla, soukromé telefony a podpisy, které nejsou pro zprávu nutné.','Podklady jsou ověřené, ale zveřejňovaná příloha zbytečně ukazuje rodná čísla a soukromé telefony všech nájemníků.'],
+      ['Ověření je doplněné přiměřenou ochranou soukromí. Pro tvrzení nepotřebujeme vystavit osobní údaje.','Před vydáním je třeba odstranit zbytečné osobní údaje. Pravdivý obsah sám neřeší způsob zveřejnění.'],
+      ['Redakční kopie zachovává relevantní část sporu, citlivé údaje jsou zakryté.','Čtenářům stačí předmět stížnosti; soukromá čísla nikoho z nájemníků nepotřebují.'],
+      'Výtah už slyší celý dům. Telefonní seznam přidávat nemusíme.',2),
+    dossier('oprava','ethics','Oprava: otevření knihovny je ve čtvrtek, nikoli ve středu.',
+      ['Knihovna potvrdila čtvrtek. Text viditelně uvádí naši původní chybu, správný údaj a čas opravy.','Nový termín máme jen z neověřeného komentáře. Původní chybu chceme potichu přepsat bez poznámky.'],
+      ['Ověřená a viditelná oprava pomáhá obnovit důvěru a opravuje konkrétní chybu.','Nejdřív ověř nový údaj. Oprava má také čtenářům jasně říct, co se změnilo.'],
+      ['Odkaz na aktuální oznámení knihovny souhlasí s potvrzením její ředitelky.','Komentátor má přezdívku VevodaZKopírky a žádný odkaz nepřiložil.'],
+      'Guma není publikační strategie.'),
+    dossier('obvineni','ethics','Policie prověřuje poškození obecní sochy.',
+      ['Policie potvrdila prověřování. Článek rozlišuje podezření od prokázané viny a nikoho bez podkladů neoznačuje za pachatele.','Jediný komentář na síti označil souseda za viníka. Policejní prověřování jsme nepotvrdili, v textu už je jméno údajného pachatele.'],
+      ['Ověřené procesní sdělení s přesným jazykem nepředbíhá výsledek.','Nemáme potvrzenou ani popisovanou policejní činnost. Nepodložené obvinění konkrétního člověka nemůže ven.'],
+      ['Mluvčí výslovně mluví o prověřování, ne o odsouzení.','Komentátor uvedl jako důkaz „má doma podobné kladivo“.'],
+      'Komentářová sekce nemá soudní razítko.',2)
+  ];
+  const VERIFY_BADGES={
+    clean:{name:'Čisté razítko',glyph:'✓',text:'Celá směna správně bez dohledávání.'},
+    brakes:{name:'Ruční brzda',glyph:'Ⅱ',text:'Alespoň čtyři správně zadržené zprávy.'},
+    courage:{name:'Bez paranoie',glyph:'↗',text:'Alespoň čtyři správně vydané zprávy.'},
+    streak:{name:'Redakční šňůra',glyph:'≋',text:'Osm správných rozhodnutí za sebou.'},
+    night:{name:'Noční sova',glyph:'☾',text:'Noční uzávěrka s alespoň 90 % správných odpovědí.'},
+    help:{name:'Telefon na zdroj',glyph:'☎',text:'Dohledání detailu a poté správné rozhodnutí.'}
+  };
+  function random(seed){let a=seed>>>0;return()=>{a+=0x6D2B79F5;let t=a;t=Math.imul(t^t>>>15,t|1);t^=t+Math.imul(t^t>>>7,t|61);return((t^t>>>14)>>>0)/4294967296;};}
+  function shuffle(items,r){const a=[...items];for(let i=a.length-1;i>0;i--){const j=Math.floor(r()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
+  function hash(text){let h=2166136261;for(const c of text){h^=c.charCodeAt(0);h=Math.imul(h,16777619);}return h>>>0;}
+  function verifyDailyChallenge(date=new Date()){
+    const p=Object.fromEntries(new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Prague',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(date).map(x=>[x.type,x.value]));
+    const day=p.year+'-'+p.month+'-'+p.day,seed=hash('overeno-v3-'+day),modes=Object.keys(VERIFY_DESKS);
+    return {seed,deskId:modes[seed%modes.length],daily:day,practice:false};
+  }
+  class Verify{
+    constructor(options=Date.now()){
+      if(typeof options==='number')options={seed:options};
+      const deskId=VERIFY_DESKS[options.deskId]?options.deskId:'morning';
+      this.options={seed:(options.seed??Date.now())>>>0,deskId,practice:!options.daily&&!!options.practice,daily:options.daily||'',recent:options.daily?[]:(Array.isArray(options.recent)?options.recent.filter(id=>VERIFY_FILES.some(f=>f.id===id)).slice(-40):[])};
+      this.reset();
+    }
+    reset(){
+      this.seed=this.options.seed;this.deskId=this.options.deskId;this.desk=VERIFY_DESKS[this.deskId];this.practice=this.options.practice;this.daily=this.options.daily;
+      this.code=this.seed.toString(36).toUpperCase().padStart(7,'0');
+      const r=random(this.seed),categories=shuffle(this.desk.categories,r),selected=new Set(),deck=[];
+      const decisions=shuffle(Array.from({length:this.desk.count},(_,i)=>i%2===0),r);
+      for(let i=0;i<this.desk.count;i++){
+        const category=categories[i%categories.length],boss=this.deskId==='night'&&i===this.desk.count-1;
+        let candidates=VERIFY_FILES.filter(f=>!selected.has(f.id)&&(boss?f.level===2:f.category===category));
+        const penalty=f=>{const at=this.options.recent.lastIndexOf(f.id);return at<0?0:at+1;};
+        candidates=shuffle(candidates,r).sort((a,b)=>penalty(a)-penalty(b));
+        const f=candidates[0],ready=decisions[i],v=ready?0:1;selected.add(f.id);
+        deck.push({id:f.id+':'+(ready?'ok':'stop'),family:f.id,category:f.category,headline:f.headline,source:f.source[v],ready,why:f.why[v],detail:f.detail[v],quip:f.quip,boss});
+      }
+      this.cards=deck;this.index=0;this.correct=0;this.score=0;this.combo=0;this.bestCombo=0;this.remaining=this.desk.seconds;this.checks=this.desk.checks;this.hintsUsed=0;this.detailOpen=false;this.phase='ready';this.paused=false;this.feedback=null;this.history=[];this.events=[];this.recorded=false;
+    }
+    get card(){return this.cards[this.index];}
+    get total(){return this.cards.length;}
+    get stars(){return this.phase==='won'?(this.correct/this.total>=.9?3:this.correct/this.total>=.75?2:this.correct/this.total>=.6?1:0):0;}
+    get badges(){const good=this.history.filter(h=>h.correct),ids=[];if(this.phase==='won'&&this.correct===this.total&&!this.hintsUsed)ids.push('clean');if(good.filter(h=>!h.answer).length>=4)ids.push('brakes');if(good.filter(h=>h.answer).length>=4)ids.push('courage');if(this.bestCombo>=8)ids.push('streak');if(this.phase==='won'&&this.deskId==='night'&&this.correct/this.total>=.9)ids.push('night');if(good.some(h=>h.checked))ids.push('help');return ids;}
+    start(){if(this.phase!=='ready')return false;this.phase='playing';return true;}
+    inspect(){
+      if(this.phase!=='playing'||this.paused||this.feedback||this.detailOpen||this.checks<=0)return false;
+      this.checks--;this.hintsUsed++;this.detailOpen=true;
+      if(!this.practice){this.remaining=Math.max(0,this.remaining-8);if(this.remaining===0)this.finish('lost');}
+      this.events.push({type:'inspect'});return this.card.detail;
+    }
+    submit(answer){
+      if(typeof answer!=='boolean'||this.phase!=='playing'||this.paused||this.feedback)return false;
+      const correct=answer===this.card.ready;let points=0;
+      if(correct){this.correct++;this.combo++;this.bestCombo=Math.max(this.bestCombo,this.combo);points=100+Math.min(4,this.combo-1)*15-(this.detailOpen?20:0);this.score+=points;}else this.combo=0;
+      this.feedback={correct,why:this.card.why,points,expected:this.card.ready};
+      this.history.push({card:this.card,answer,correct,checked:this.detailOpen,points});this.events.push({type:correct?'correct':'incorrect'});return this.feedback;
+    }
+    next(){
+      if(!this.feedback||this.phase!=='playing'||this.paused)return false;
+      this.feedback=null;this.detailOpen=false;this.index++;
+      if(this.index===this.total)this.finish('won');return true;
+    }
+    finish(phase){if(this.phase!=='playing')return;this.phase=phase;this.events.push({type:phase});}
+    update(dt){if(this.phase!=='playing'||this.paused||this.feedback||this.practice||!Number.isFinite(dt)||dt<=0)return;this.remaining=Math.max(0,this.remaining-dt);if(this.remaining===0)this.finish('lost');}
+  }
+  const api={Verify,VERIFY_CATEGORIES,VERIFY_DESKS,VERIFY_FILES,VERIFY_BADGES,verifyDailyChallenge};
+  if(typeof module!=='undefined'&&module.exports)module.exports=api;else root.VerifyGame=api;
+})(typeof window!=='undefined'?window:globalThis);
+
+</script>
+<script>
 (function (root) {
   'use strict';
   const defense=typeof module!=='undefined'&&module.exports?require('./defender.js'):root.DefenderGame;
-  const STORIES=[
-    {headline:'Od pondělí pojede tramvaj jinudy.',source:'Aktuální jízdní řád přímo od dopravního podniku. Datum i číslo linky souhlasí.',ready:true,why:'Máme aktuální primární zdroj a ověřené podrobnosti. Zpráva může ven.'},
-    {headline:'Starosta prý zítra zavře všechny školy.',source:'Přeposlaný screenshot bez odkazu. Autor ani datum nejsou známé.',ready:false,why:'Screenshot není potvrzení. Najdi původ zprávy a vyžádej si stanovisko města.'},
-    {headline:'Město schválilo peníze na novou knihovnu.',source:'Zveřejněné usnesení zastupitelstva. Částka i výsledek hlasování jsou ověřené.',ready:true,why:'Rozhodnutí dokládá veřejný dokument. Přesný rozsah usnesení máme ověřený.'},
-    {headline:'Tahle fotografie zachycuje dnešní povodeň.',source:'Obrázek ze sociální sítě. Vyhledávání našlo stejnou fotografii už před pěti lety.',ready:false,why:'Fotografie patří k jiné události. Bez ověření místa a času by titulek klamal.'},
-    {headline:'V centru zdražilo parkování o třetinu.',source:'Nový a předchozí oficiální ceník. Výpočet se týká centrální zóny uvedené v titulku.',ready:true,why:'Srovnání má jasnou základnu, platné ceníky i správně vymezený rozsah.'},
-    {headline:'Nezaměstnanost raketově roste!',source:'Graf bez popisků os, období a původu dat. Není jasné, co vlastně ukazuje.',ready:false,why:'Nejdřív zjisti zdroj, období a měřítko grafu. Obrázek sám tvrzení nedokládá.'},
-    {headline:'Most bude o víkendu uzavřený.',source:'Aktuální oznámení správce silnice. Termín jsme ověřili také u města.',ready:true,why:'Dva relevantní zdroje potvrzují stejný termín a rozsah omezení.'},
-    {headline:'Všichni obyvatelé podporují novou stavbu.',source:'Anketa ve skupině příznivců projektu. Odpovědělo 28 lidí.',ready:false,why:'Výběrová anketa nepopisuje všechny obyvatele. Uveď, kdo a jak se jí účastnil.'},
-    {headline:'Zastupitelka slíbila dokončit opravu letos.',source:'Celý záznam veřejného jednání. Citace je přesná a její kontext jsme poslechli.',ready:true,why:'Přesnost citace i kontext máme ověřené. Slib jasně připisujeme jeho autorce.'},
-    {headline:'Tajný dokument odhaluje velký skandál.',source:'Anonymní e-mail s neúplnou přílohou. Pravost dokumentu zatím nikdo nepotvrdil.',ready:false,why:'Tip je začátek práce. Ověř pravost dokumentu a dej dotčeným prostor k vyjádření.'},
-    {headline:'Letos přišlo na festival 12 tisíc lidí.',source:'Pořadatel dodal pouze odhad pro příští ročník. Letošní výsledek neznáme.',ready:false,why:'Odhad budoucnosti není výsledek minulosti. Číslo i časový údaj potřebují opravu.'},
-    {headline:'Ve středu se otevře nové dětské oddělení knihovny.',source:'Potvrzený termín od knihovny a zveřejněná otevírací doba. Adresa ověřena.',ready:true,why:'Máme ověřený termín, místo i praktické informace pro čtenáře.'}
-  ];
+  const verification=typeof module!=='undefined'&&module.exports?require('./verify.js'):root.VerifyGame;
   function random(seed){let a=seed>>>0;return ()=>{a+=0x6D2B79F5;let t=a;t=Math.imul(t^t>>>15,t|1);t^=t+Math.imul(t^t>>>7,t|61);return ((t^t>>>14)>>>0)/4294967296;};}
-  class Verify {
-    constructor(seed=Date.now()){this.seed=seed;this.reset();}
-    reset(){const r=random(this.seed);this.cards=[...STORIES];for(let i=this.cards.length-1;i>0;i--){let j=Math.floor(r()*(i+1));[this.cards[i],this.cards[j]]=[this.cards[j],this.cards[i]];}this.cards=this.cards.slice(0,8);this.index=0;this.correct=0;this.score=0;this.combo=0;this.remaining=60;this.phase='ready';this.paused=false;this.feedback=null;this.events=[];}
-    get card(){return this.cards[this.index];}
-    start(){if(this.phase==='ready'){this.phase='playing';return true;}return false;}
-    submit(ready){if(this.phase!=='playing'||this.paused||this.feedback)return false;const correct=ready===this.card.ready;if(correct){this.correct++;this.combo++;this.score+=100+Math.max(0,this.combo-1)*15;}else this.combo=0;this.feedback={correct,why:this.card.why};this.events.push({type:correct?'correct':'incorrect'});return this.feedback;}
-    next(){if(!this.feedback||this.phase!=='playing')return false;this.feedback=null;this.index++;if(this.index>=this.cards.length){this.phase='won';this.events.push({type:'won'});}return true;}
-    update(dt){if(this.phase!=='playing'||this.paused||this.feedback)return;this.remaining=Math.max(0,this.remaining-dt);if(this.remaining===0){this.phase='lost';this.events.push({type:'lost'});}}
-  }
   const N=1,E=2,S=4,W=8;
   const DIRECTIONS=[{bit:N,dx:0,dy:-1,op:S},{bit:E,dx:1,dy:0,op:W},{bit:S,dx:0,dy:1,op:N},{bit:W,dx:-1,dy:0,op:E}];
   const PUZZLE_PATHS=[
@@ -355,7 +688,7 @@
     next(){if(this.phase!=='round-won')return false;this.round++;this.generate();this.phase='playing';return true;}
     update(dt){if(this.phase!=='playing'||this.paused)return;this.remaining=Math.max(0,this.remaining-dt);if(this.remaining===0){this.phase='lost';this.events.push({type:'lost'});}}
   }
-  const api={...defense,Verify,Signal,rotate,PUZZLE_PATHS};
+  const api={...defense,...verification,Signal,rotate,PUZZLE_PATHS};
   if(typeof module!=='undefined'&&module.exports)module.exports=api;else root.MediaGames=api;
 })(typeof window!=='undefined'?window:globalThis);
 
@@ -522,7 +855,7 @@
 <script>
 (() => {
   'use strict';
-  const {Defender,Verify,Signal,TOWERS,MAPS,DIFFICULTIES,ENEMIES,BONUSES,TARGET_MODES,WAVE_NAMES,dailyChallenge}=window.MediaGames;
+  const {Defender,Verify,Signal,TOWERS,MAPS,DIFFICULTIES,ENEMIES,BONUSES,TARGET_MODES,WAVE_NAMES,dailyChallenge,VERIFY_DESKS,VERIFY_CATEGORIES,VERIFY_FILES,VERIFY_BADGES,verifyDailyChallenge}=window.MediaGames;
   const $=id=>document.getElementById(id);
   const format=n=>Math.round(n).toLocaleString('cs-CZ');
   const icons={
@@ -532,7 +865,7 @@
   };
   const meta={
     defender:{kicker:'P101 / STRATEGICKÁ OBRANA VYSÍLÁNÍ',title:'KAVKY <span>DEFENDER</span>',description:'Škrty jdou po kabelu. Ty jdeš po nich.',note:'REŽIE, POZOR.<br>MÁME TU ŠKRTY.',welcome:'Vysílání tě potřebuje.',welcomeText:'Postav obrany na +. Přežij osm vln, na poradě vybírej bonusy a v nouzi přivolej kavčí nálet klávesou K. Kávovar je strategický cíl.',start:'Jdu bránit vysílání',icon:'◉',hint:'<span><kbd>1</kbd><kbd>2</kbd><kbd>3</kbd> vyber obranu</span><span><kbd>←</kbd><kbd>→</kbd> stanoviště <kbd>Enter</kbd> postav</span><span><kbd>K</kbd> kavčí nálet <kbd>mezerník</kbd> vlna / pauza</span>'},
-    verify:{kicker:'02 / VE SLUŽBĚ FAKTŮM',title:'OVĚŘENO<span>!</span>',description:'Rychlost je fajn. Důvěra je víc. Rozhodni, které zprávy<br class="desktop-break"> mají dost podkladů k vydání — a které potřebují ještě práci.',note:'Každá dobrá zpráva<br>začíná dobrou otázkou.',welcome:'Titulek není celý příběh.',welcomeText:'Osm zpráv, 60 sekund čistého času. Čti podklady a rozhodni: může zpráva ven, nebo potřebuje ještě ověřit? Vysvětlení si můžeš přečíst v klidu.',start:'Zasednout do redakce',icon:'✓',hint:'<span><kbd>F</kbd> ještě ověřit</span><span><kbd>J</kbd> může ven</span><span><kbd>Enter</kbd> další zpráva <kbd>mezerník</kbd> pauza</span>'},
+    verify:{kicker:'P200 / REDAKČNÍ POHOTOVOST',title:'OVĚŘENO<span>!</span>',description:'Na stole zprávy. V hrnku nejistota. Rozhodni, co může ven.<br class="desktop-break"> Kvído má připomínku. Kvído má vždycky připomínku.',note:'ZDROJ: „VĚŘ MI.“<br>REDAKCE: „JEŠTĚ NĚCO?“',welcome:'Titulek není celý příběh.',start:'Převzít službu',icon:'✓',hint:'<span><kbd>F</kbd> ještě ověřit <kbd>J</kbd> může ven</span><span><kbd>D</kbd> dohledat detail</span><span><kbd>Enter</kbd> další zpráva <kbd>mezerník</kbd> pauza</span>'},
     signal:{kicker:'03 / AŤ JE NÁS SLYŠET',title:'DRŽ <span>SIGNÁL</span>',description:'Dobrá informace má najít cestu ke každému.<br class="desktop-break"> Otoč dílky, propoj vysílání a překonej tři zamotané okruhy.',note:'Spojení, na kterém<br>záleží.',welcome:'Najdi společnou vlnu.',welcomeText:'Kliknutím otáčej dílky o čtvrt otáčky. Spoj studio vlevo s veřejností vpravo. Zelená linka ukazuje, kudy už signál teče. Tři okruhy, každý na 90 sekund.',start:'Naladit se',icon:'≋',hint:'<span><kbd>kliknutí</kbd> otočit dílek</span><span><kbd>šipky</kbd> pohyb po mapě <kbd>Enter</kbd> otočit</span><span><kbd>mezerník</kbd> pauza</span>'}
   };
   const controllers={
@@ -549,6 +882,22 @@
   const setText=(id,value)=>{const el=$(id);if(el.textContent!==String(value))el.textContent=value;};
   const renderedHTML=new WeakMap();
   const setHTML=(id,value)=>{const el=$(id);if(renderedHTML.get(el)!==value){el.innerHTML=value;renderedHTML.set(el,value);}};
+  const escapeHTML=value=>String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const verifyRecordKey=g=>g.deskId+':'+(g.practice?'practice':'timed');
+  let verifyProfile={records:{},seen:[],recent:[],badges:[],shifts:0};
+  try{
+    const raw=JSON.parse(localStorage.getItem('overeno-redakce-v3')||'{}');
+    if(raw&&typeof raw==='object'){
+      for(const id of Object.keys(VERIFY_DESKS))for(const mode of ['practice','timed']){const key=id+':'+mode,r=raw.records?.[key];if(r&&Number.isFinite(r.score)&&r.score>=0)verifyProfile.records[key]={score:r.score,stars:Math.max(0,Math.min(3,Math.floor(Number(r.stars)||0)))};}
+      if(Array.isArray(raw.seen))verifyProfile.seen=[...new Set(raw.seen.filter(id=>VERIFY_FILES.some(f=>id===f.id+':ok'||id===f.id+':stop')))];
+      if(Array.isArray(raw.recent))verifyProfile.recent=raw.recent.filter(id=>VERIFY_FILES.some(f=>f.id===id)).slice(-40);
+      if(Array.isArray(raw.badges))verifyProfile.badges=[...new Set(raw.badges.filter(id=>Object.hasOwn(VERIFY_BADGES,id)))];
+      verifyProfile.shifts=Number.isFinite(raw.shifts)?Math.max(0,Math.floor(raw.shifts)):0;
+    }
+  }catch{}
+  controllers.verify.engine=new Verify({recent:verifyProfile.recent});
+  function storeVerifyProfile(){try{localStorage.setItem('overeno-redakce-v3',JSON.stringify(verifyProfile));}catch{}}
+  function rememberVerifyCard(card){if(!verifyProfile.seen.includes(card.id))verifyProfile.seen.push(card.id);verifyProfile.recent=verifyProfile.recent.filter(id=>id!==card.family).concat(card.family).slice(-40);storeVerifyProfile();}
   function toast(message){clearTimeout(toastTimeout);$('toast').textContent=message;$('toast').classList.add('visible');toastTimeout=setTimeout(()=>$('toast').classList.remove('visible'),3100);}
   function note(frequency=440,duration=.09,type='sine'){
     if(!sound)return;
@@ -559,6 +908,10 @@
       if(g.recorded)return;g.recorded=true;const key=recordKey(g),old=defenderRecords[key]||{score:0,stars:0,wins:0};
       defenderRecords[key]={score:Math.max(old.score,score),stars:Math.max(old.stars,g.stars),wins:old.wins+(g.phase==='won'?1:0)};
       try{localStorage.setItem('kavky-records-v2',JSON.stringify(defenderRecords));}catch{}
+    }else if(current==='verify'){
+      if(g.recorded)return;g.recorded=true;const key=verifyRecordKey(g),old=verifyProfile.records[key]||{score:0,stars:0};
+      verifyProfile.records[key]={score:Math.max(old.score,score),stars:Math.max(old.stars,g.stars)};verifyProfile.shifts++;
+      verifyProfile.badges=[...new Set([...verifyProfile.badges,...g.badges])];storeVerifyProfile();
     }else if(Number.isFinite(score)&&score>(best[current]||0)){best[current]=score;try{localStorage.setItem('vysilame-dal-scores',JSON.stringify(best));}catch{}}
   }
   function events(){const g=game();for(const event of g.events.splice(0)){
@@ -572,6 +925,7 @@
     if(event.type==='leak')note(150,.15,'triangle');
     if(event.type==='correct'||event.type==='connected')note(660,.13);
     if(event.type==='incorrect')note(190,.15);
+    if(event.type==='inspect')note(480,.1,'triangle');
     if(event.type==='turn')note(330,.035,'triangle');
     if(event.type==='won'){saveBest();note(880,.3);}
     if(event.type==='lost'){saveBest();note(130,.28,'triangle');}
@@ -590,6 +944,20 @@
   }
   function newDefender(options){const c=controllers.defender;c.engine=new Defender(options);c.started=false;c.speed=1;c.view={selectedType:'verify',selectedTower:null,hoverSlot:-1,hoverEnemy:null};overlayKey='';$('defender-map-picker').open=!matchMedia('(max-width:540px)').matches;render(true);}
   function atlas(){return '<h2>Kdo nám leze do éteru?</h2><p>Jedenáct druhů smyšlené škodné. V přírodě by se měly krmit. Tady stačí důsledné otázky.</p><div class="enemy-album">'+Object.entries(ENEMIES).map(([id,e])=>'<article class="enemy-file"><img class="enemy-portrait" src="'+window.MediaDraw.portrait(id)+'" alt=""><h3>'+e.name+'</h3><p class="enemy-quip">„'+e.quip+'“</p><p>'+e.ability+'</p><p class="enemy-counter"><strong>Co na něj:</strong> '+e.counter+'</p></article>').join('')+'</div>';}
+  function newVerify(options={}){const c=controllers.verify;c.engine=new Verify({recent:verifyProfile.recent,...options});c.started=false;c.speed=1;overlayKey='';$('verify-desk-picker').open=!matchMedia('(max-width:540px)').matches;render(true);}
+  function renderVerifySetup(){
+    const c=controllers.verify,g=c.engine,locked=c.started&&!['won','lost'].includes(g.phase);
+    for(const b of $('verify-desks').children){const selected=b.dataset.desk===g.deskId,r=verifyProfile.records[b.dataset.desk+':'+(g.practice?'practice':'timed')];b.disabled=locked;b.classList.toggle('selected',selected);b.setAttribute('aria-pressed',String(selected));b.querySelector('.desk-medals').textContent=medalStars(r?.stars||0);}
+    $('verify-practice').checked=g.practice;$('verify-practice').disabled=locked||!!g.daily;
+    $('verify-daily').classList.toggle('selected',!!g.daily);
+    setText('verify-picker-title',g.desk.name+(g.practice?' · BEZ ČASOVAČE':''));setText('verify-collection','SPISOVNA '+verifyProfile.seen.length+' / '+VERIFY_FILES.length*2);
+    setText('verify-code',g.daily?'DNEŠNÍ VYDÁNÍ · '+g.daily.split('-').reverse().join('.'):'SMĚNA № '+g.code);
+    setText('verify-shift-rule',g.total+' zpráv · '+(g.practice?'bez časového limitu':g.desk.seconds+' sekund na rozhodování')+' · '+g.desk.checks+' dohledání. '+(locked?'Služba běží. Kávovar také.':g.desk.quip));
+  }
+  function verifyNotebook(){
+    return '<h2>Spisovna, která nepráší.</h2><p>Každý spis má dvě varianty podkladů. Samotný titulek ti správnou odpověď nezaručí. Nová směna dává přednost déle nehraným spisům.</p><div class="verify-notebook-stats">'+verifyProfile.seen.length+' / '+VERIFY_FILES.length*2+' odehraných variant · uzavřené směny: '+verifyProfile.shifts+'</div><div class="verify-badge-grid">'+Object.entries(VERIFY_BADGES).map(([id,b])=>'<article class="verify-badge '+(verifyProfile.badges.includes(id)?'earned':'')+'"><strong>'+b.glyph+' '+b.name+(verifyProfile.badges.includes(id)?' · MÁŠ':' · ČEKÁ')+'</strong><p>'+b.text+'</p></article>').join('')+'</div><h3>Co už ti prošlo rukama</h3>'+Object.entries(VERIFY_CATEGORIES).map(([id,c])=>{const files=VERIFY_FILES.filter(f=>f.category===id),seen=verifyProfile.seen.filter(v=>files.some(f=>v.startsWith(f.id+':'))).length;return '<p>'+c.glyph+' '+c.name+': <strong>'+seen+' / '+files.length*2+'</strong></p>';}).join('')+'<p>Zlaté razítko: alespoň 90 % správně. Stříbrné: 75 %. Bronzové: 60 %. Směnu je třeba dokončit. Rekordy a razítka se ukládají zvlášť pro každou redakci i hraní bez časovače.</p>';
+  }
+  function verifyReview(){const g=controllers.verify.engine;return '<h2>Zápis po službě.</h2><p>'+g.correct+' správně z '+g.total+' zpráv. '+(g.phase==='lost'?'Nezodpovězené zprávy zůstaly na stole.':'Za každým razítkem má být důvod.')+'</p>'+g.cards.map((card,i)=>{const h=g.history[i];return '<article class="verify-review-item"><small>'+String(i+1).padStart(2,'0')+' / '+VERIFY_CATEGORIES[card.category].name.toUpperCase()+'</small><h3>'+escapeHTML(card.headline)+'</h3><p class="review-source">'+escapeHTML(card.source)+'</p><p class="'+(h?.correct?'review-right':'review-wrong')+'">'+(h?(h.correct?'✓ Správně. ':'↺ Tady byla chyba. ')+'Tvoje volba: '+(h.answer?'může ven.':'ještě ověřit.'):'Bez odpovědi.')+' Správné rozhodnutí: <strong>'+(card.ready?'může ven.':'ještě ověřit.')+'</strong></p><p>'+escapeHTML(card.why)+'</p></article>';}).join('');}
   function selectGame(name){
     if(!controllers[name])return;
     if(name!==current&&active().started&&!['won','lost'].includes(game().phase))game().paused=true;
@@ -599,19 +967,21 @@
     setText('game-kicker',meta[name].kicker);setHTML('game-title',meta[name].title);setHTML('game-description',meta[name].description);setHTML('intro-note',meta[name].note);setHTML('keyboard-hint',meta[name].hint);
     $('defender-canvas').hidden=name!=='defender';$('verify-view').hidden=name!=='verify';$('signal-view').hidden=name!=='signal';
     for(const id of Object.keys(controllers))$(id+'-tools').hidden=id!==name;
-    $('defender-legend').hidden=name!=='defender';$('speed-button').hidden=name!=='defender';$('defender-setup').hidden=name!=='defender';$('defender-action-bar').hidden=name!=='defender';document.body.classList.toggle('is-defender',name==='defender');
+    $('defender-legend').hidden=name!=='defender';$('speed-button').hidden=name!=='defender';$('defender-setup').hidden=name!=='defender';$('defender-action-bar').hidden=name!=='defender';$('verify-setup').hidden=name!=='verify';document.body.classList.toggle('is-defender',name==='defender');document.body.classList.toggle('is-verify',name==='verify');
     document.title=({defender:'Kavky Defender',verify:'Ověřeno!',signal:'Drž signál'})[name]+' — Vysíláme dál.';
+    try{history.replaceState(null,'','#'+({defender:'kavky',verify:'overeno',signal:'signal'})[name]);}catch{}
     render(true);requestAnimationFrame(alignSignalEnds);
   }
-  function start(){active().started=true;if(current!=='defender')game().start();else{$('defender-map-picker').open=false;game().quip=game().say('welcome');}game().paused=false;overlayKey='';render(true);note(440,.1);if(current==='defender')toast('Redakce má službu. Postav obrany a spusť vlnu.');}
-  function reset(same=false){const c=active();if(current==='verify')c.engine=new Verify();else if(current==='signal')c.engine=new Signal();else{const g=c.engine;c.engine=new Defender(same===true?g.options:{mapId:g.mapId,difficulty:g.difficulty});c.view={selectedType:'verify',selectedTower:null,hoverSlot:-1,hoverEnemy:null};$('defender-map-picker').open=!matchMedia('(max-width:540px)').matches;}c.started=false;c.speed=1;overlayKey='';render(true);}
+  function start(){active().started=true;if(current!=='defender')game().start();else{$('defender-map-picker').open=false;game().quip=game().say('welcome');}if(current==='verify')$('verify-desk-picker').open=false;game().paused=false;overlayKey='';render(true);note(440,.1);if(current==='defender')toast('Redakce má službu. Postav obrany a spusť vlnu.');}
+  function reset(same=false){const c=active();if(current==='verify'){const g=c.engine;newVerify(same===true?g.options:{deskId:g.deskId,practice:g.practice});return;}else if(current==='signal')c.engine=new Signal();else{const g=c.engine;c.engine=new Defender(same===true?g.options:{mapId:g.mapId,difficulty:g.difficulty});c.view={selectedType:'verify',selectedTower:null,hoverSlot:-1,hoverEnemy:null};$('defender-map-picker').open=!matchMedia('(max-width:540px)').matches;}c.started=false;c.speed=1;overlayKey='';render(true);}
   function togglePause(){if(!active().started||['won','lost','round-won','briefing'].includes(game().phase))return;game().paused=!game().paused;overlayKey='';render(true);}
   function primaryAction(){const g=game();if(!active().started){start();return;}if(g.paused)return;if(current==='defender')g.startWave();else if(current==='verify'&&g.feedback)g.next();else if(current==='signal'&&g.phase==='round-won')g.next();events();overlayKey='';render(true);}
   function overlay(){
     const c=active(),g=game(),m=meta[current];let kind=!c.started?(current==='defender'?'':'welcome'):g.paused?'paused':['won','lost','round-won','briefing'].includes(g.phase)?g.phase:'';
     const key=current+':'+kind+':'+(g.round||0)+':'+(g.wave||0)+':'+(g.code||'');if(key===overlayKey)return;overlayKey=key;$('board-overlay').hidden=!kind;if(!kind)return;
     let html='',extraClass='';
-    if(kind==='welcome')html='<div class="overlay-icon" aria-hidden="true">'+m.icon+'</div><p class="eyebrow">'+(current==='defender'?g.map.name.toUpperCase()+' · '+DIFFICULTIES[g.difficulty].name.toUpperCase():'MALÁ HRA. VELKÁ VĚC.')+'</p><h2>'+m.welcome+'</h2><p>'+m.welcomeText+'</p><button class="primary-button" data-action="start">'+m.start+' <span aria-hidden="true">→</span></button><span class="overlay-caption">MYŠ · DOTYK · KLÁVESNICE</span>';
+    if(kind==='welcome'&&current==='verify')html='<div class="overlay-icon" aria-hidden="true">'+g.desk.glyph+'</div><p class="eyebrow">'+(g.daily?'DNEŠNÍ VYDÁNÍ · STEJNÉ ZADÁNÍ PRO VŠECHNY':g.desk.label)+'</p><h2>'+g.desk.name+'</h2><p>'+g.desk.description+'</p><div class="verify-welcome-spec"><span>'+g.total+' ZPRÁV</span><span>'+(g.practice?'BEZ ČASOVAČE':g.desk.seconds+' SEKUND')+'</span><span>'+g.desk.checks+' DOHLEDÁNÍ</span></div><p>Čti titulek i podklady. <b>Ještě ověřit</b>, nebo <b>Může ven</b>? Při vysvětlení čas stojí. Detail ti napoví za '+(g.practice?'20 bodů z případné správné odpovědi':'8 sekund a 20 bodů z případné správné odpovědi')+'.</p><button class="primary-button" data-action="start">Převzít službu →</button><span class="overlay-caption">80 VARIANT · 8 TÉMAT · JEDEN NEVYŽÁDANÝ KVÍDO</span>';
+    else if(kind==='welcome')html='<div class="overlay-icon" aria-hidden="true">'+m.icon+'</div><p class="eyebrow">MALÁ HRA. VELKÁ VĚC.</p><h2>'+m.welcome+'</h2><p>'+m.welcomeText+'</p><button class="primary-button" data-action="start">'+m.start+' <span aria-hidden="true">→</span></button><span class="overlay-caption">MYŠ · DOTYK · KLÁVESNICE</span>';
     else if(kind==='paused')html='<div class="overlay-icon" aria-hidden="true">Ⅱ</div><p class="eyebrow">ODBOROVĚ SCHVÁLENÉ NADECHNUTÍ</p><h2>Jsme tu pořád.</h2><p>Hra stojí. Kvído hledá svůj hrnek. Až budeš připravený, můžeme pokračovat.</p><button class="primary-button" data-action="resume">Pokračovat <span aria-hidden="true">▶</span></button>';
     else if(kind==='briefing'){
       extraClass=' briefing-card';html='<p class="eyebrow">REDAKČNÍ PORADA · PO VLNĚ '+g.wave+'</p><h2>Tohle mohla být káva.</h2><p>Vyber jednu výhodu pro zbytek směny. Zápis z porady tentokrát netřeba.</p><div class="bonus-choices">'+g.briefing.map(id=>{const b=BONUSES[id];return '<button class="bonus-choice" data-action="bonus" data-bonus="'+id+'"><span class="bonus-icon">'+b.icon+'</span><span><strong>'+b.name+'</strong><small>'+b.text+'</small><em>'+b.quip+'</em></span><span aria-hidden="true">→</span></button>';}).join('')+'</div>';
@@ -621,17 +991,18 @@
       if(current==='defender'){
         title=won?g.stars===3?'Zlatá kavka!':g.stars===2?'Stříbrný zobák!':'Bronzová sponka!':'Dneska vede příloha.';
         body=won?'Osm vln za námi. '+g.health+' % signálu přežilo. '+g.quip:'Signál se odmlčel. '+g.quip+' Stejná směna má stejné vlny — můžeš zkusit lepší plán.';
-      }else if(current==='verify'){title=g.correct>=7?'Důvěra zasloužená.':g.correct>=5?'Dobrá redakční směna.':'Ještě jednu kontrolu.';body='Správně '+g.correct+' z 8 zpráv. '+(won?'Každá ověřená zpráva je malý kousek důvěry.':'Čas vypršel. Nezodpovězené zprávy zůstaly nevydané. Zkus další směnu.');}
+      }else if(current==='verify'){title=!won?'Uzávěrka zaklapla.':g.stars===3?'Zlaté razítko!':g.stars===2?'Stříbro do spisovny.':g.stars===1?'Bronz. A čerstvá káva.':'Razítko má dovolenou.';body=g.correct+' správně z '+g.total+' zpráv. '+(!won?'Čas došel. Nezodpovězené zprávy zůstaly nevydané.':g.stars===3?'Důvěra roste. Kvído předstírá, že to celou dobu věděl.':g.stars===2?'Dobrá služba. Tiskárna ti na počest zasekla jen jednu stránku.':'Rozbor ukáže, kde chyběl podklad. Kvído už chystá poradu.');}
       else{title=won?'Signál pro všechny.':'Tady to ještě šumí.';body=won?'Tři okruhy, jedno spojení. Dobré informace mají najít cestu ke každému.':'Čas došel. Začni od studia a sleduj zelenou linku. Každý dílek může být ten správný.';}
       html='<div class="overlay-icon" aria-hidden="true">'+(won?'✳':'↺')+'</div><p class="eyebrow">'+(current==='defender'?g.map.name.toUpperCase()+' · SMĚNA '+g.code:won?'HOTOVO. DÍKY ZA HRU.':'KAŽDÝ POKUS SE POČÍTÁ.')+'</p><h2>'+title+'</h2>'+(current==='defender'&&won?'<div class="result-medals" aria-label="'+g.stars+' ze 3 medailí">'+medalStars(g.stars)+'</div>':'')+'<p>'+body+'</p><div class="overlay-score">'+format(g.score)+' <small style="font-size:10px">BODŮ</small></div><button class="primary-button" data-action="replay">'+(current==='defender'?'Stejná směna, lepší plán':'Zahrát znovu')+' <span aria-hidden="true">↺</span></button>'+(current==='defender'?'<div class="result-actions"><button class="text-button" data-action="new-shift">Jiná směna ↻</button><button class="text-button" data-action="choose-map">Jiná scéna ↗</button></div>':'<button class="text-button" data-action="next-game">Vyzkoušet další hru →</button>');
+      if(current==='verify')html='<p class="eyebrow">'+g.desk.name.toUpperCase()+' · '+(g.practice?'BEZ ČASOVAČE':g.daily?'DNEŠNÍ VYDÁNÍ':'SMĚNA '+g.code)+'</p><h2 class="verify-result-title">'+title+'</h2><div class="verify-result-stamp" aria-label="'+g.stars+' ze tří razítek">'+medalStars(g.stars)+'</div><p>'+body+'</p><div class="overlay-score">'+format(g.score)+' <small style="font-size:10px">BODŮ</small></div><p>Nejdelší série: '+g.bestCombo+' · Dohledání: '+g.hintsUsed+'</p><div class="verify-result-badges">'+g.badges.map(id=>'<span>'+VERIFY_BADGES[id].glyph+' '+VERIFY_BADGES[id].name+'</span>').join('')+'</div><button class="primary-button" data-action="new-shift">Jiná směna, čerstvé zprávy →</button><div class="verify-result-actions"><button class="text-button" data-action="verify-review">Rozbor zpráv ↗</button><button class="text-button" data-action="replay">Stejná směna ↺</button><button class="text-button" data-action="verify-choose">Jiná redakce ↗</button></div>';
     }
     $('board-overlay').innerHTML='<div class="overlay-card'+extraClass+'">'+html+'</div>';
   }
   function metrics(){const g=game();let labels,values,icons_,tag;
     if(current==='defender'){labels=['SÍLA SIGNÁLU','PODPORA','VLNA'];values=[g.health+'<span> %</span>',format(g.money),g.wave+'<span> / '+g.waveCount+'</span>'];icons_=['◉','✳','≋'];tag=g.phase==='build'?'PŘÍPRAVA':g.phase==='wave'?'VYSÍLÁME':g.phase==='briefing'?'PORADA':g.phase==='won'?'UDRŽENO':'DOHRÁNO';$('health-track').hidden=false;$('health-track').firstElementChild.style.width=g.health+'%';$('health-track').firstElementChild.style.background=g.health>40?'#edfa45':'#ff6b4a';}
-    else if(current==='verify'){labels=['ZBÝVÁ ČASU','SPRÁVNĚ','ZPRÁVA'];values=[Math.ceil(g.remaining)+'<span> s</span>',g.correct+'<span> / 8</span>',Math.min(g.index+1,8)+'<span> / 8</span>'];icons_=['◷','✓','▤'];tag=g.feedback?'ČTEME KONTEXT':'REDAKCE';$('health-track').hidden=true;}
+    else if(current==='verify'){labels=[g.practice?'ČAS NA KÁVU':'ZBÝVÁ ČASU','SPRÁVNĚ','ZPRÁVA'];values=[g.practice?'∞':Math.ceil(g.remaining)+'<span> s</span>',g.correct+'<span> / '+g.total+'</span>',Math.min(g.index+1,g.total)+'<span> / '+g.total+'</span>'];icons_=['◷','✓','▤'];tag=g.phase==='won'?'DOHRÁNO':g.phase==='lost'?'UZÁVĚRKA':g.feedback?'ČTEME KONTEXT':g.card?.boss?'UZÁVĚRKOVÝ CHYTÁK':g.phase==='ready'?'PŘÍPRAVA':'VE SLUŽBĚ';$('health-track').hidden=true;}
     else{labels=['ZBÝVÁ ČASU','OTOČENÍ','OKRUH'];values=[Math.ceil(g.remaining)+'<span> s</span>',format(g.moves),(g.round+1)+'<span> / 3</span>'];icons_=['◷','↻','≋'];tag=g.solved?'SPOJENO':'LADÍME';$('health-track').hidden=true;}
-    labels.forEach((v,i)=>{setText('metric-label-'+(i+1),v);setHTML('metric-value-'+(i+1),values[i]);setText('metric-icon-'+(i+1),icons_[i]);});setText('metric-tag',g.paused?'PAUZA':tag);const record=current==='defender'?defenderRecords[recordKey(g)]?.score:best[current];setText('best-score',record?format(record)+' b.':'—');
+    labels.forEach((v,i)=>{setText('metric-label-'+(i+1),v);setHTML('metric-value-'+(i+1),values[i]);setText('metric-icon-'+(i+1),icons_[i]);});setText('metric-tag',g.paused?'PAUZA':tag);const record=current==='defender'?defenderRecords[recordKey(g)]?.score:current==='verify'?verifyProfile.records[verifyRecordKey(g)]?.score:best[current];setText('best-score',record?format(record)+' b.':'—');setText('best-score-label',current==='verify'?(g.practice?'REKORD BEZ ČASOVAČE':'REKORD TÉTO REDAKCE'):'TVŮJ REKORD');
   }
   function controls(){const c=active(),g=game(),finished=['won','lost'].includes(g.phase),b=$('wave-button');
     if(!c.started){b.disabled=current==='defender';b.innerHTML=current==='defender'?'Postav obranu na +':'<span aria-hidden="true">▶</span> Začít hrát';}
@@ -654,7 +1025,17 @@
     setHTML('wave-preview-list',data.map(e=>'<span class="preview-enemy" title="'+e.name+': '+e.ability+'"><i style="background:'+e.color+'">'+e.glyph+'</i>'+e.count+'× '+e.short+'</span>').join('')||'<span class="preview-empty">Ani tlačítko „odpovědět všem“ už nic nepřivolá.</span>');
     setText('defender-tip',g.quip);
   }
-  function renderVerify(){const g=controllers.verify.engine;if(!g.card)return;setText('story-number',String(g.index+1).padStart(2,'0')+' / 08');setText('story-headline',g.card.headline);setText('story-source',g.card.source);$('verify-choices').hidden=!!g.feedback;$('verify-feedback').hidden=!g.feedback;$('next-story').hidden=!g.feedback;if(g.feedback){$('verify-feedback').classList.toggle('wrong',!g.feedback.correct);setHTML('verify-feedback','<strong>'+(g.feedback.correct?'Přesně tak.':'Tady ještě pozor.')+'</strong>'+g.feedback.why);setText('next-story',g.index===7?'Dokončit směnu →':'Další zpráva →');}}
+  function renderVerify(){
+    const g=controllers.verify.engine;renderVerifySetup();setText('verify-desk-label',g.desk.name.toUpperCase());setText('verify-chain','SÉRIE '+g.combo);setText('verify-score',format(g.score));setText('verify-best-chain',g.bestCombo);setText('verify-desk-description',g.desk.description);
+    setText('verify-check-rule',g.checks+' z '+g.desk.checks+' dohledání zbývá. '+(g.practice?'Cena: 20 bodů z případné správné odpovědi.':'Cena: 8 sekund a 20 bodů z případné správné odpovědi.')+' Detail není nutný: rozhodnout lze už z podkladů.');
+    setHTML('verify-stamps',Object.values(VERIFY_DESKS).map(d=>{const stars=verifyProfile.records[d.id+':'+(g.practice?'practice':'timed')]?.stars||0;return '<div class="verify-stamp '+(stars?'earned':'')+'">'+d.name+'<b aria-label="'+stars+' ze tří razítek">'+medalStars(stars)+'</b></div>';}).join(''));
+    if(!g.card)return;const card=g.card,locked=!controllers.verify.started||g.paused||g.phase!=='playing';
+    setText('story-number',String(g.index+1).padStart(2,'0')+' / '+String(g.total).padStart(2,'0'));setText('story-category',VERIFY_CATEGORIES[card.category].glyph+' '+VERIFY_CATEGORIES[card.category].name.toUpperCase());setText('story-label',card.boss?'POSLEDNÍ ZPRÁVA / UZÁVĚRKOVÝ CHYTÁK':'ZPRÁVA K VYDÁNÍ');setText('story-headline',card.headline);setText('story-source',card.source);setText('verify-quip',card.quip);
+    $('verify-choices').hidden=!!g.feedback;$('verify-feedback').hidden=!g.feedback;$('next-story').hidden=!g.feedback;$('verify-inspect').hidden=!!g.feedback;$('verify-detail').hidden=!g.detailOpen;
+    $('hold-story').disabled=locked;$('publish-story').disabled=locked;$('next-story').disabled=locked;$('verify-inspect').disabled=locked||g.detailOpen||g.checks<=0;
+    setText('verify-inspect-count',g.detailOpen?'DOHLEDÁNO':g.checks+'× · '+(g.practice?'−20 b.':'−8 s / −20 b.'));setText('verify-detail-text',g.detailOpen?card.detail:'');
+    if(g.feedback){$('verify-feedback').classList.toggle('wrong',!g.feedback.correct);setHTML('verify-feedback','<strong class="verify-verdict">'+(g.feedback.correct?'✓ Dobré razítko.':'↺ Razítko vedle.')+'<span>'+(g.feedback.correct?'+'+g.feedback.points+' b.':'Série se přerušila')+'</span></strong>'+escapeHTML(g.feedback.why)+'<span class="feedback-action">ROZHODNUTÍ: '+(card.ready?'MŮŽE VEN':'JEŠTĚ OVĚŘIT')+' · ČAS STOJÍ</span>');setText('next-story',g.index===g.total-1?'Dokončit směnu →':'Další zpráva →');}
+  }
   const portNames={1:'sever',2:'východ',4:'jih',8:'západ'};
   function pipeSVG(mask){let d='';for(const [bit,x,y] of [[1,50,0],[2,100,50],[4,50,100],[8,0,50]])if(mask&bit)d+='M50 50 L'+x+' '+y+' ';return '<svg viewBox="0 0 100 100" aria-hidden="true"><path class="pipe-shadow" d="'+d+'"/><path class="pipe-line" d="'+d+'"/><circle class="pipe-center" cx="50" cy="50" r="9"/></svg>';}
   function renderSignal(){const g=controllers.signal.engine,grid=$('pipe-grid');if(!grid.children.length){for(let i=0;i<25;i++){const b=document.createElement('button');b.className='pipe-tile';b.dataset.tile=i;grid.appendChild(b);}}
@@ -672,17 +1053,20 @@
   canvas.addEventListener('pointermove',e=>{const c=controllers.defender,r=canvas.getBoundingClientRect(),x=(e.clientX-r.left)/r.width*960,y=(e.clientY-r.top)/r.height*576;c.view.hoverSlot=pointerSlot(e);c.view.hoverEnemy=c.engine.enemies.find(n=>Math.hypot(n.x-x,n.y-y)<24)?.id||null;});canvas.addEventListener('pointerleave',()=>{controllers.defender.view.hoverSlot=-1;controllers.defender.view.hoverEnemy=null;});canvas.addEventListener('click',e=>{const i=pointerSlot(e);if(i>=0)pickSlot(i);});
   $('pipe-grid').addEventListener('click',e=>{const b=e.target.closest('[data-tile]');if(!b)return;game().turn(Number(b.dataset.tile));events();render();});
   $('pipe-grid').addEventListener('keydown',e=>{const b=e.target.closest('[data-tile]');if(!b)return;const i=Number(b.dataset.tile),delta={ArrowLeft:-1,ArrowRight:1,ArrowUp:-5,ArrowDown:5}[e.key];if(delta){e.preventDefault();e.stopPropagation();const next=i+delta;if(next>=0&&next<25&&(Math.abs(delta)===5||Math.floor(next/5)===Math.floor(i/5)))$('pipe-grid').children[next].focus();}});
-  function answer(value){if(current!=='verify')return;game().submit(value);events();render();}
-  $('hold-story').addEventListener('click',()=>answer(false));$('publish-story').addEventListener('click',()=>answer(true));$('next-story').addEventListener('click',()=>{game().next();events();render();});
+  function answer(value){if(current!=='verify')return;const g=game();if(!g.submit(value))return;rememberVerifyCard(g.card);events();render();$('next-story').focus({preventScroll:true});}
+  function advanceVerify(){if(current!=='verify'||!game().next())return;events();render();if(game().phase==='playing')$('news-card').focus({preventScroll:true});else $('board-overlay').querySelector('.primary-button')?.focus({preventScroll:true});}
+  function inspectVerify(){if(current!=='verify'||!game().inspect())return;events();render();}
+  $('news-card').tabIndex=-1;
+  $('hold-story').addEventListener('click',()=>answer(false));$('publish-story').addEventListener('click',()=>answer(true));$('next-story').addEventListener('click',advanceVerify);$('verify-inspect').addEventListener('click',inspectVerify);
   $('wave-button').addEventListener('click',primaryAction);$('pause-button').addEventListener('click',togglePause);$('reset-button').addEventListener('click',()=>reset());
   $('speed-button').addEventListener('click',()=>{active().speed=active().speed===1?2:1;render();});
   $('signal-restart-round').addEventListener('click',()=>{if(current!=='signal')return;const g=game();if(!active().started||g.phase!=='playing'||g.paused)return;g.generate();overlayKey='';render();toast('Okruh znovu naladěn.');});
   $('sound-button').addEventListener('click',()=>{sound=!sound;$('sound-button').setAttribute('aria-pressed',String(sound));$('sound-button').setAttribute('aria-label',sound?'Vypnout zvuk':'Zapnout zvuk');$('sound-button').title=sound?'Vypnout zvuk':'Zapnout zvuk';$('sound-button').innerHTML='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4Z" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="'+(sound?'M17 8q6 4 0 8m-1-6q3 2 0 4':'m17 9 5 6m0-6-5 6')+'" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>';if(sound)note(550,.12);});
   document.querySelectorAll('[data-game]').forEach((b,i,array)=>{b.addEventListener('click',()=>selectGame(b.dataset.game));b.addEventListener('keydown',e=>{if(['ArrowLeft','ArrowRight'].includes(e.key)){e.preventDefault();const next=(i+(e.key==='ArrowRight'?1:2))%3;selectGame(array[next].dataset.game);array[next].focus();}});});
-  $('board-overlay').addEventListener('click',e=>{const b=e.target.closest('[data-action]');if(!b)return;const action=b.dataset.action;if(action==='start')start();if(action==='resume'){game().paused=false;overlayKey='';render();}if(action==='replay'){reset(true);start();}if(action==='new-shift'){reset();start();}if(action==='choose-map'){reset();$('defender-map-picker').open=true;$('defender-setup').scrollIntoView({behavior:'smooth',block:'start'});}if(action==='bonus'){game().chooseBonus(b.dataset.bonus);events();overlayKey='';render();}if(action==='next-game'){const names=Object.keys(controllers);selectGame(names[(names.indexOf(current)+1)%3]);}if(action==='next-round'){game().next();overlayKey='';render();}});
+  $('board-overlay').addEventListener('click',e=>{const b=e.target.closest('[data-action]');if(!b)return;const action=b.dataset.action;if(action==='start')start();if(action==='resume'){game().paused=false;overlayKey='';render();}if(action==='replay'){reset(true);start();}if(action==='new-shift'){reset();start();}if(action==='verify-review')openDialog(verifyReview(),'ROZBOR SMĚNY');if(action==='verify-choose'){reset();$('verify-desk-picker').open=true;$('verify-setup').scrollIntoView({behavior:'smooth',block:'start'});}if(action==='choose-map'){reset();$('defender-map-picker').open=true;$('defender-setup').scrollIntoView({behavior:'smooth',block:'start'});}if(action==='bonus'){game().chooseBonus(b.dataset.bonus);events();overlayKey='';render();}if(action==='next-game'){const names=Object.keys(controllers);selectGame(names[(names.indexOf(current)+1)%3]);}if(action==='next-round'){game().next();overlayKey='';render();}});
   const help={
     defender:'<h2>Jak udržet Kavky v éteru</h2><ol><li>Vyber Ověřovnu, Reportéra nebo Komunitu. Kliknutím na stanoviště <b>+</b> ji postavíš.</li><li>Spusť vlnu. Obrana zasahuje automaticky.</li><li>Za zastavený tlak získáš podporu. Kliknutím na postavenou obranu ji můžeš vylepšit nebo prodat.</li><li>Přežij všech osm vln s alespoň částí signálu. Kombinuj dosah reportérů se zpomalením komunity.</li></ol><p>Klávesy <b>1–3</b> vybírají obranu, <b>šipky</b> stanoviště, <b>Enter</b> staví nebo vybírá. <b>Mezerník</b> spustí další vlnu nebo pozastaví hru. Tlačítkem <b>1× / 2×</b> měníš rychlost. <b>K</b> přivolá nálet: 45 bodů zásahu a 2,2 sekundy zastavení. Začínáš se dvěma nálety, po čtvrté vlně přibude jeden.</p><p>Po vlnách 2, 4 a 6 si vybereš jeden trvalý bonus. U obrany můžeš měnit cíl: nejblíž cíli, nejsilnější nebo nejrychlejší. Všechny mapy jsou dostupné od začátku. Zlatá kavka vyžaduje alespoň 95 % signálu, stříbrná 60 %. Rekordy se ukládají zvlášť pro scénu i obtížnost.</p><p>Stejná směna opakuje stejné vlny i nabídky bonusů. Jiná směna je promíchá. Dnešní výzva má během jednoho dne stejné zadání.</p>',
-    verify:'<h2>Rychle, ale s rozmyslem.</h2><p>Přečti titulek i podklady. Pokud tvrzení zatím není dostatečně doložené, zvol <b>Ještě ověřit (F)</b>. Když podklady sedí, zvol <b>Může ven (J)</b>.</p><p>Za správné rozhodnutí získáš 100 bodů, za sérii správných odpovědí bonus. Po každé odpovědi si přečti vysvětlení. Při něm se čas zastaví. Čeká tě osm smyšlených redakčních situací.</p>',
+    verify:'<h2>Razítko není argument.</h2><p>Vyber jednu ze čtyř redakcí. Čeká tě 8–12 zpráv a 110–120 sekund na rozhodování. Můžeš zapnout <b>Bez časovače</b>; tato varianta má vlastní rekordy. Všech 80 variant je smyšlených.</p><p>Čti titulek i podklady. <b>Ještě ověřit (F)</b> znamená, že zpráva v této podobě potřebuje práci. <b>Může ven (J)</b> znamená, že je doložená a správně vymezená. Stejný titulek má dvě verze podkladů: nespoléhej na paměť. Někdy je správné vydat předběžný výzkum s jasným omezením, jindy zadržet pravdivý text, který zbytečně odhaluje osobní údaje.</p><p><b>Dohledat detail (D)</b> doplní jednu indicii. Počet dohledání je omezený, stojí 8 sekund a ubere 20 bodů z případné správné odpovědi. Bez časovače se odečítají jen body. Rozhodnout lze už z původních podkladů. Při vysvětlení čas stojí; <b>Enter</b> pokračuje.</p><p>Správně: 100 bodů + 15 za každý předchozí krok současné série, nejvýše +60. Chyba sérii přeruší. Zlato získáš za dokončenou směnu s alespoň 90 % správně, stříbro za 75 %, bronz za 60 %. Odznaky a odehrané varianty najdeš ve spisovně.</p><p><b>Jiná směna</b> promíchá zprávy a upřednostní déle nehrané spisy. <b>Stejná směna</b> zopakuje totožné zadání. <b>Dnešní vydání</b> je společné zadání pro české kalendářní datum a používá časovač. Kód odlišuje losování; import cizího kódu hra zatím neumí. Po směně si otevři rozbor všech zpráv.</p>',
     signal:'<h2>Doveď signál až k lidem.</h2><p>Kliknutím otočíš dílek o 90° po směru hodinových ručiček. Spoj studio vlevo s veřejností vpravo. Živý signál poznáš podle zelené barvy.</p><p>Ne všechny dílky musíš využít. Na každý ze tří okruhů máš 90 sekund. Za dokončený okruh získáš 300 bodů a 5 bodů za každou zbývající sekundu. Po mapě se můžeš pohybovat šipkami, otáčet Enterem.</p>'
   };
   function openDialog(content,eyebrow,wide=false){if($('info-dialog').open)return;dialogPause={name:current,paused:game().paused};game().paused=true;setText('dialog-eyebrow',eyebrow);$('info-dialog').classList.toggle('wide-dialog',wide);$('dialog-content').innerHTML=content;$('info-dialog').showModal();render();}
@@ -693,7 +1077,7 @@
     if(e.key===' '){e.preventDefault();if(!c.started)start();else if(current==='defender'&&g.phase==='build'&&!g.paused)primaryAction();else togglePause();return;}
     if((!c.started&&current!=='defender')||g.paused||['won','lost','round-won','briefing'].includes(g.phase))return;
     if(current==='defender'){if(e.key.toLowerCase()==='k'){g.callFlock();events();render();}if(['1','2','3'].includes(e.key)){c.view.selectedType=Object.keys(TOWERS)[Number(e.key)-1];c.view.selectedTower=null;render();}if(['ArrowLeft','ArrowUp','ArrowRight','ArrowDown'].includes(e.key)){e.preventDefault();const delta=['ArrowLeft','ArrowUp'].includes(e.key)?-1:1;c.view.hoverSlot=(Math.max(0,c.view.hoverSlot)+delta+g.slots.length)%g.slots.length;canvas.focus();}if(e.key==='Enter'){e.preventDefault();pickSlot(Math.max(0,c.view.hoverSlot));}}
-    if(current==='verify'){if(e.key.toLowerCase()==='f')answer(false);if(e.key.toLowerCase()==='j')answer(true);if(e.key==='Enter'&&g.feedback){e.preventDefault();g.next();events();render();}}
+    if(current==='verify'){if(e.key.toLowerCase()==='f')answer(false);if(e.key.toLowerCase()==='j')answer(true);if(e.key.toLowerCase()==='d')inspectVerify();if(e.key==='Enter'&&g.feedback){e.preventDefault();advanceVerify();}}
   });
   document.addEventListener('visibilitychange',()=>{lastFrame=0;if(document.hidden&&active().started&&!['won','lost'].includes(game().phase)){game().paused=true;overlayKey='';render();}});
   if(window.ResizeObserver)new ResizeObserver(alignSignalEnds).observe($('pipe-grid'));
@@ -706,7 +1090,16 @@
   $('daily-button').addEventListener('click',()=>newDefender(dailyChallenge()));
   $('bestiary-button').addEventListener('click',()=>openDialog(atlas(),'ATLAS NEVYŽÁDANÝCH NÁVŠTĚV',true));
   $('flock-button').addEventListener('click',()=>{if(current==='defender'){game().callFlock();events();render();}});
-  $('defender-map-picker').open=!matchMedia('(max-width:540px)').matches;selectGame('defender');requestAnimationFrame(frame);
+  $('verify-desks').innerHTML=Object.values(VERIFY_DESKS).map(d=>'<button class="verify-desk" data-desk="'+d.id+'" aria-pressed="false"><i aria-hidden="true">'+d.glyph+'</i><strong>'+d.name+'</strong><small>'+d.count+' zpráv · '+d.seconds+' s</small><span class="desk-medals" aria-label="Získaná razítka">···</span></button>').join('');
+  $('verify-desks').addEventListener('click',e=>{const b=e.target.closest('[data-desk]');if(b&&!b.disabled)newVerify({deskId:b.dataset.desk,practice:controllers.verify.engine.practice});});
+  $('verify-practice').addEventListener('change',()=>newVerify({deskId:controllers.verify.engine.deskId,practice:$('verify-practice').checked}));
+  $('verify-new').addEventListener('click',()=>newVerify({deskId:controllers.verify.engine.deskId,practice:controllers.verify.engine.practice}));
+  $('verify-daily').addEventListener('click',()=>newVerify(verifyDailyChallenge()));
+  $('verify-notebook').addEventListener('click',()=>openDialog(verifyNotebook(),'SPISOVNA / LOKÁLNÍ PAMĚŤ'));
+  const gameFromHash=()=>({kavky:'defender',overeno:'verify',signal:'signal'})[location.hash.slice(1)];
+  window.addEventListener('hashchange',()=>{const name=gameFromHash();if(name&&name!==current)selectGame(name);});
+  $('verify-desk-picker').open=!matchMedia('(max-width:540px)').matches;
+  $('defender-map-picker').open=!matchMedia('(max-width:540px)').matches;selectGame(gameFromHash()||'defender');requestAnimationFrame(frame);
 })();
 
 </script>

@@ -9,7 +9,9 @@
   <link rel="icon" href="icon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="defender.css">
+  <link rel="stylesheet" href="verify.css">
   <script src="defender.js" defer></script>
+  <script src="verify.js" defer></script>
   <script src="engine.js" defer></script>
   <script src="draw.js" defer></script>
   <script src="app.js" defer></script>
@@ -46,6 +48,15 @@
         <p class="map-rule" id="map-rule"></p>
       </section>
 
+      <section class="verify-setup" id="verify-setup" aria-label="Výběr redakční směny" hidden>
+        <details id="verify-desk-picker" open>
+          <summary><span><strong id="verify-picker-title">ROZPIS SLUŽEB</strong><small id="verify-collection">SPISOVNA 0 / 80</small></span><span class="picker-arrow" aria-hidden="true">⌄</span></summary>
+          <div class="verify-desks" id="verify-desks" role="group" aria-label="Vyber směnu"></div>
+        </details>
+        <div class="verify-shift-controls"><label><input type="checkbox" id="verify-practice"> Bez časovače</label><button class="shift-button" id="verify-daily">◷ Dnešní vydání</button><button class="shift-button" id="verify-new">↻ Jiná směna</button><span class="shift-code" id="verify-code"></span></div>
+        <p class="verify-shift-rule" id="verify-shift-rule"></p>
+      </section>
+
       <div class="game-metrics" aria-label="Stav hry">
         <div class="metric"><span class="metric-icon" id="metric-icon-1" aria-hidden="true">◉</span><span><small id="metric-label-1">SÍLA SIGNÁLU</small><strong id="metric-value-1">100<span> %</span></strong></span><div class="health-track" id="health-track"><i></i></div></div>
         <div class="metric"><span class="metric-icon support-icon" id="metric-icon-2" aria-hidden="true">✳</span><span><small id="metric-label-2">PODPORA</small><strong id="metric-value-2">200</strong></span></div>
@@ -57,7 +68,18 @@
           <div class="board-wrap" id="board-wrap">
             <canvas id="defender-canvas" width="960" height="576" tabindex="0" aria-label="Herní mapa. Klávesy 1–3 vyberou obranu, šipky stanoviště, Enter staví, K přivolá kavčí nálet."></canvas>
             <section id="verify-view" class="verify-view" aria-label="Ověřování zpráv" hidden>
-              <div class="news-card" id="news-card"><div class="news-card-top"><span><span class="live-dot"></span> REDAKČNÍ STŮL</span><span id="story-number">01 / 08</span></div><p class="story-label">ZPRÁVA K VYDÁNÍ</p><h2 id="story-headline"></h2><div class="source-box"><span class="source-symbol" aria-hidden="true">↳</span><div><small>CO ZATÍM VÍME</small><p id="story-source"></p></div></div><div class="verify-feedback" id="verify-feedback" hidden></div><div class="verify-choices" id="verify-choices"><button id="hold-story" class="choice hold"><span aria-hidden="true">↺</span> Ještě ověřit<kbd>F</kbd></button><button id="publish-story" class="choice publish"><span aria-hidden="true">✓</span> Může ven<kbd>J</kbd></button></div><button id="next-story" class="primary-button next-story" hidden>Další zpráva <span aria-hidden="true">→</span></button></div>
+              <div class="verify-desk-strip"><span id="verify-desk-label">RANNÍ SMĚNA</span><span id="verify-chain">SÉRIE 0</span></div>
+              <div class="news-card" id="news-card">
+                <div class="news-card-top"><span id="story-category">PŮVOD ZPRÁVY</span><span id="story-number">01 / 10</span></div>
+                <p class="story-label" id="story-label">ZPRÁVA K VYDÁNÍ</p><h2 id="story-headline"></h2>
+                <div class="source-box"><span class="source-symbol" aria-hidden="true">↳</span><div><small>CO MÁME NA STOLE</small><p id="story-source"></p></div></div>
+                <div class="verify-detail" id="verify-detail" hidden><strong>DOHLEDANÝ DETAIL</strong><p id="verify-detail-text"></p></div>
+                <button class="verify-inspect" id="verify-inspect">☎ Dohledat detail <kbd>D</kbd><span id="verify-inspect-count">3×</span></button>
+                <div class="verify-feedback" id="verify-feedback" role="status" aria-live="polite" hidden></div>
+                <div class="verify-choices" id="verify-choices"><button id="hold-story" class="choice hold"><span aria-hidden="true">↺</span> Ještě ověřit<kbd>F</kbd></button><button id="publish-story" class="choice publish"><span aria-hidden="true">✓</span> Může ven<kbd>J</kbd></button></div>
+                <button id="next-story" class="primary-button next-story" hidden>Další zpráva <span aria-hidden="true">→</span></button>
+              </div>
+              <div class="verify-editor"><span aria-hidden="true">KRÁ</span><p id="verify-quip">Káva je ověřená. Zbytek je na tobě.</p></div>
               <span class="fiction-note">Smyšlené situace. Skutečné redakční návyky.</span>
             </section>
             <section id="signal-view" class="signal-view" aria-label="Propojování signálu" hidden>
@@ -81,9 +103,17 @@
             <div class="wave-preview"><span class="note-label" id="wave-preview-label">PŘÍŠTÍ VLNA</span><strong id="wave-preview-title"></strong><div id="wave-preview-list"></div></div>
             <div class="field-note crow-note"><span class="crow-note-icon" aria-hidden="true">⌁</span><span class="note-label">KVÍDO / REŽIE</span><p id="defender-tip">Začni u zatáček. Rozpočet zatáčky neumí.</p></div>
           </div>
-          <div id="verify-tools" class="tool-panel" hidden><div class="sidebar-heading"><h2>Než to pustíš ven</h2><span>CHECK</span></div><p class="sidebar-intro">Za titulkem je vždycky ještě jeden krok.</p><ol class="editor-rules"><li><span>01</span><div><strong>Najdi původ.</strong><p>Kdo je zdroj a může to vědět?</p></div></li><li><span>02</span><div><strong>Čti kontext.</strong><p>Sedí datum, místo a rozsah tvrzení?</p></div></li><li><span>03</span><div><strong>Přiznej nejistotu.</strong><p>Tip ještě není ověřená zpráva.</p></div></li></ol><div class="field-note"><span class="note-label">PRAVIDLO HRY</span><p>Máš 60 sekund čistého času na osm zpráv. Při vysvětlení se čas zastaví.</p></div></div>
+          <div id="verify-tools" class="tool-panel" hidden>
+            <div class="sidebar-heading"><h2>Redakční nástěnka</h2><span>P200</span></div>
+            <p class="sidebar-intro" id="verify-desk-description"></p>
+            <div class="verify-live-score"><span>BODY ZA SMĚNU<strong id="verify-score">0</strong></span><span>NEJDELŠÍ SÉRIE<strong id="verify-best-chain">0</strong></span></div>
+            <div class="verify-stamps" id="verify-stamps" aria-label="Razítka za redakční směny"></div>
+            <div class="field-note"><span class="note-label">DOHLEDÁVÁNÍ</span><p id="verify-check-rule"></p></div>
+            <ol class="editor-rules"><li><span>01</span><div><strong>Čti i podklady.</strong><p>Stejný titulek může mít různé důkazy.</p></div></li><li><span>02</span><div><strong>Drž rozsah.</strong><p>„V anketě“ není „v celé republice“.</p></div></li><li><span>03</span><div><strong>Pak se nadechni.</strong><p>Při vysvětlení čas stojí. Káva může téct.</p></div></li></ol>
+            <button id="verify-notebook" class="text-button verify-notebook">Spisovna a odznaky ↗</button>
+          </div>
           <div id="signal-tools" class="tool-panel" hidden><div class="sidebar-heading"><h2>Ve spojení</h2><span>FM 03</span></div><p class="sidebar-intro">Otoč dílky a doveď nepřerušený signál ze studia k veřejnosti.</p><div class="signal-legend"><span class="wire-sample connected"></span><div><strong>Živý signál</strong><p>Navazuje na studio.</p></div><span class="wire-sample"></span><div><strong>Čeká na spojení</strong><p>Otoč kliknutím nebo Enterem.</p></div></div><div class="field-note"><span class="note-label">TŘI OKRUHY</span><p>Na každý máš 90 sekund. Začni u studia vlevo a postupuj po zelené lince.</p><button id="signal-restart-round" class="text-button">Znovu tento okruh ↺</button></div></div>
-          <div class="best-score"><span>TVŮJ REKORD</span><strong id="best-score">—</strong><small>Ukládá se v tomto prohlížeči.</small></div>
+          <div class="best-score"><span id="best-score-label">TVŮJ REKORD</span><strong id="best-score">—</strong><small>Ukládá se v tomto prohlížeči.</small></div>
         </aside>
       </div>
 

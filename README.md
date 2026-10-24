@@ -7,7 +7,7 @@ Otevři soubor **hry.html** v běžném prohlížeči. Obsahuje všechny tři hr
 Vzhled vychází z televizní režie, teletextu a starých arkád: signální žlutá, číslované kanály, mechanická tlačítka a vlastní pixelové postavy. Kavky Defender se otevírá rovnou na mapě. První stavba automaticky zahájí směnu; vlnu potom spustíš zvlášť. Na telefonu otevřeš další mapy klepnutím na název aktuální mapy.
 
 - **Kavky Defender:** čtyři mapy, osm vln, jedenáct protivníků včetně dvou bossů, tři obtížnosti a kavka Kvído s nevyžádanými komentáři. Podrobnosti níže.
-- **Ověřeno!:** osm smyšlených redakčních situací. Zvol „Ještě ověřit“ (F), nebo „Může ven“ (J). Limit 60 sekund běží pouze při rozhodování; při čtení vysvětlení stojí.
+- **[Ověřeno!](https://josefslerka.github.io/vysilame-dal/#overeno):** čtyři redakce, 80 variant podkladů, osm témat a Kvídovy nevyžádané poznámky. Denní vydání, dohledávání detailů, razítka a rozbor zpráv. Podrobnosti níže.
 - **Drž signál:** tři rotační hlavolamy. Otoč dílky a propoj studio vlevo s veřejností vpravo. Na každý okruh je 90 sekund. Kliknutí nebo Enter otáčí, šipky přesouvají fokus po mřížce.
 
 Při přepnutí na jinou hru nebo opuštění karty se rozehraná hra pozastaví. Tlačítko „?“ otevírá pravidla. Projekt nepoužívá skutečná loga ČT ani ČRo a není jejich oficiální hrou.
@@ -31,6 +31,23 @@ V atlasu „Kdo nám leze do éteru?“ najdeš schopnosti i protiopatření. Kl
 
 „Jiná směna“ promíchá vlny a nabídky bonusů. Po dohrání můžeš zvolit „Stejná směna, lepší plán“ a zopakovat stejné zadání. Dnešní výzva nabízí společnou mapu a zadání pro dané místní kalendářní datum. Kód směny slouží k rozlišení zadání; import cizího kódu zatím není součástí hry.
 
+**Ověřeno! — rozšířená redakce**
+
+| Služba | Zadání |
+| --- | --- |
+| Ranní směna | 10 zpráv ze všech osmi témat, 120 sekund, 3 dohledání |
+| Čísla a čáry | 8 zpráv o číslech, anketách a výzkumech, 110 sekund, 2 dohledání |
+| Obrazová redakce | 8 zpráv o obrazu, čase a kontextu, 110 sekund, 2 dohledání |
+| Noční uzávěrka | 12 zpráv napříč tématy, 120 sekund, 2 dohledání a závěrečný chyták |
+
+Čtyřicet smyšlených spisů má po dvou variantách důkazů: stejný titulek může být doložený i nedoložený. V jedné směně se spis neopakuje. Témata zahrnují původ zpráv, čas a místo, čísla, ankety, citace, obraz a zvuk, výzkum a redakční odpovědnost. Nové směny upřednostňují déle nehrané spisy. Rozhodni podle titulku **i podkladů**, ne podle toho, jak podezřele titulek zní.
+
+Zvol **Ještě ověřit (F)**, nebo **Může ven (J)**. Dohledání detailu **(D)** doplní indicii za 8 sekund a odečte 20 bodů z případné správné odpovědi. Původní podklady už k rozhodnutí stačí. Správná odpověď dává 100 bodů, série přidává po 15 bodech až do bonusu 60. Chyba sérii přeruší. Při vysvětlení čas stojí; Enter pokračuje na další zprávu. Rozhodnutí „Ještě ověřit“ znamená také nutnost opravit rozsah, kontext či způsob zveřejnění, nikoli automaticky nepravdivý obsah.
+
+**Bez časovače** dovoluje číst v klidu; dohledání stojí pouze body. Tento režim má samostatné rekordy a razítka. Zlato je za dokončenou směnu s alespoň 90 % správně, stříbro za 75 %, bronz za 60 %. Šest odznaků, odehrané varianty a pokrok po tématech ukazuje Spisovna. Pamatuje si je pouze prohlížeč v klíči `overeno-redakce-v3`.
+
+Po dohrání otevři **Rozbor zpráv**, zopakuj **Stejnou směnu** se stejnými podklady a pořadím, nebo spusť **Jinou směnu**. **Dnešní vydání** používá stejné zadání pro všechny podle kalendářního data v časovém pásmu Europe/Prague a vždy běží s časovačem. Nezávisí na místní historii odehraných zpráv. Kód rozlišuje losování; import zadání z kódu není součástí hry. Přímý odkaz `#overeno` otevírá Ověřeno!, `#kavky` obranu a `#signal` hlavolam.
+
 Zdrojové soubory jsou rozdělené podle účelu:
 
 | Soubor | Obsah |
@@ -39,12 +56,15 @@ Zdrojové soubory jsou rozdělené podle účelu:
 | style.css | Responzivní vzhled pro počítač a telefon |
 | defender.css | Výběr map, bonusové porady a atlas protivníků |
 | defender.js | Pravidla Kavky Defender, mapy, protivníci, vlny a denní zadání |
-| engine.js | Zprávy, hlavolamy a společný export herních jader |
+| verify.js | Spisy a jejich varianty, směny, denní vydání a pravidla Ověřeno! |
+| verify.css | Rozpis služeb, redakční pošta, razítka a rozbory |
+| engine.js | Hlavolamy a společný export herních jader |
 | draw.js | Čtyři kreslené mapy, protivníci a animace na canvasu |
 | app.js | Ovládání, zvuk, nabídky a propojení s rozhraním |
 | bundle.cjs | Vytvoření přenositelného hry.html |
 | qa/engines.test.cjs | Společné ověření všech tří her |
 | qa/defender.test.cjs | Schopnosti, ekonomika, mapy, replay a simulace celých směn |
+| qa/verify.test.cjs | 1 200 zadání, 80 variant, denní vydání, bodování, dohledání a razítka |
 
 Po úpravě zdrojů spusť z této složky:
 

@@ -1,19 +1,7 @@
 const assert=require('node:assert/strict');
-const {Verify,Signal}=require('../engine.js');
+const {Signal}=require('../engine.js');
 require('./defender.test.cjs');
-
-const verify=new Verify(42);verify.start();
-for(let i=0;i<8;i++){
-  assert.ok(verify.submit(verify.card.ready).correct);
-  const before=verify.score;
-  assert.equal(verify.submit(verify.card.ready),false);
-  verify.update(50);assert.equal(verify.remaining,60,'Feedback must stop the timer.');
-  assert.equal(verify.score,before);
-  verify.next();
-}
-assert.equal(verify.phase,'won');assert.equal(verify.correct,8);assert.equal(verify.score,1220);
-const timeout=new Verify(2);timeout.start();timeout.update(61);assert.equal(timeout.phase,'lost');
-console.log('Verify: eight cards, scoring, duplicate-input guard, reading pause and timeout pass.');
+require('./verify.test.cjs');
 
 for(let seed=1;seed<=30;seed++){
   const signal=new Signal(seed);assert.equal(signal.solved,false);signal.start();

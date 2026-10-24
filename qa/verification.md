@@ -23,3 +23,14 @@ Soubor hry.html byl otevřen a vyzkoušen přes místní HTTP server. Přímou n
 - Nové snímky: kavky-defender-teletext.png a kavky-mobile-teletext.png. Starší snímky zachycují předchozí výtvarnou verzi.
 
 Neověřeno: všechny možné strategie, dlouhodobé vyvážení obtížnosti a fyzická mobilní zařízení. Úspěch jedné automatické strategie není zárukou stejné obtížnosti pro začínajícího hráče.
+
+**Ověřeno! — rozšíření redakce, 24. října 2026**
+
+- Nové jádro v `verify.js`: 40 spisů, 80 variant podkladů, osm témat a čtyři redakční směny. V jednom zadání se spis neopakuje, vyvážení připouští vydané i zadržené zprávy. Při novém losování se zohledňuje nedávná historie; přesné opakování zachovává její původní snímek. Denní zadání místní historii ignoruje.
+- Automatické ověření 300 seedů pro každou redakci, celkem 1 200 zadání. Pokryto všech 80 variant, správný tematický rozsah, vyvážení, závěrečný noční chyták, opakování stejného zadání i upřednostnění méně hraných spisů. Kontrola českého data denní výzvy zahrnuje půlnoc v Europe/Prague.
+- Kontroly bodování a horního limitu série, chyby a resetu série, odmítnutí dvojí odpovědi, omezeného počtu dohledání, ceny 8 sekund a 20 bodů, zastavení času při vysvětlení a pauze. Ověřen časový konec při dohledání, odmítnutí odpovědi po konci, ignorování neplatného času, hraní bez časovače a hranice všech razítek.
+- Přenosná hra má pět vložených skriptů a tři styly. Test spouští její skutečná vložená herní jádra v izolovaném prostředí a dokončí celou směnu; kontroluje také jedinečná HTML ID a existenci používaných prvků.
+- Skutečný prohlížeč: dokončená Obrazová redakce bez časovače s jednou záměrnou chybou a jedním dohledáním. Výsledek 7/8, 890 bodů, stříbrné razítko; rozbor ukázal původní podklady, zvolená rozhodnutí a vysvětlení. Přesné opakování vrátilo stejný kód i první zprávu a její podklady. Klávesy D, F, J a Enter prošly, fokus přechází na pokračování a další zprávu.
+- Mobilní rozložení v rámci o šířce 390 px: nabídka všech čtyř redakcí, volba denního vydání, vynucený časovač, zahájení Noční uzávěrky a dohledání detailu. Správná odpověď přidala 80 bodů, čas při vysvětlení stál. Zdroj, detail, vysvětlení a tlačítko pokračování zůstaly čitelné a dosažitelné svislým posunem. Jde o kontrolu rozložení, nikoli fyzického telefonu.
+
+Snímek mobilní kontroly je uložen v `qa/overeno-mobile.png`. Automatické kontroly všech tří her zůstávají součástí GitHub Actions. Zpravodajské situace jsou autorské fikce; nejde o tvrzení o skutečných osobách či událostech.
