@@ -120,6 +120,31 @@
 @media(max-width:540px){.verify-setup summary{padding:9px 10px}.verify-setup summary>span:first-child{gap:7px}.verify-setup summary strong{font-size:10px}.verify-setup summary small{font-size:9px}.verify-desks{grid-template-columns:repeat(2,minmax(0,1fr));padding:0 8px 9px;gap:5px}.verify-desk{min-height:67px;padding:8px;gap:5px;grid-template-columns:23px 1fr}.verify-desk strong{font-size:11px}.verify-desk small{font-size:9px;padding-bottom:5px}.verify-desk .desk-medals{bottom:4px;font-size:9px}.verify-shift-controls{padding:8px;gap:7px}.verify-shift-controls label{font-size:10px}.verify-shift-controls .shift-button{font-size:10px;padding:7px;min-height:35px}.verify-shift-controls .shift-code{width:100%;margin:0;font-size:9px}.verify-shift-rule{font-size:10px;padding:8px}.is-verify .verify-view{padding:13px 12px 33px;gap:14px;min-height:550px}.verify-desk-strip{font-size:9px}.is-verify .news-card{padding:18px 16px;box-shadow:4px 4px #203c48}.is-verify .news-card h2{font-size:26px;line-height:1.17;margin-bottom:16px}.is-verify .news-card-top{font-size:9px;gap:5px}.is-verify .source-box{padding:10px;gap:6px}.is-verify .source-symbol{display:none}.is-verify .source-box p{font-size:12px;line-height:1.65}.is-verify .source-box small{font-size:9px}.verify-inspect{font-size:10px;min-height:44px}.verify-inspect kbd{display:none}.verify-detail{font-size:11px;padding:10px}.is-verify .choice{font-size:10px;gap:5px;min-height:47px;padding:10px 6px}.is-verify .verify-feedback{font-size:12px;padding:10px}.verify-verdict{font-size:12px;flex-wrap:wrap}.verify-editor{padding:0 3px;gap:8px}.verify-editor p{font-size:11px}.is-verify .board-overlay:not([hidden]){padding:25px 14px;min-height:520px}.is-verify .overlay-card{padding:22px 16px}.is-verify .overlay-card p{font-size:12px}.verify-welcome-spec{font-size:9px;gap:5px}.verify-welcome-spec span{padding:6px}.verify-stamps{gap:7px}.verify-stamp{font-size:8px;padding:8px 2px;min-height:54px}.verify-stamp b{font-size:12px;letter-spacing:1px}.is-verify .editor-rules{display:block}.is-verify .editor-rules li{gap:10px;padding:10px 0}.is-verify .editor-rules p{font-size:11px}.verify-badge-grid{grid-template-columns:1fr}.verify-review-item h3{font-size:17px}.is-verify .keyboard-hint span:nth-child(2){display:inline}.is-verify .control-bar .primary-button{font-size:10px;padding:9px 8px}}
 
 </style>
+  <style>
+/* DRŽ SIGNÁL / technická knížka a starý studiový rozvaděč. */
+.signal-setup{margin:0 0 13px;background:#242936;border-left:3px solid #b5a5e4}
+.signal-setup summary{list-style:none;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:9px 12px;cursor:pointer}.signal-setup summary::-webkit-details-marker{display:none}.signal-setup summary>span:first-child{display:flex;gap:17px;align-items:baseline;flex-wrap:wrap}.signal-setup summary strong{font:700 11px var(--mono);text-transform:uppercase;color:#f2f2e9}.signal-setup summary small{font:10px var(--mono);color:#b9bdd0}
+.signal-areas{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:5px;padding:0 12px 10px}.signal-area{display:grid;grid-template-columns:31px 1fr;gap:3px 8px;align-items:center;min-height:65px;padding:9px;text-align:left;border:1px solid #737d99;background:#28354a;color:#dce7ef}.signal-area>i{grid-row:1/3;font:700 26px var(--mono);font-style:normal;color:var(--area-color)}.signal-area strong{font:700 12px/1.3 var(--mono)}.signal-area small{font:10px/1.4 var(--mono);color:#afbed1}.signal-area:hover:not(:disabled){background:#3d4b64}.signal-area.selected{background:#b5a5e4;color:#171a2b}.signal-area.selected>i,.signal-area.selected small{color:#31394d}.signal-area:disabled{opacity:.5;cursor:default}.signal-area.selected:disabled{opacity:1}
+.signal-jobs{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));padding:0 12px 11px;gap:5px}.signal-job{display:grid;grid-template-columns:19px 1fr;gap:2px 5px;text-align:left;padding:7px;border:1px solid #66708a;background:#1a2434;color:#c9d6e7;min-height:57px}.signal-job>b{grid-row:1/3;font:700 12px var(--mono);color:#edfa45}.signal-job>span{font:10px/1.3 var(--mono)}.signal-job>small{font:10px var(--mono);letter-spacing:2px;color:#a5afd2}.signal-job.selected{border-color:#edfa45;background:#3d4450}.signal-job:disabled{cursor:default;opacity:.55}.signal-job.selected:disabled{opacity:1}.signal-job:hover:not(:disabled){background:#405065}
+.signal-shift-controls{display:flex;gap:9px;align-items:center;flex-wrap:wrap;border-top:1px solid #58667b;padding:8px 12px}.signal-shift-controls>label{display:flex;gap:7px;align-items:center;font:11px var(--mono);color:#d3dddf;min-height:32px}.signal-shift-controls input{width:16px;height:16px;margin:0;accent-color:#b5a5e4}.signal-job-rule{font:11px/1.5 var(--mono);color:#c8d2e2;margin:0;padding:8px 12px;border-top:1px solid #58667b}
+.is-signal .signal-view{min-height:540px;height:auto;justify-content:flex-start;padding:17px 22px 20px;gap:13px;background-color:#202f46;background-image:linear-gradient(90deg,#7a99b410 1px,#0000 1px),linear-gradient(#7a99b410 1px,#0000 1px);background-size:20px 20px}
+.is-signal .signal-map-label{position:static;width:100%;font:700 10px/1.4 var(--mono);color:#c3d4e6;gap:10px}.signal-job-title{font:900 25px/1.15 'Arial Black',Arial,sans-serif;color:#edf5e5;margin:2px 0 0;text-transform:uppercase;letter-spacing:-.7px;text-align:center}
+.is-signal .signal-puzzle{grid-template-columns:34px minmax(0,420px) 34px;gap:10px;max-width:508px;margin:0;flex:none}.signal-input-column,.signal-output-list{position:relative;height:100%;min-width:0}.is-signal .signal-end{position:absolute;height:auto;gap:4px;width:100%;top:0}.is-signal .signal-end>span{width:33px;height:33px;font:700 20px var(--mono)}.is-signal .signal-end small{font:8px var(--mono);color:#d5e3f0}.is-signal .signal-end:after{width:11px;top:15px}.is-signal .source-end:after{right:-11px}.is-signal .target-end:after{left:-11px}.is-signal .target-end.reached:after{background:#edfa45}
+.is-signal .pipe-grid{gap:4px;grid-template-columns:repeat(4,minmax(0,1fr));border:4px solid #0a1828;outline:1px solid #7898b1;background:#0a1828;box-shadow:5px 5px #0b1623}.is-signal .pipe-tile{min-width:0;touch-action:manipulation;border:1px solid #142a3d;box-shadow:inset 2px 2px #839aaf,inset -2px -2px #2d445a;background:#4f697e;overflow:visible;isolation:isolate}.is-signal .pipe-tile:hover:not(:disabled){outline:2px solid #fffbd5;outline-offset:0}.is-signal .pipe-tile:focus-visible{outline:3px solid #fff3b2;outline-offset:0;z-index:2}.is-signal .pipe-tile:disabled{opacity:1;cursor:default}.is-signal .pipe-tile.connected{background:#a7c45d;box-shadow:inset 2px 2px #dfefa5,inset -2px -2px #718b39}.is-signal .pipe-shadow{stroke-width:25;stroke:#172d40}.is-signal .pipe-line{stroke:#c7d4df;stroke-width:11}.is-signal .connected .pipe-shadow{stroke:#304b25}.is-signal .connected .pipe-line{stroke:#f0ff9e}.is-signal .connected .pipe-center{fill:#f0ff9e}
+.pipe-coordinate{position:absolute;top:3px;left:4px;z-index:1;font:700 8px/1 var(--mono);color:#132a3e;pointer-events:none}.pipe-fixed{position:absolute;top:2px;right:2px;z-index:1;background:#10263a;color:#d2e6f3;font:11px/1 var(--mono);padding:1px;pointer-events:none}.pipe-relay{position:absolute;left:3px;bottom:3px;z-index:1;background:#edfa45;color:#142d24;font:700 9px/1 var(--mono);padding:2px;pointer-events:none}.is-signal .pipe-tile.relay{outline:2px solid #edfa45;outline-offset:-3px}.is-signal .pipe-tile.locked{border-color:#b3cde0}.is-signal .pipe-tile.hinted{outline:3px dashed #ffb178;outline-offset:1px;z-index:3}
+.is-signal .pipe-tile.wall{background:repeating-linear-gradient(135deg,#433e41 0 7px,#373039 7px 14px);box-shadow:inset 2px 2px #766770,inset -2px -2px #201e27;border-color:#221c2b}.pipe-cabinet{position:absolute;inset:17%;border:2px solid #c1a08b;background:#493c3f;display:grid;place-content:center;color:#dfb898;font:700 25px var(--mono)}.pipe-cabinet:before{content:'';position:absolute;left:3px;top:3px;width:40%;height:2px;background:#b1927d}.wall .pipe-coordinate{color:#ddbfad}
+.signal-board-status{font:11px/1.5 var(--mono);color:#d2e4ef;display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin:0;min-height:20px}.signal-board-status .all-live{color:#edfa45}.signal-editor{display:flex;align-items:flex-start;gap:10px;max-width:510px;width:100%;padding-top:9px;border-top:1px solid #60758e;color:#d8e5ed}.signal-editor b{flex:none;background:#edfa45;color:#122217;font:700 10px var(--mono);padding:5px 4px;transform:rotate(-6deg)}.signal-editor p{font:12px/1.6 var(--mono);margin:0}.signal-inline-hint{font:12px/1.6 var(--mono);background:#f4c291;color:#28322d;padding:10px 13px;border:2px solid #142536;width:min(510px,100%)}
+.signal-action-bar{display:flex;gap:8px;align-items:center;flex-wrap:wrap;padding:0 12px 10px;background:#353d36}.signal-action-bar button{font-size:11px;min-height:37px}.signal-action-bar button:disabled{opacity:.5;cursor:default}.signal-action-bar #signal-hint{margin-left:auto}.signal-action-bar #signal-hint-count{background:#192818;color:#edfa45;padding:2px 5px;margin-left:5px;font-weight:700}
+.signal-target-status{display:grid;gap:6px;padding:13px 0;border-top:1px solid #526f77;border-bottom:1px solid #526f77}.signal-receiver{display:flex;align-items:center;gap:8px;font:11px/1.4 var(--mono);color:#c8d5e2}.signal-receiver>b{display:grid;place-content:center;width:25px;height:23px;background:#38526a;border:1px solid #7794ab;color:#dceaf3;font:700 10px var(--mono)}.signal-receiver.online>b{background:#edfa45;color:#162917;border-color:#edfa45}.signal-receiver>small{font:9px var(--mono);margin-left:auto;color:#9eabbf}.signal-receiver.online>small{color:#edfa45}
+.signal-score-line{display:flex;gap:12px;font:9px/1.4 var(--mono);color:#b7c6d8;padding:13px 0 6px}.signal-score-line>span{flex:1}.signal-score-line strong{display:block;font:700 22px/1.1 var(--mono);color:#edfa45;margin-top:4px}.signal-score-line>span:nth-child(2) strong{font-size:17px;color:#c0d2ed}.signal-benchmark-note{font:10px/1.5 var(--mono);color:#9fb2c6;margin:1px 0 15px}
+.signal-key{border-top:1px solid #526f77;padding-top:9px}.signal-key p{display:flex;align-items:center;gap:9px;margin:8px 0;color:#b7c8d4;font:10px/1.5 var(--mono)}.signal-key b{color:#e7ede1}.signal-key i{display:grid;place-content:center;flex:none;width:22px;height:22px;border:1px solid #829ba7;font:700 11px var(--mono);font-style:normal}.key-live{background:#b9d05d;box-shadow:inset 0 8px #496239,inset 0 -8px #496239}.key-relay{background:#edfa45;color:#102d1f}.key-lock{background:#27445c;color:#d5e7f2}.key-wall{background:#483b3f;color:#e1b792}.signal-logbook{font-size:11px!important;color:#b5a5e4!important;padding:15px 0 0}
+.is-signal .board-wrap:has(.board-overlay:not([hidden])) .signal-view{display:none}.is-signal .board-overlay:not([hidden]){position:relative;min-height:540px;padding:30px 24px;background:#2d3f56}.is-signal .overlay-card{width:min(500px,100%);max-width:500px}.signal-specs{display:flex;justify-content:center;gap:6px;flex-wrap:wrap;margin:16px 0;font:700 10px var(--mono)}.signal-specs span{padding:6px 9px;background:#d9dfe2;color:#263b4f}.signal-result-stars{font:700 30px var(--mono);letter-spacing:5px;color:#314b68;margin:13px 0}.signal-result-actions{display:flex;gap:7px;justify-content:center;flex-wrap:wrap;margin-top:12px}.signal-result-actions .text-button{margin:0!important;color:#29435b;padding:4px}.signal-result-summary{font:11px/1.6 var(--mono);color:#354e61;margin:12px 0}.signal-result-badges{display:flex;justify-content:center;gap:5px;flex-wrap:wrap;margin-bottom:13px}.signal-result-badges span{font:9px var(--mono);padding:5px;border:1px solid #829698;color:#2e4b59}
+.signal-badge-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:20px 0}.signal-badge{border:1px dashed #647386;padding:13px}.signal-badge.earned{border:2px solid #b5a5e4;background:#283547}.signal-badge strong{font:700 12px/1.4 var(--mono);color:#dfebef}.signal-badge p{font-size:11px!important;margin:6px 0 0!important}.signal-log-stats{font:700 14px/1.7 var(--mono);color:#edfa45}.signal-solution{display:grid;gap:3px;background:#13283c;padding:6px;margin:20px auto;max-width:400px}.signal-solution>div{position:relative;aspect-ratio:1;background:#4b6177}.signal-solution>div.required{background:#a5c35c}.signal-solution>div svg{width:100%;height:100%;display:block}.signal-solution .required .pipe-shadow{stroke:#294829}.signal-solution .required .pipe-line{stroke:#effca7}.signal-solution .wall{background:#59484b}.signal-log-table{width:100%;border-collapse:collapse;font:11px/1.5 var(--mono);color:#d1dfeb}.signal-log-table th,.signal-log-table td{padding:8px 6px;border-bottom:1px solid #647386;text-align:left}.signal-log-table th{color:#edfa45}
+@media(max-width:1100px){.signal-area{padding:8px 7px;grid-template-columns:25px 1fr;gap:3px 5px}.signal-area strong{font-size:11px}.signal-area>i{font-size:23px}.signal-job{padding:6px;grid-template-columns:15px 1fr;gap:3px}.signal-job>span{font-size:9px}.is-signal .signal-puzzle{grid-template-columns:29px minmax(0,380px) 29px;gap:8px;max-width:454px}.is-signal .signal-end>span{width:28px;height:28px;font-size:18px}.is-signal .signal-end:after{top:13px;width:9px}.is-signal .source-end:after{right:-9px}.is-signal .target-end:after{left:-9px}.signal-job-title{font-size:23px}.signal-action-bar{gap:6px}.signal-action-bar button{font-size:10px;padding:7px}}
+@media(max-width:850px){.signal-key{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 12px}.signal-target-status{grid-template-columns:repeat(2,minmax(0,1fr))}.signal-score-line{max-width:400px}.is-signal .signal-view{min-height:560px}}
+@media(max-width:540px){.signal-setup summary{padding:9px 10px}.signal-setup summary>span:first-child{gap:7px}.signal-setup summary strong{font-size:10px}.signal-setup summary small{font-size:9px}.signal-areas{grid-template-columns:repeat(2,minmax(0,1fr));padding:0 8px 9px}.signal-area{padding:8px;min-height:63px}.signal-area small{font-size:9px}.signal-jobs{grid-template-columns:repeat(3,minmax(0,1fr));padding:0 8px 10px}.signal-job{min-height:60px;padding:7px;gap:3px 5px}.signal-job>span{font-size:10px}.signal-shift-controls{padding:8px;gap:7px}.signal-shift-controls label{font-size:10px}.signal-shift-controls button{font-size:10px;min-height:35px;padding:7px}.signal-shift-controls .shift-code{margin:0;width:100%;font-size:9px}.signal-job-rule{font-size:10px;padding:8px}.is-signal .signal-view{min-height:470px;padding:14px 10px 17px;gap:14px}.is-signal .signal-map-label{font-size:9px}.signal-job-title{font-size:22px;letter-spacing:-.7px}.is-signal .signal-puzzle{grid-template-columns:22px minmax(0,1fr) 22px;gap:5px;max-width:100%}.is-signal .pipe-grid{gap:3px;border-width:2px;box-shadow:3px 3px #0b1623}.is-signal .signal-end>span{width:22px;height:25px;font-size:16px}.is-signal .signal-end small{font-size:7px}.is-signal .signal-end:after{top:12px;width:6px}.is-signal .source-end:after{right:-6px}.is-signal .target-end:after{left:-6px}.pipe-coordinate{top:2px;left:3px;font-size:7px}.pipe-fixed{font-size:9px;top:1px;right:1px}.pipe-relay{font-size:8px;padding:1px;left:2px;bottom:2px}.pipe-cabinet{border-width:1px;font-size:19px}.signal-board-status{font-size:10px;gap:9px}.signal-editor{gap:8px;padding-top:10px}.signal-editor p{font-size:11px}.signal-inline-hint{font-size:11px;padding:10px}.signal-action-bar{padding:0 8px 10px;gap:5px}.signal-action-bar button{font-size:10px;min-height:41px;padding:7px}.signal-action-bar button kbd{display:none}.signal-action-bar #signal-hint{margin-left:0;flex:1}.signal-action-bar #signal-hint-count{margin-left:3px}.signal-key{gap:0 9px}.signal-key p{font-size:10px;align-items:flex-start}.signal-target-status{grid-template-columns:1fr}.signal-receiver{font-size:11px}.is-signal .board-overlay:not([hidden]){padding:25px 14px;min-height:480px}.is-signal .overlay-card{padding:22px 16px}.is-signal .overlay-card p{font-size:12px}.is-signal .overlay-card h2{font-size:26px}.signal-result-actions .text-button{font-size:11px!important}.signal-badge-grid{grid-template-columns:1fr}.signal-log-table{font-size:10px}.signal-specs{font-size:9px}.is-signal .keyboard-hint span:nth-child(2){display:inline}}
+
+</style>
 </head>
 <body>
   <a class="skip-link" href="#game-title">Přejít ke hře</a>
@@ -162,6 +187,12 @@
         <p class="verify-shift-rule" id="verify-shift-rule"></p>
       </section>
 
+      <section class="signal-setup" id="signal-setup" aria-label="Výběr technické zakázky" hidden>
+        <details id="signal-area-picker" open><summary><span><strong id="signal-picker-title">OBLAST PŘENOSU</strong><small id="signal-progress">ZAPOJENO 0 / 24</small></span><span class="picker-arrow" aria-hidden="true">⌄</span></summary><div id="signal-areas" class="signal-areas" role="group" aria-label="Vyber oblast přenosu"></div><div class="signal-jobs" id="signal-jobs" role="group" aria-label="Vyber zakázku"></div></details>
+        <div class="signal-shift-controls"><label><input type="checkbox" id="signal-practice"> Bez časovače</label><button id="signal-random" class="shift-button">↻ Jiný rozvod · 3 okruhy</button><button id="signal-daily" class="shift-button">◷ Dnešní přenos</button><span id="signal-code" class="shift-code"></span></div>
+        <p class="signal-job-rule" id="signal-job-rule"></p>
+      </section>
+
       <div class="game-metrics" aria-label="Stav hry">
         <div class="metric"><span class="metric-icon" id="metric-icon-1" aria-hidden="true">◉</span><span><small id="metric-label-1">SÍLA SIGNÁLU</small><strong id="metric-value-1">100<span> %</span></strong></span><div class="health-track" id="health-track"><i></i></div></div>
         <div class="metric"><span class="metric-icon support-icon" id="metric-icon-2" aria-hidden="true">✳</span><span><small id="metric-label-2">PODPORA</small><strong id="metric-value-2">200</strong></span></div>
@@ -188,14 +219,18 @@
               <span class="fiction-note">Smyšlené situace. Skutečné redakční návyky.</span>
             </section>
             <section id="signal-view" class="signal-view" aria-label="Propojování signálu" hidden>
-              <div class="signal-map-label"><span>STUDIO → POSLUCHAČI</span><span id="circuit-number">OKRUH 01</span></div>
-              <div class="signal-puzzle"><div class="signal-end source-end" id="signal-source"><span aria-hidden="true">◉</span><small>STUDIO</small></div><div class="pipe-grid" id="pipe-grid" role="group" aria-label="Otáčej dílky a vytvoř souvislou cestu signálu"></div><div class="signal-end target-end" id="signal-target"><span aria-hidden="true">⌂</span><small>VEŘEJNOST</small></div></div>
-              <p class="signal-tip">Každým otočením o kousek blíž.</p>
+              <div class="signal-map-label"><span id="signal-board-area">OBECNÍ ROZHLAS</span><span id="circuit-number">OKRUH 01</span></div>
+              <h2 class="signal-job-title" id="signal-job-title">Slepice ve vysílání</h2>
+              <div class="signal-puzzle"><div class="signal-input-column"><div class="signal-end source-end" id="signal-source" role="img"><span aria-hidden="true">◉</span><small>STUDIO</small></div></div><div class="pipe-grid" id="pipe-grid" role="group" aria-label="Otáčej dílky a vytvoř souvislou cestu signálu"></div><div class="signal-output-list" id="signal-targets" aria-label="Přijímače"></div></div>
+              <div class="signal-board-status" id="signal-board-status" aria-live="polite"></div>
+              <div class="signal-inline-hint" id="signal-inline-hint" role="status" hidden></div>
+              <div class="signal-editor"><b aria-hidden="true">KRÁ</b><p id="signal-quip"></p></div>
             </section>
             <div class="board-overlay" id="board-overlay"></div>
           </div>
           <div class="control-bar"><div class="main-controls"><button id="wave-button" class="primary-button"><span aria-hidden="true">▶</span> Spustit vlnu</button><button id="pause-button" class="icon-button" aria-label="Pozastavit hru" title="Pauza (mezerník)">Ⅱ</button><button id="speed-button" class="speed-button" aria-label="Rychlost hry: normální">1×</button></div><div class="secondary-controls"><button id="sound-button" class="icon-button" aria-label="Zapnout zvuk" aria-pressed="false" title="Zapnout zvuk"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4Z" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m17 9 5 6m0-6-5 6" stroke="currentColor" stroke-width="1.8"/></svg></button><button id="reset-button" class="icon-button" aria-label="Nová hra" title="Nová hra">↺</button><button id="help-button" class="icon-button" aria-label="Jak hrát" title="Jak hrát">?</button></div></div>
           <div class="defender-action-bar" id="defender-action-bar"><button class="flock-button" id="flock-button"><span aria-hidden="true">⌁</span> Kavčí nálet <kbd>K</kbd><b id="flock-count">2</b></button><span id="flock-hint">Zastaví protivníky na 2 sekundy. Zobáky bez portfeje.</span></div>
+          <div class="signal-action-bar" id="signal-action-bar" hidden><button class="shift-button" id="signal-direction">↻ Otáčet doprava</button><button class="shift-button" id="signal-undo">↶ Zpět <kbd>Z</kbd></button><button class="shift-button" id="signal-hint">⌕ Zavolat Kvída <kbd>H</kbd><span id="signal-hint-count">2</span></button></div>
           <p class="keyboard-hint" id="keyboard-hint"><span><kbd>1</kbd><kbd>2</kbd><kbd>3</kbd> vyber obranu</span><span><kbd>←</kbd><kbd>→</kbd> stanoviště <kbd>Enter</kbd> postav</span><span><kbd>mezerník</kbd> další vlna / pauza</span></p>
         </div>
 
@@ -217,7 +252,15 @@
             <ol class="editor-rules"><li><span>01</span><div><strong>Čti i podklady.</strong><p>Stejný titulek může mít různé důkazy.</p></div></li><li><span>02</span><div><strong>Drž rozsah.</strong><p>„V anketě“ není „v celé republice“.</p></div></li><li><span>03</span><div><strong>Pak se nadechni.</strong><p>Při vysvětlení čas stojí. Káva může téct.</p></div></li></ol>
             <button id="verify-notebook" class="text-button verify-notebook">Spisovna a odznaky ↗</button>
           </div>
-          <div id="signal-tools" class="tool-panel" hidden><div class="sidebar-heading"><h2>Ve spojení</h2><span>FM 03</span></div><p class="sidebar-intro">Otoč dílky a doveď nepřerušený signál ze studia k veřejnosti.</p><div class="signal-legend"><span class="wire-sample connected"></span><div><strong>Živý signál</strong><p>Navazuje na studio.</p></div><span class="wire-sample"></span><div><strong>Čeká na spojení</strong><p>Otoč kliknutím nebo Enterem.</p></div></div><div class="field-note"><span class="note-label">TŘI OKRUHY</span><p>Na každý máš 90 sekund. Začni u studia vlevo a postupuj po zelené lince.</p><button id="signal-restart-round" class="text-button">Znovu tento okruh ↺</button></div></div>
+          <div id="signal-tools" class="tool-panel" hidden>
+            <div class="sidebar-heading"><h2>Technický protokol</h2><span>P300</span></div><p class="sidebar-intro" id="signal-brief"></p>
+            <div class="signal-target-status" id="signal-target-status"></div>
+            <div class="signal-score-line"><span>BODY<strong id="signal-score">0</strong></span><span>VZOROVÉ ZAPOJENÍ<strong id="signal-baseline">0 tahů</strong></span></div>
+            <p class="signal-benchmark-note">Počet tahů pro jednu známou cestu. Lepší řešení může existovat.</p>
+            <div class="signal-key"><p><i class="key-live"></i><span><b>Živý signál</b> vede ze studia.</span></p><p><i class="key-relay">R</i><span><b>Přepojovač</b> musí být také připojený.</span></p><p><i class="key-lock">▣</i><span><b>Pevný spoj</b> je správně natočený.</span></p><p><i class="key-wall">×</i><span><b>Skříň</b> se obejde. Nepřemístí.</span></p></div>
+            <div class="field-note"><span class="note-label">SERVISNÍ ZÁSAH</span><p id="signal-assist-rule"></p><button id="signal-restart-round" class="text-button">Znovu tento okruh ↺</button></div>
+            <button id="signal-logbook" class="text-button signal-logbook">Provozní knížka a odznaky ↗</button>
+          </div>
           <div class="best-score"><span id="best-score-label">TVŮJ REKORD</span><strong id="best-score">—</strong><small>Ukládá se v tomto prohlížeči.</small></div>
         </aside>
       </div>
@@ -664,32 +707,175 @@
 
 </script>
 <script>
-(function (root) {
+(function(root){
   'use strict';
-  const defense=typeof module!=='undefined'&&module.exports?require('./defender.js'):root.DefenderGame;
-  const verification=typeof module!=='undefined'&&module.exports?require('./verify.js'):root.VerifyGame;
-  function random(seed){let a=seed>>>0;return ()=>{a+=0x6D2B79F5;let t=a;t=Math.imul(t^t>>>15,t|1);t^=t+Math.imul(t^t>>>7,t|61);return ((t^t>>>14)>>>0)/4294967296;};}
   const N=1,E=2,S=4,W=8;
-  const DIRECTIONS=[{bit:N,dx:0,dy:-1,op:S},{bit:E,dx:1,dy:0,op:W},{bit:S,dx:0,dy:1,op:N},{bit:W,dx:-1,dy:0,op:E}];
-  const PUZZLE_PATHS=[
-    [[0,2],[1,2],[1,1],[2,1],[3,1],[3,2],[2,2],[2,3],[3,3],[4,3]],
-    [[0,1],[1,1],[1,0],[2,0],[2,1],[2,2],[1,2],[1,3],[2,3],[3,3],[3,2],[4,2]],
-    [[0,3],[1,3],[1,4],[2,4],[3,4],[3,3],[2,3],[2,2],[1,2],[1,1],[2,1],[3,1],[3,0],[4,0],[4,1],[4,2]]
-  ];
+  const DIRS=[{bit:N,dx:0,dy:-1,op:S},{bit:E,dx:1,dy:0,op:W},{bit:S,dx:0,dy:1,op:N},{bit:W,dx:-1,dy:0,op:E}];
+  const SIGNAL_AREAS={
+    obec:{id:'obec',name:'Obecní rozhlas',glyph:'⌂',size:4,seconds:120,color:'#a3c477',label:'NEJDŘÍV NAJDI KABEL',description:'Čtyři krát čtyři. Jeden přijímač, potom první přepojovače a pevné spoje. Hlášení o ztracené slepici má přednost.',targets:[1,1,1,1,1,1],relays:[0,0,0,0,1,1],walls:[0,0,0,0,0,0],locks:[0,0,0,1,1,2]},
+    mesto:{id:'mesto',name:'Městský uzel',glyph:'▥',size:5,seconds:150,color:'#84b8ed',label:'JEDEN SIGNÁL, VÍC UŠÍ',description:'Pět krát pět. Rozvětvi síť k více přijímačům. Knihovna, škola i radnice chtějí slyšet něco jiného. Dostanou stejný signál.',targets:[2,2,2,2,3,3],relays:[0,1,1,1,1,1],walls:[0,0,1,2,2,2],locks:[0,0,1,1,2,2]},
+    teren:{id:'teren',name:'Přenos z terénu',glyph:'⌁',size:6,seconds:200,color:'#f0b17e',label:'SKŘÍŇ SE NEUHNE',description:'Šest krát šest. Obejdi skříně a zapoj povinné přepojovače R. Technický vůz parkuje přesně tam, kde nemá.',targets:[1,2,2,2,2,3],relays:[1,1,2,2,2,2],walls:[3,4,4,5,5,6],locks:[0,1,1,2,2,3]},
+    noc:{id:'noc',name:'Noční rozvaděč',glyph:'☾',size:6,seconds:210,color:'#b5a5e4',label:'NIKDO NA NIC NESAHAL',description:'Šest krát šest, více přijímačů, relé a pevných spojů. Předchozí směna nic neměnila. Jen všechno přepojila.',targets:[2,2,3,3,3,3],relays:[1,2,2,2,3,3],walls:[2,3,4,4,5,6],locks:[2,3,3,4,4,5]}
+  };
+  const JOB_TEXT={
+    obec:[
+      ['Slepice ve vysílání','Obec čeká na ranní hlášení. Najdi cestu od studia k přijímači. Ostatní kabely mohou odpočívat.','Slepice se našla. Teď hledáme člověka, který si vyžádal živý vstup.'],
+      ['Pozor, zkouška mikrofonu','Mikrofon funguje. Kabely mají tvůrčí pauzu. Zelená ukazuje, kam už signál došel.','Jedna, dvě, tři. Čtvrtá už by chtěla honorář.'],
+      ['Tajemství dolního šuplíku','Zásuvka je správná. Všechno mezi ní a studiem už méně. Nepotřebuješ zapojit každý dílek.','V šuplíku jsou tři redukce a návod na jiný šuplík.'],
+      ['Spoj pod plombou','Dílek s malým zámkem je pevný. Už je správně natočený, obsluž okolní kabely.','Plombu neporušovat. Podepsal ji někdo, kdo už tu nepracuje.'],
+      ['Přepojovač u vrátnice','Kromě přijímače musí dostat signál také dílek R1. Nestačí ho jen minout.','Vrátnice se ptá, jestli máme na průchod signálu papír.'],
+      ['Poutní speciál','Přijímač i přepojovač R1 čekají na spojení. Pevné dílky ti napoví, kudy se dá jít.','Reprobedna chce hrát dechovku. Zatím hraje jen prodlužovačku.']
+    ],
+    mesto:[
+      ['Škola a knihovna','Připoj oba přijímače vpravo. Když svítí jen jeden, veřejná služba má ještě nedodělek.','Knihovna žádá ticho. Škola žádá zesílit. Vyváženost v praxi.'],
+      ['Odbočka na radnici','Dva přijímače a přepojovač R1. Třícestné dílky umějí signál rozdělit.','Odbočka schválena. Podmínkou je, že se nebude nazývat odbočka.'],
+      ['Skříň pro vedení','Skříň s křížem nepřestěhuješ. Obejdi ji a udrž v síti oba přijímače i relé.','Skříň nemá kompetenci uhýbat. Má jen klíček.'],
+      ['Dva odbory, jeden kabel','Pevné spoje se neotáčejí. Zbytek je na tobě. Všechny cíle musejí svítit současně.','Kabel zatím nemá připomínky. Oba odbory ano.'],
+      ['Třetí do éteru','Tři přijímače, jeden přepojovač. Stav každého uvidíš na technickém panelu.','Tři lidé slyší totéž. Čtyři stížnosti už jsou na cestě.'],
+      ['Velká městská smyčka','Rozděl signál ke všem třem přijímačům. Zbytečné odbočky nevadí, chybějící posluchač ano.','Zkratka přes podatelnu trvá šest až osm týdnů.']
+    ],
+    teren:[
+      ['Vůz za kulturákem','Najdi průchod mezi skříněmi. Přijímač i R1 musejí mít živý signál.','Přenosový vůz stojí na kabelu. Řidič říká, že jen na minutku.'],
+      ['Výjezd bez redukce','Dva přijímače, jedna povinná zastávka R1. Zámky zůstávají na svém místě.','Redukce je v jiném voze. Ten vůz je v jiném kraji.'],
+      ['Dvě mezistanice','Zapoj oba přepojovače R1 a R2 i oba přijímače. Žlutý rám označuje povinné relé.','Mezistanice nemá občerstvení. Jen napětí v kolektivu.'],
+      ['Skříň, druhá skříň','Pět překážek. Dvě relé. Jeden technik, který si měl vzít delší kabel.','Ta skříň tu stojí od rekonstrukce. Rekonstrukce ještě nezačala.'],
+      ['Kabel přes kopec','Sleduj, co je opravdu připojené ke studiu. Zelený ostrůvek bez zdroje v téhle hře nevznikne.','Na kopci je výhled. Signál se zatím dívá jinam.'],
+      ['Živě odkudkoliv','Tři přijímače a dvě relé mezi skříněmi. Zkus si síť nejdřív přečíst, pak otáčet.','„Jsme na místě.“ To je zatím jediná ověřená technická informace.']
+    ],
+    noc:[
+      ['Po kolegovi','Kolega nechal některé spoje napevno. Nepanikař: tyto dílky už mají správnou orientaci.','Předávací protokol: „Včera to šlo.“ Podpis nečitelný.'],
+      ['Kávovar na jiné větvi','Dva přijímače, dvě relé a pár plomb. Kávovar do schématu raději nekreslíme.','Kávovar vysílá výrazně stabilněji než zbytek budovy.'],
+      ['Nikdo nic neměnil','Tři přijímače. Udrž všechny pod proudem a připoj obě relé současně.','Nikdo nic neměnil. Jen se tu objevilo šest nových kabelů.'],
+      ['Zámek bez klíče','Čtyři pevné spoje ti zůstávají jako opěrné body. Zkratka přes skříň nevede.','Klíč je v obálce. Obálka ve skříni. Skříň je zamčená.'],
+      ['Tři relé do rána','Každé z relé R1–R3 je povinné. Přijímače samotné tentokrát nestačí.','Relé má předat signál dál. Na poradě by to bylo podezřelé chování.'],
+      ['Poslední kabel v budově','Tři přijímače, tři relé, šest skříní. Zelená bude nakonec slušet všem.','Technický dluh splatný dnes. Úrok: další prodlužovačka.']
+    ]
+  };
+  const SIGNAL_JOBS=Object.values(SIGNAL_AREAS).flatMap(a=>JOB_TEXT[a.id].map(([name,brief,quip],level)=>({id:a.id+'-'+(level+1),areaId:a.id,level,name,brief,quip})));
+  const SIGNAL_BADGES={
+    first:{name:'Jsme v éteru',glyph:'◉',text:'Dokonči první okruh.'},
+    clean:{name:'Zlatý konektor',glyph:'✦',text:'Získej tři hvězdy na jednom okruhu.'},
+    branches:{name:'Rozděl a vysílej',glyph:'⋔',text:'Připoj tři přijímače současně.'},
+    relays:{name:'Přepojeno',glyph:'R',text:'Dokonči okruh s alespoň dvěma relé.'},
+    field:{name:'Terénní pracovník',glyph:'⌁',text:'Dokonči okruh se šesti překážkami.'},
+    night:{name:'Poslední zhasíná',glyph:'☾',text:'Dokonči poslední noční zakázku.'},
+    daily:{name:'Dnešní přenos',glyph:'◷',text:'Dokonči všechny tři okruhy denního přenosu.'}
+  };
+  const TURN_QUIPS=['Signál je rychlejší než zápis z porady. Zatím se ale nehnul.','Tohle není změť. To je nezdokumentovaná infrastruktura.','Každý kabel někam vede. Některý bohužel jen za skříň.','Začíná to vypadat jako řešení. Nebo jako logo technického oddělení.','Kvído tvrdí, že to viděl už na školení. Školení nebylo.','Když nevíš, sleduj zelenou. To radil i účetní, ale z jiných důvodů.'];
+  function random(seed){let a=seed>>>0;return()=>{a+=0x6D2B79F5;let t=a;t=Math.imul(t^t>>>15,t|1);t^=t+Math.imul(t^t>>>7,t|61);return((t^t>>>14)>>>0)/4294967296;};}
+  function hash(text){let h=2166136261;for(const c of text){h^=c.charCodeAt(0);h=Math.imul(h,16777619);}return h>>>0;}
+  function shuffle(items,r){const a=[...items];for(let i=a.length-1;i>0;i--){const j=Math.floor(r()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
   const rotate=mask=>((mask<<1)&15)|((mask&8)?1:0);
-  function direction(a,b){return b[0]>a[0]?E:b[0]<a[0]?W:b[1]>a[1]?S:N;}
-  class Signal {
-    constructor(seed=Date.now()){this.seed=seed;this.reset();}
-    reset(){this.round=0;this.moves=0;this.score=0;this.phase='ready';this.paused=false;this.events=[];this.generate();}
-    generate(){const r=random(this.seed+this.round*173),path=PUZZLE_PATHS[this.round];this.sourceRow=path[0][1];this.targetRow=path.at(-1)[1];this.solution=Array.from({length:25},()=>r()<.5?N|S:N|E);for(let i=0;i<path.length;i++){const p=path[i],previous=i?direction(p,path[i-1]):W,next=i<path.length-1?direction(p,path[i+1]):E;this.solution[p[1]*5+p[0]]=previous|next;}this.tiles=this.solution.map(m=>{for(let j=0,n=Math.floor(r()*4);j<n;j++)m=rotate(m);return m;});this.remaining=90;this.refresh();if(this.solved){const p=path[1],i=p[1]*5+p[0];this.tiles[i]=rotate(this.tiles[i]);this.refresh();}}
-    start(){if(this.phase==='ready'){this.phase='playing';return true;}return false;}
-    refresh(){this.connected=new Set();const first=this.sourceRow*5;if(!(this.tiles[first]&W)){this.solved=false;return;}const queue=[first];this.connected.add(first);while(queue.length){const i=queue.shift(),x=i%5,y=Math.floor(i/5),m=this.tiles[i];for(const d of DIRECTIONS){if(!(m&d.bit))continue;const nx=x+d.dx,ny=y+d.dy;if(nx<0||nx>=5||ny<0||ny>=5)continue;const next=ny*5+nx;if((this.tiles[next]&d.op)&&!this.connected.has(next)){this.connected.add(next);queue.push(next);}}}const last=this.targetRow*5+4;this.solved=this.connected.has(last)&&!!(this.tiles[last]&E);}
-    turn(i){if(this.phase!=='playing'||this.paused||!Number.isInteger(i)||i<0||i>=25)return false;this.tiles[i]=rotate(this.tiles[i]);this.moves++;this.refresh();this.events.push({type:'turn'});if(this.solved){this.score+=Math.round(300+this.remaining*5);this.phase=this.round===2?'won':'round-won';this.events.push({type:this.phase==='won'?'won':'connected'});}return true;}
-    next(){if(this.phase!=='round-won')return false;this.round++;this.generate();this.phase='playing';return true;}
-    update(dt){if(this.phase!=='playing'||this.paused)return;this.remaining=Math.max(0,this.remaining-dt);if(this.remaining===0){this.phase='lost';this.events.push({type:'lost'});}}
+  function rotationTo(from,to){let mask=from;for(let n=0;n<4;n++){if(mask===to)return n===3?-1:n;mask=rotate(mask);}return null;}
+  function neighbors(index,size){const x=index%size,y=Math.floor(index/size);return DIRS.filter(d=>x+d.dx>=0&&x+d.dx<size&&y+d.dy>=0&&y+d.dy<size).map(d=>({index:(y+d.dy)*size+x+d.dx,...d}));}
+  function freeConnected(size,blocked,excluded){const cells=Array.from({length:size*size},(_,i)=>i).filter(i=>!blocked.has(i)&&i!==excluded),seen=new Set([cells[0]]),queue=[cells[0]];for(let p=0;p<queue.length;p++)for(const n of neighbors(queue[p],size))if(n.index!==excluded&&!blocked.has(n.index)&&!seen.has(n.index)){seen.add(n.index);queue.push(n.index);}return seen.size===cells.length;}
+  function makePuzzle(seed,areaId,level){
+    const a=SIGNAL_AREAS[areaId],r=random(seed),size=a.size,sourceRow=Math.floor(r()*size),source=sourceRow*size,walls=new Set();
+    // Keep the free board connected even without the source. It can then have
+    // one outgoing wire, so any scrambled solved board can safely be disconnected.
+    const interior=shuffle(Array.from({length:size*size},(_,i)=>i).filter(i=>i%size>0&&i%size<size-1&&Math.floor(i/size)>0&&Math.floor(i/size)<size-1),r);
+    for(const i of interior){if(walls.size>=a.walls[level])break;walls.add(i);if(!freeConnected(size,walls,source))walls.delete(i);}
+    const attach=shuffle(neighbors(source,size).filter(n=>!walls.has(n.index)),r)[0].index;
+    const tree=Array.from({length:size*size},()=>[]),visited=new Set([attach]);let frontier=neighbors(attach,size).filter(n=>n.index!==source&&!walls.has(n.index)).map(n=>[attach,n.index]);
+    while(frontier.length){const at=Math.floor(r()*frontier.length),[from,to]=frontier[at];frontier[at]=frontier.at(-1);frontier.pop();if(visited.has(to))continue;visited.add(to);tree[from].push(to);tree[to].push(from);for(const n of neighbors(to,size))if(n.index!==source&&!walls.has(n.index)&&!visited.has(n.index))frontier.push([to,n.index]);}
+    tree[source].push(attach);tree[attach].push(source);
+    const parent=Array(size*size).fill(-1),depth=Array(size*size).fill(0),queue=[source];parent[source]=source;
+    for(let p=0;p<queue.length;p++)for(const next of tree[queue[p]])if(parent[next]===-1){parent[next]=queue[p];depth[next]=depth[queue[p]]+1;queue.push(next);}
+    const rows=shuffle(Array.from({length:size},(_,i)=>i),r).slice(0,a.targets[level]).sort((x,y)=>x-y),names=shuffle(['Obec','Škola','Knihovna','Studio B','Klub','Náměstí'],r);
+    const targets=rows.map((row,i)=>({row,index:row*size+size-1,name:names[i],online:false})),required=new Set([source]),edges=new Set();
+    function addPath(index){while(index!==source){const previous=parent[index];required.add(index);required.add(previous);edges.add(Math.min(index,previous)+':'+Math.max(index,previous));index=previous;}}
+    targets.forEach(t=>addPath(t.index));
+    const relays=[];for(let i=0;i<a.relays[level];i++){
+      const candidates=shuffle(queue.filter(n=>n%size>0&&n%size<size-1&&!relays.includes(n)),r).sort((x,y)=>Number(required.has(x))-Number(required.has(y)));
+      const index=candidates[0];relays.push(index);addPath(index);
+    }
+    const shapes=[N|E,N|S,N|E,N|E|S,N],solution=Array.from({length:size*size},(_,i)=>walls.has(i)?0:required.has(i)?0:shapes[Math.floor(r()*shapes.length)]);
+    for(const edge of edges){const [from,to]=edge.split(':').map(Number),d=neighbors(from,size).find(n=>n.index===to);solution[from]|=d.bit;solution[to]|=d.op;}
+    solution[source]|=W;targets.forEach(t=>solution[t.index]|=E);
+    const locked=new Set(shuffle([...required].filter(i=>i!==source&&!relays.includes(i)&&!targets.some(t=>t.index===i)&&rotate(solution[i])!==solution[i]),r).slice(0,a.locks[level]));
+    const initial=solution.map((mask,i)=>{if(locked.has(i)||walls.has(i))return mask;for(let n=Math.floor(r()*4);n>0;n--)mask=rotate(mask);return mask;});
+    // Start with a real task, never an already solved puzzle.
+    while(initial[source]&W)initial[source]=rotate(initial[source]);
+    const mutable=[...required].filter(i=>!locked.has(i));
+    let baseline=mutable.reduce((sum,i)=>sum+Math.abs(rotationTo(initial[i],solution[i])),0);
+    const desired=5+level+(size-4)*2;
+    for(const i of shuffle(mutable,r)){
+      if(baseline>=desired)break;let best=initial[i],cost=Math.abs(rotationTo(initial[i],solution[i])),mask=solution[i];
+      for(let n=0;n<4;n++,mask=rotate(mask)){if(i===source&&(mask&W))continue;const next=Math.abs(rotationTo(mask,solution[i]));if(next>cost){cost=next;best=mask;}}
+      baseline+=cost-Math.abs(rotationTo(initial[i],solution[i]));initial[i]=best;
+    }
+    return {size,sourceRow,source,targets,relays,walls,locked,solution,initial,required:[...required].sort((x,y)=>depth[x]-depth[y]),baseline};
   }
-  const api={...defense,...verification,Signal,rotate,PUZZLE_PATHS};
-  if(typeof module!=='undefined'&&module.exports)module.exports=api;else root.MediaGames=api;
+  function signalDailyChallenge(date=new Date()){
+    const p=Object.fromEntries(new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Prague',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(date).map(x=>[x.type,x.value]));
+    const daily=p.year+'-'+p.month+'-'+p.day;return {mode:'daily',daily,seed:hash('signal-v3:'+daily),practice:false};
+  }
+  class Signal{
+    constructor(options={}){
+      if(typeof options==='number')options={seed:options,mode:'random'};
+      const areaId=SIGNAL_AREAS[options.areaId]?options.areaId:'obec',level=Math.max(0,Math.min(5,Math.floor(Number(options.level)||0))),mode=['campaign','random','daily'].includes(options.mode)?options.mode:'campaign';
+      this.options={areaId,level,mode,seed:(options.seed??(mode==='campaign'?hash('signal-campaign-v3:'+areaId+':'+level):Date.now()))>>>0,practice:mode!=='daily'&&!!options.practice,daily:mode==='daily'?options.daily||'':''};this.reset();
+    }
+    reset(){
+      Object.assign(this,this.options);this.code=this.seed.toString(36).toUpperCase().padStart(7,'0');this.round=0;this.score=0;this.totalMoves=0;this.totalHints=0;this.phase='ready';this.paused=false;this.events=[];this.history=[];this.recorded=false;
+      const r=random(this.seed),areas=shuffle(Object.keys(SIGNAL_AREAS),r);
+      this.jobs=Array.from({length:this.mode==='campaign'?1:3},(_,i)=>{const areaId=this.mode==='daily'?areas[i]:this.areaId,level=this.mode==='daily'?i+2:Math.min(5,this.level+i),job=SIGNAL_JOBS.find(j=>j.areaId===areaId&&j.level===level);return {...job,seed:this.mode==='campaign'?this.seed:hash(this.seed+':'+i+':'+areaId)};});
+      this.loadRound();
+    }
+    get job(){return this.jobs[this.round];}
+    get roundCount(){return this.jobs.length;}
+    get stars(){return this.phase==='won'?Math.min(...this.history.map(r=>r.stars)):0;}
+    get badges(){const ids=[];if(this.history.length)ids.push('first');if(this.history.some(r=>r.stars===3))ids.push('clean');if(this.history.some(r=>r.targets>=3))ids.push('branches');if(this.history.some(r=>r.relays>=2))ids.push('relays');if(this.history.some(r=>r.walls>=6))ids.push('field');if(this.history.some(r=>r.jobId==='noc-6'))ids.push('night');if(this.mode==='daily'&&this.phase==='won')ids.push('daily');return ids;}
+    loadRound(){
+      this.area=SIGNAL_AREAS[this.job.areaId];const p=makePuzzle(this.job.seed,this.job.areaId,this.job.level);Object.assign(this,p);this.tiles=[...p.initial];this.moves=0;this.hintsUsed=0;this.hintsLeft=2;this.hint=null;this.restarts=0;this.undoStack=[];this.limit=this.area.seconds+this.job.level*10;this.remaining=this.limit;this.quip=this.job.quip;this.refresh();
+    }
+    start(){if(this.phase!=='ready')return false;this.phase='playing';return true;}
+    refresh(){
+      this.connected=new Set();if(this.tiles[this.source]&W){const queue=[this.source];this.connected.add(this.source);for(let p=0;p<queue.length;p++){const from=queue[p];for(const d of neighbors(from,this.size))if((this.tiles[from]&d.bit)&&(this.tiles[d.index]&d.op)&&!this.connected.has(d.index)){this.connected.add(d.index);queue.push(d.index);}}}
+      for(const t of this.targets)t.online=this.connected.has(t.index)&&!!(this.tiles[t.index]&E);
+      this.online=this.targets.filter(t=>t.online).length;this.relaysOnline=this.relays.filter(i=>this.connected.has(i)).length;this.solved=this.online===this.targets.length&&this.relaysOnline===this.relays.length;
+    }
+    canTurn(i){return this.phase==='playing'&&!this.paused&&Number.isInteger(i)&&i>=0&&i<this.tiles.length&&!this.walls.has(i)&&!this.locked.has(i);}
+    turn(i,direction=1){
+      if(!this.canTurn(i)||![1,-1].includes(direction))return false;const before=this.tiles[i];let after=before;for(let n=direction===1?1:3;n>0;n--)after=rotate(after);
+      this.undoStack.push({i,before});this.tiles[i]=after;this.moves++;this.totalMoves++;if(this.hint?.index===i)this.hint=null;this.refresh();this.events.push({type:'turn'});
+      if(this.moves%12===0)this.quip=TURN_QUIPS[(Math.floor(this.moves/12)+this.seed)%TURN_QUIPS.length];if(this.solved)this.completeRound();return true;
+    }
+    undo(){
+      if(this.phase!=='playing'||this.paused||!this.undoStack.length)return false;const {i,before}=this.undoStack.pop();this.tiles[i]=before;this.moves++;this.totalMoves++;this.hint=null;this.quip='Krok zpět. To je v technice metoda, na poradě politický problém.';this.refresh();this.events.push({type:'turn'});return true;
+    }
+    askHint(){
+      if(this.phase!=='playing'||this.paused)return false;if(this.hint)return this.hint;if(!this.hintsLeft)return false;
+      const index=this.required.find(i=>!this.locked.has(i)&&this.tiles[i]!==this.solution[i]);if(index===undefined)return false;
+      this.hintsLeft--;this.hintsUsed++;this.totalHints++;this.hint={index,turns:rotationTo(this.tiles[index],this.solution[index]),mask:this.solution[index]};this.quip='Kvído: „Vím, kam s tím. Do faktury napíšu konzultace.“';this.events.push({type:'signal-hint'});return this.hint;
+    }
+    restartRound(){
+      if(this.phase!=='playing'||this.paused)return false;this.tiles=[...this.initial];this.moves=0;this.restarts++;this.undoStack=[];this.hint=null;this.remaining=this.limit;this.quip='Stejná síť, nový nádech. Počet restartů si ale technická knížka pamatuje.';this.refresh();this.events.push({type:'signal-restart'});return true;
+    }
+    completeRound(){
+      if(this.phase!=='playing'||!this.solved)return;
+      const stars=!this.hintsUsed&&!this.restarts&&this.moves<=this.baseline?3:this.hintsUsed<=1&&this.restarts<=1&&this.moves<=Math.max(this.baseline+4,Math.ceil(this.baseline*1.6))?2:1;
+      const score=Math.max(100,Math.round(500+250*Math.min(1,this.baseline/Math.max(1,this.moves))-50*this.hintsUsed-40*this.restarts));
+      this.history.push({jobId:this.job.id,areaId:this.job.areaId,name:this.job.name,seed:this.job.seed,stars,score,moves:this.moves,baseline:this.baseline,hints:this.hintsUsed,restarts:this.restarts,targets:this.targets.length,relays:this.relays.length,walls:this.walls.size,recorded:false});this.score+=score;
+      this.phase=this.round===this.roundCount-1?'won':'round-won';this.quip='Všichni slyší. Teď prosím nezakopnout o ten poslední kabel.';this.events.push({type:this.phase==='won'?'won':'connected'});
+    }
+    next(){if(this.phase!=='round-won'||this.paused)return false;this.round++;this.loadRound();this.phase='playing';return true;}
+    update(dt){if(this.phase!=='playing'||this.paused||this.practice||!Number.isFinite(dt)||dt<=0)return;this.remaining=Math.max(0,this.remaining-dt);if(!this.remaining){this.phase='lost';this.quip='Čas vypršel. V éteru zůstal jen povzdech technického oddělení.';this.events.push({type:'lost'});}}
+  }
+  const api={Signal,SIGNAL_AREAS,SIGNAL_JOBS,SIGNAL_BADGES,signalDailyChallenge,rotate,rotationTo,makePuzzle};
+  if(typeof module!=='undefined'&&module.exports)module.exports=api;else root.SignalGame=api;
+})(typeof window!=='undefined'?window:globalThis);
+
+</script>
+<script>
+(function(root){
+  'use strict';
+  const node=typeof module!=='undefined'&&module.exports;
+  const defense=node?require('./defender.js'):root.DefenderGame;
+  const verification=node?require('./verify.js'):root.VerifyGame;
+  const signal=node?require('./signal.js'):root.SignalGame;
+  const api={...defense,...verification,...signal};
+  if(node)module.exports=api;else root.MediaGames=api;
 })(typeof window!=='undefined'?window:globalThis);
 
 </script>
@@ -855,7 +1041,7 @@
 <script>
 (() => {
   'use strict';
-  const {Defender,Verify,Signal,TOWERS,MAPS,DIFFICULTIES,ENEMIES,BONUSES,TARGET_MODES,WAVE_NAMES,dailyChallenge,VERIFY_DESKS,VERIFY_CATEGORIES,VERIFY_FILES,VERIFY_BADGES,verifyDailyChallenge}=window.MediaGames;
+  const {Defender,Verify,Signal,TOWERS,MAPS,DIFFICULTIES,ENEMIES,BONUSES,TARGET_MODES,WAVE_NAMES,dailyChallenge,VERIFY_DESKS,VERIFY_CATEGORIES,VERIFY_FILES,VERIFY_BADGES,verifyDailyChallenge,SIGNAL_AREAS,SIGNAL_JOBS,SIGNAL_BADGES,signalDailyChallenge}=window.MediaGames;
   const $=id=>document.getElementById(id);
   const format=n=>Math.round(n).toLocaleString('cs-CZ');
   const icons={
@@ -866,12 +1052,12 @@
   const meta={
     defender:{kicker:'P101 / STRATEGICKÁ OBRANA VYSÍLÁNÍ',title:'KAVKY <span>DEFENDER</span>',description:'Škrty jdou po kabelu. Ty jdeš po nich.',note:'REŽIE, POZOR.<br>MÁME TU ŠKRTY.',welcome:'Vysílání tě potřebuje.',welcomeText:'Postav obrany na +. Přežij osm vln, na poradě vybírej bonusy a v nouzi přivolej kavčí nálet klávesou K. Kávovar je strategický cíl.',start:'Jdu bránit vysílání',icon:'◉',hint:'<span><kbd>1</kbd><kbd>2</kbd><kbd>3</kbd> vyber obranu</span><span><kbd>←</kbd><kbd>→</kbd> stanoviště <kbd>Enter</kbd> postav</span><span><kbd>K</kbd> kavčí nálet <kbd>mezerník</kbd> vlna / pauza</span>'},
     verify:{kicker:'P200 / REDAKČNÍ POHOTOVOST',title:'OVĚŘENO<span>!</span>',description:'Na stole zprávy. V hrnku nejistota. Rozhodni, co může ven.<br class="desktop-break"> Kvído má připomínku. Kvído má vždycky připomínku.',note:'ZDROJ: „VĚŘ MI.“<br>REDAKCE: „JEŠTĚ NĚCO?“',welcome:'Titulek není celý příběh.',start:'Převzít službu',icon:'✓',hint:'<span><kbd>F</kbd> ještě ověřit <kbd>J</kbd> může ven</span><span><kbd>D</kbd> dohledat detail</span><span><kbd>Enter</kbd> další zpráva <kbd>mezerník</kbd> pauza</span>'},
-    signal:{kicker:'03 / AŤ JE NÁS SLYŠET',title:'DRŽ <span>SIGNÁL</span>',description:'Dobrá informace má najít cestu ke každému.<br class="desktop-break"> Otoč dílky, propoj vysílání a překonej tři zamotané okruhy.',note:'Spojení, na kterém<br>záleží.',welcome:'Najdi společnou vlnu.',welcomeText:'Kliknutím otáčej dílky o čtvrt otáčky. Spoj studio vlevo s veřejností vpravo. Zelená linka ukazuje, kudy už signál teče. Tři okruhy, každý na 90 sekund.',start:'Naladit se',icon:'≋',hint:'<span><kbd>kliknutí</kbd> otočit dílek</span><span><kbd>šipky</kbd> pohyb po mapě <kbd>Enter</kbd> otočit</span><span><kbd>mezerník</kbd> pauza</span>'}
+    signal:{kicker:'P300 / TECHNICKÁ POHOTOVOST',title:'DRŽ <span>SIGNÁL</span>',description:'Všichni chtějí být v obraze. Někdo musí zapojit kabel.<br class="desktop-break"> Dvacet čtyři zakázek. Čtyři oblasti. Kvído bez elektrotechnické vyhlášky.',note:'NIKDO NIC NEMĚNIL.<br>JEN SE TO PŘEPOJILO.',icon:'≋',hint:'<span><kbd>kliknutí / Enter</kbd> otočit <kbd>Shift</kbd> opačně</span><span><kbd>šipky</kbd> pohyb <kbd>H</kbd> nápověda <kbd>Z</kbd> zpět</span><span><kbd>P</kbd> pauza</span>'}
   };
   const controllers={
     defender:{engine:new Defender(),started:false,speed:1,view:{selectedType:'verify',selectedTower:null,hoverSlot:-1,hoverEnemy:null}},
     verify:{engine:new Verify(),started:false,speed:1},
-    signal:{engine:new Signal(),started:false,speed:1}
+    signal:{engine:new Signal(),started:false,speed:1,direction:1,focus:0}
   };
   let current='defender',lastFrame=0,lastUI=0,overlayKey='',sound=false,audioContext=null,toastTimeout,dialogPause=null;
   let best={};try{const raw=JSON.parse(localStorage.getItem('vysilame-dal-scores')||'{}');for(const key of Object.keys(controllers))if(Number.isFinite(raw[key])&&raw[key]>=0)best[key]=raw[key];}catch{}
@@ -898,6 +1084,22 @@
   controllers.verify.engine=new Verify({recent:verifyProfile.recent});
   function storeVerifyProfile(){try{localStorage.setItem('overeno-redakce-v3',JSON.stringify(verifyProfile));}catch{}}
   function rememberVerifyCard(card){if(!verifyProfile.seen.includes(card.id))verifyProfile.seen.push(card.id);verifyProfile.recent=verifyProfile.recent.filter(id=>id!==card.family).concat(card.family).slice(-40);storeVerifyProfile();}
+  const signalModeKey=g=>g.practice?'practice':'timed';
+  const signalRecordKey=g=>g.mode==='campaign'?g.job.id+':'+signalModeKey(g):g.mode==='daily'?'daily:'+g.daily:'random:'+g.options.areaId+':'+signalModeKey(g);
+  let signalProfile={campaign:{},records:{},badges:[],solved:0};
+  function mergeSignalProfile(raw){if(raw&&typeof raw==='object'){
+    for(const job of SIGNAL_JOBS)for(const mode of ['practice','timed']){const key=job.id+':'+mode,r=raw.campaign?.[key];if(r&&Number.isFinite(r.score)&&r.score>=0&&Number.isFinite(r.moves)&&r.moves>=0){const old=signalProfile.campaign[key];signalProfile.campaign[key]={score:Math.max(old?.score||0,r.score),moves:Math.min(old?.moves??Infinity,r.moves),stars:Math.max(old?.stars||0,Math.max(0,Math.min(3,Math.floor(Number(r.stars)||0))))};}}
+    if(raw.records&&typeof raw.records==='object')for(const [key,value] of Object.entries(raw.records))if(/^(random:(obec|mesto|teren|noc):(practice|timed)|daily:\d{4}-\d{2}-\d{2})$/.test(key)&&Number.isFinite(value)&&value>=0)signalProfile.records[key]=Math.max(signalProfile.records[key]||0,value);
+    if(Array.isArray(raw.badges))signalProfile.badges=[...new Set([...signalProfile.badges,...raw.badges.filter(id=>Object.hasOwn(SIGNAL_BADGES,id))])];
+    if(Number.isFinite(raw.solved))signalProfile.solved=Math.max(signalProfile.solved,Math.floor(raw.solved));
+  }}
+  function readSignalProfile(){try{mergeSignalProfile(JSON.parse(localStorage.getItem('signal-provoz-v3')||'{}'));}catch{}}
+  readSignalProfile();
+  function storeSignalProfile(){readSignalProfile();const daily=Object.keys(signalProfile.records).filter(k=>k.startsWith('daily:')).sort().reverse();for(const key of daily.slice(31))delete signalProfile.records[key];try{localStorage.setItem('signal-provoz-v3',JSON.stringify(signalProfile));}catch{}}
+  function saveSignalRounds(g){
+    readSignalProfile();for(const r of g.history){if(r.recorded)continue;r.recorded=true;signalProfile.solved++;if(g.mode==='campaign'){const key=r.jobId+':'+signalModeKey(g),old=signalProfile.campaign[key];signalProfile.campaign[key]={stars:Math.max(old?.stars||0,r.stars),score:Math.max(old?.score||0,r.score),moves:Math.min(old?.moves??Infinity,r.moves)};}}
+    signalProfile.badges=[...new Set([...signalProfile.badges,...g.badges])];storeSignalProfile();
+  }
   function toast(message){clearTimeout(toastTimeout);$('toast').textContent=message;$('toast').classList.add('visible');toastTimeout=setTimeout(()=>$('toast').classList.remove('visible'),3100);}
   function note(frequency=440,duration=.09,type='sine'){
     if(!sound)return;
@@ -912,6 +1114,8 @@
       if(g.recorded)return;g.recorded=true;const key=verifyRecordKey(g),old=verifyProfile.records[key]||{score:0,stars:0};
       verifyProfile.records[key]={score:Math.max(old.score,score),stars:Math.max(old.stars,g.stars)};verifyProfile.shifts++;
       verifyProfile.badges=[...new Set([...verifyProfile.badges,...g.badges])];storeVerifyProfile();
+    }else if(current==='signal'){
+      if(g.recorded)return;g.recorded=true;saveSignalRounds(g);if(g.mode!=='campaign'){const key=signalRecordKey(g);signalProfile.records[key]=Math.max(signalProfile.records[key]||0,g.score);storeSignalProfile();}
     }else if(Number.isFinite(score)&&score>(best[current]||0)){best[current]=score;try{localStorage.setItem('vysilame-dal-scores',JSON.stringify(best));}catch{}}
   }
   function events(){const g=game();for(const event of g.events.splice(0)){
@@ -924,8 +1128,11 @@
     if(event.type==='flock'){note(980,.2,'triangle');toast(g.quip);}
     if(event.type==='leak')note(150,.15,'triangle');
     if(event.type==='correct'||event.type==='connected')note(660,.13);
+    if(event.type==='connected'&&current==='signal')saveSignalRounds(g);
     if(event.type==='incorrect')note(190,.15);
     if(event.type==='inspect')note(480,.1,'triangle');
+    if(event.type==='signal-hint')note(520,.15,'triangle');
+    if(event.type==='signal-restart')toast('Stejné zapojení, nový pokus. Nápovědy se nedoplňují.');
     if(event.type==='turn')note(330,.035,'triangle');
     if(event.type==='won'){saveBest();note(880,.3);}
     if(event.type==='lost'){saveBest();note(130,.28,'triangle');}
@@ -958,6 +1165,19 @@
     return '<h2>Spisovna, která nepráší.</h2><p>Každý spis má dvě varianty podkladů. Samotný titulek ti správnou odpověď nezaručí. Nová směna dává přednost déle nehraným spisům.</p><div class="verify-notebook-stats">'+verifyProfile.seen.length+' / '+VERIFY_FILES.length*2+' odehraných variant · uzavřené směny: '+verifyProfile.shifts+'</div><div class="verify-badge-grid">'+Object.entries(VERIFY_BADGES).map(([id,b])=>'<article class="verify-badge '+(verifyProfile.badges.includes(id)?'earned':'')+'"><strong>'+b.glyph+' '+b.name+(verifyProfile.badges.includes(id)?' · MÁŠ':' · ČEKÁ')+'</strong><p>'+b.text+'</p></article>').join('')+'</div><h3>Co už ti prošlo rukama</h3>'+Object.entries(VERIFY_CATEGORIES).map(([id,c])=>{const files=VERIFY_FILES.filter(f=>f.category===id),seen=verifyProfile.seen.filter(v=>files.some(f=>v.startsWith(f.id+':'))).length;return '<p>'+c.glyph+' '+c.name+': <strong>'+seen+' / '+files.length*2+'</strong></p>';}).join('')+'<p>Zlaté razítko: alespoň 90 % správně. Stříbrné: 75 %. Bronzové: 60 %. Směnu je třeba dokončit. Rekordy a razítka se ukládají zvlášť pro každou redakci i hraní bez časovače.</p>';
   }
   function verifyReview(){const g=controllers.verify.engine;return '<h2>Zápis po službě.</h2><p>'+g.correct+' správně z '+g.total+' zpráv. '+(g.phase==='lost'?'Nezodpovězené zprávy zůstaly na stole.':'Za každým razítkem má být důvod.')+'</p>'+g.cards.map((card,i)=>{const h=g.history[i];return '<article class="verify-review-item"><small>'+String(i+1).padStart(2,'0')+' / '+VERIFY_CATEGORIES[card.category].name.toUpperCase()+'</small><h3>'+escapeHTML(card.headline)+'</h3><p class="review-source">'+escapeHTML(card.source)+'</p><p class="'+(h?.correct?'review-right':'review-wrong')+'">'+(h?(h.correct?'✓ Správně. ':'↺ Tady byla chyba. ')+'Tvoje volba: '+(h.answer?'může ven.':'ještě ověřit.'):'Bez odpovědi.')+' Správné rozhodnutí: <strong>'+(card.ready?'může ven.':'ještě ověřit.')+'</strong></p><p>'+escapeHTML(card.why)+'</p></article>';}).join('');}
+  function newSignal(options={}){const c=controllers.signal;c.engine=new Signal(options);c.started=false;c.speed=1;c.direction=1;c.focus=c.engine.source;overlayKey='';$('signal-area-picker').open=!matchMedia('(max-width:540px)').matches;render(true);}
+  function signalNextJob(){const g=controllers.signal.engine,next=SIGNAL_JOBS[SIGNAL_JOBS.findIndex(j=>j.id===g.job.id)+1];if(next){newSignal({areaId:next.areaId,level:next.level,practice:g.practice});start();}}
+  function renderSignalSetup(){
+    const c=controllers.signal,g=c.engine,locked=c.started&&!['won','lost'].includes(g.phase),mode=signalModeKey(g);
+    for(const b of $('signal-areas').children){const selected=b.dataset.area===g.area.id;b.disabled=locked;b.classList.toggle('selected',selected);b.setAttribute('aria-pressed',String(selected));const jobs=SIGNAL_JOBS.filter(j=>j.areaId===b.dataset.area),done=jobs.filter(j=>signalProfile.campaign[j.id+':'+mode]?.stars).length;b.querySelector('small').textContent=SIGNAL_AREAS[b.dataset.area].size+' × '+SIGNAL_AREAS[b.dataset.area].size+' · ZAPOJENO '+done+'/6';}
+    setHTML('signal-jobs',SIGNAL_JOBS.filter(j=>j.areaId===g.area.id).map(j=>{const r=signalProfile.campaign[j.id+':'+mode];return '<button class="signal-job '+(j.id===g.job.id?'selected':'')+'" data-job="'+j.id+'" aria-pressed="'+(g.mode==='campaign'&&j.id===g.job.id)+'" '+(locked?'disabled':'')+'><b>'+String(j.level+1).padStart(2,'0')+'</b><span>'+j.name+'</span><small aria-label="'+(r?.stars||0)+' ze tří hvězd">'+medalStars(r?.stars||0)+'</small></button>';}).join(''));
+    $('signal-practice').checked=g.practice;$('signal-practice').disabled=locked||g.mode==='daily';$('signal-daily').classList.toggle('selected',g.mode==='daily');$('signal-random').classList.toggle('selected',g.mode==='random');
+    setText('signal-picker-title',g.area.name+(g.practice?' · BEZ ČASOVAČE':''));setText('signal-progress','ZAPOJENO '+SIGNAL_JOBS.filter(j=>signalProfile.campaign[j.id+':'+mode]?.stars).length+' / 24');
+    setText('signal-code',g.mode==='daily'?'DNEŠNÍ · '+g.daily.split('-').reverse().join('.'):g.mode==='campaign'?'ZAKÁZKA '+g.job.id.toUpperCase():'ROZVOD № '+g.code);
+    setText('signal-job-rule',(g.mode==='campaign'?'ZAKÁZKA':g.mode==='daily'?'DNEŠNÍ PŘENOS':'LOSOVANÁ SÍŤ')+' · '+g.size+' × '+g.size+' · '+g.targets.length+'× přijímač · '+g.relays.length+'× relé · '+g.walls.size+'× skříň · '+g.locked.size+'× pevný spoj');
+  }
+  function signalLogbook(){const g=controllers.signal.engine,mode=signalModeKey(g);return '<h2>Knížka závad. A úspěchů.</h2><p>Všech 24 zakázek je dostupných od začátku. Jejich sítě zůstávají stejné, takže můžeš zlepšit postup i medaili. Jiný rozvod losuje tři nové okruhy; denní přenos má tři společná zadání pro české datum.</p><div class="signal-log-stats">Dokončené okruhy: '+signalProfile.solved+' · Odznaky: '+signalProfile.badges.length+' / '+Object.keys(SIGNAL_BADGES).length+'</div><div class="signal-badge-grid">'+Object.entries(SIGNAL_BADGES).map(([id,b])=>'<article class="signal-badge '+(signalProfile.badges.includes(id)?'earned':'')+'"><strong>'+b.glyph+' '+b.name+' · '+(signalProfile.badges.includes(id)?'MÁŠ':'ČEKÁ')+'</strong><p>'+b.text+'</p></article>').join('')+'</div><h3>Zakázky '+(g.practice?'bez časovače':'s časovačem')+'</h3><table class="signal-log-table"><thead><tr><th>Oblast</th><th>Zapojeno</th><th>Hvězdy</th></tr></thead><tbody>'+Object.values(SIGNAL_AREAS).map(a=>{const records=SIGNAL_JOBS.filter(j=>j.areaId===a.id).map(j=>signalProfile.campaign[j.id+':'+mode]);return '<tr><td>'+a.name+'</td><td>'+records.filter(r=>r?.stars).length+' / 6</td><td>'+records.reduce((n,r)=>n+(r?.stars||0),0)+' / 18</td></tr>';}).join('')+'</tbody></table><p>Tři hvězdy: bez nápovědy a restartu, nejvýše tolik tahů jako vzorové zapojení. Dvě: nejvýše jedna nápověda a restart, v mírně vyšším počtu tahů. Jedna: za dokončení. Vzor je známá cesta, nikoli důkaz nejkratšího řešení.</p><p>Každé otočení i krok zpět se počítá jako tah. Nápověda ubere 50 bodů a restart 40. Restart vrátí čas a natočení dílků, spotřebované nápovědy zůstanou spotřebované. Rekordy i zakázky bez časovače se vedou zvlášť. Knížka se ukládá pouze v tomto prohlížeči.</p>';}
+  function signalPattern(){const g=controllers.signal.engine;return '<h2>Jedno ověřené zapojení.</h2><p>Zelená ukazuje jednu cestu ke všem přijímačům i relé. Může existovat jiné, i úspornější řešení. Souřadnice odpovídají herní desce.</p><div class="signal-solution" style="grid-template-columns:repeat('+g.size+',1fr)">'+g.solution.map((mask,i)=>'<div class="'+(g.walls.has(i)?'wall':g.required.includes(i)?'required':'')+'">'+(g.walls.has(i)?'<span class="pipe-cabinet">×</span>':pipeSVG(mask))+'<small class="pipe-coordinate">'+signalCoordinate(i,g.size)+'</small>'+(g.relays.includes(i)?'<span class="pipe-relay">R'+(g.relays.indexOf(i)+1)+'</span>':'')+'</div>').join('')+'</div><p>Vstup ze studia je vlevo na řádku '+String.fromCharCode(65+g.sourceRow)+'. Přijímače vpravo: '+g.targets.map((t,i)=>'P'+(i+1)+' na řádku '+String.fromCharCode(65+t.row)).join(', ')+'.</p>';}
   function selectGame(name){
     if(!controllers[name])return;
     if(name!==current&&active().started&&!['won','lost'].includes(game().phase))game().paused=true;
@@ -967,20 +1187,31 @@
     setText('game-kicker',meta[name].kicker);setHTML('game-title',meta[name].title);setHTML('game-description',meta[name].description);setHTML('intro-note',meta[name].note);setHTML('keyboard-hint',meta[name].hint);
     $('defender-canvas').hidden=name!=='defender';$('verify-view').hidden=name!=='verify';$('signal-view').hidden=name!=='signal';
     for(const id of Object.keys(controllers))$(id+'-tools').hidden=id!==name;
-    $('defender-legend').hidden=name!=='defender';$('speed-button').hidden=name!=='defender';$('defender-setup').hidden=name!=='defender';$('defender-action-bar').hidden=name!=='defender';$('verify-setup').hidden=name!=='verify';document.body.classList.toggle('is-defender',name==='defender');document.body.classList.toggle('is-verify',name==='verify');
+    $('defender-legend').hidden=name!=='defender';$('speed-button').hidden=name!=='defender';$('defender-setup').hidden=name!=='defender';$('defender-action-bar').hidden=name!=='defender';$('verify-setup').hidden=name!=='verify';$('signal-setup').hidden=name!=='signal';$('signal-action-bar').hidden=name!=='signal';document.body.classList.toggle('is-defender',name==='defender');document.body.classList.toggle('is-verify',name==='verify');document.body.classList.toggle('is-signal',name==='signal');
     document.title=({defender:'Kavky Defender',verify:'Ověřeno!',signal:'Drž signál'})[name]+' — Vysíláme dál.';
     try{history.replaceState(null,'','#'+({defender:'kavky',verify:'overeno',signal:'signal'})[name]);}catch{}
     render(true);requestAnimationFrame(alignSignalEnds);
   }
-  function start(){active().started=true;if(current!=='defender')game().start();else{$('defender-map-picker').open=false;game().quip=game().say('welcome');}if(current==='verify')$('verify-desk-picker').open=false;game().paused=false;overlayKey='';render(true);note(440,.1);if(current==='defender')toast('Redakce má službu. Postav obrany a spusť vlnu.');}
-  function reset(same=false){const c=active();if(current==='verify'){const g=c.engine;newVerify(same===true?g.options:{deskId:g.deskId,practice:g.practice});return;}else if(current==='signal')c.engine=new Signal();else{const g=c.engine;c.engine=new Defender(same===true?g.options:{mapId:g.mapId,difficulty:g.difficulty});c.view={selectedType:'verify',selectedTower:null,hoverSlot:-1,hoverEnemy:null};$('defender-map-picker').open=!matchMedia('(max-width:540px)').matches;}c.started=false;c.speed=1;overlayKey='';render(true);}
+  function start(){active().started=true;if(current!=='defender')game().start();else{$('defender-map-picker').open=false;game().quip=game().say('welcome');}if(current==='verify')$('verify-desk-picker').open=false;if(current==='signal'){$('signal-area-picker').open=false;controllers.signal.focus=game().source;}game().paused=false;overlayKey='';render(true);if(current==='signal')$('pipe-grid').children[game().source]?.focus({preventScroll:true});note(440,.1);if(current==='defender')toast('Redakce má službu. Postav obrany a spusť vlnu.');}
+  function reset(same=false){const c=active();if(current==='verify'){const g=c.engine;newVerify(same===true?g.options:{deskId:g.deskId,practice:g.practice});return;}else if(current==='signal'){const g=c.engine;newSignal(same===true?g.options:{mode:'random',areaId:g.area.id,level:g.job.level,practice:g.practice});return;}else{const g=c.engine;c.engine=new Defender(same===true?g.options:{mapId:g.mapId,difficulty:g.difficulty});c.view={selectedType:'verify',selectedTower:null,hoverSlot:-1,hoverEnemy:null};$('defender-map-picker').open=!matchMedia('(max-width:540px)').matches;}c.started=false;c.speed=1;overlayKey='';render(true);}
   function togglePause(){if(!active().started||['won','lost','round-won','briefing'].includes(game().phase))return;game().paused=!game().paused;overlayKey='';render(true);}
-  function primaryAction(){const g=game();if(!active().started){start();return;}if(g.paused)return;if(current==='defender')g.startWave();else if(current==='verify'&&g.feedback)g.next();else if(current==='signal'&&g.phase==='round-won')g.next();events();overlayKey='';render(true);}
+  function primaryAction(){const g=game();if(!active().started){start();return;}if(g.paused)return;if(current==='defender')g.startWave();else if(current==='verify'&&g.feedback)g.next();else if(current==='signal'&&g.phase==='round-won'){nextSignalRound();return;}events();overlayKey='';render(true);}
+  function signalOverlay(kind){
+    const g=controllers.signal.engine,eyebrow=g.mode==='daily'?'DNEŠNÍ PŘENOS · '+g.daily:g.mode==='campaign'?'ZAKÁZKA '+String(g.job.level+1).padStart(2,'0')+' / '+g.area.name.toUpperCase():'LOSOVANÝ ROZVOD · OKRUH '+(g.round+1)+' / '+g.roundCount;
+    if(kind==='welcome')return '<div class="overlay-icon" aria-hidden="true">'+g.area.glyph+'</div><p class="eyebrow">'+eyebrow+'</p><h2>'+g.job.name+'</h2><p>'+g.job.brief+'</p><div class="signal-specs"><span>'+g.size+' × '+g.size+'</span><span>PŘIJÍMAČE: '+g.targets.length+'</span><span>'+g.relays.length+' RELÉ</span><span>'+(g.practice?'BEZ ČASOVAČE':g.limit+' SEKUND')+'</span>'+(g.roundCount>1?'<span>3 OKRUHY</span>':'')+'</div><p>Otoč dílky a připoj všechny přijímače vpravo i povinná relé R. Nemusíš využít celou desku. Kvído může dvakrát poradit.</p><button class="primary-button" data-action="start">Zapojit vysílání →</button><span class="overlay-caption">LEVOU I PRAVOU · MYŠÍ, DOTYKEM, KLÁVESNICÍ</span>';
+    const last=g.history.at(-1),won=kind==='won',cleared=kind==='round-won',stars=cleared?last.stars:g.stars;
+    const title=cleared?'Tenhle už hraje.':!won?'V éteru je ticho.':stars===3?'Zlatý konektor!':stars===2?'Stříbrná redukce!':'Zapojeno. I s příběhem.';
+    const body=cleared?'Všechny přijímače i relé jsou připojené. Čas stojí. Kvído hledá, komu to vyfakturovat.':!won?'Čas došel. Stejnou síť můžeš zapojit znovu, případně ji nejdřív prohlédnout ve vzorovém zapojení.':g.roundCount===1?'Zakázka vyřízena. Kabely popsané. Aspoň myšlenkově.':'Všechny tři okruhy jsou v éteru. Předávací protokol tentokrát nelže.';
+    const next=SIGNAL_JOBS[SIGNAL_JOBS.findIndex(j=>j.id===g.job.id)+1];
+    const primary=cleared?'<button class="primary-button" data-action="next-round">Další okruh →</button>':!won?'<button class="primary-button" data-action="replay">Stejná síť, nový pokus ↺</button>':g.mode==='campaign'&&next?'<button class="primary-button" data-action="signal-next-job">Další zakázka →</button>':'<button class="primary-button" data-action="signal-random">Jiný rozvod · 3 nové okruhy →</button>';
+    return '<p class="eyebrow">'+eyebrow+'</p><h2>'+title+'</h2>'+(won||cleared?'<div class="signal-result-stars" aria-label="'+stars+' ze tří hvězd">'+medalStars(stars)+'</div>':'')+'<p>'+body+'</p><div class="overlay-score">'+format(cleared?last.score:g.score)+' <small style="font-size:10px">BODŮ</small></div>'+(last&&(won||cleared)?'<div class="signal-result-summary">'+(g.roundCount===1||cleared?'Tahů: '+last.moves+' · Vzor: '+last.baseline+' · Nápověd: '+last.hints+' · Restartů: '+last.restarts:'Dokončeno: '+g.history.length+' / '+g.roundCount+' · Tahů celkem: '+g.totalMoves+' · Nápověd: '+g.totalHints)+'</div>':'')+'<div class="signal-result-badges">'+g.badges.map(id=>'<span>'+SIGNAL_BADGES[id].glyph+' '+SIGNAL_BADGES[id].name+'</span>').join('')+'</div>'+primary+'<div class="signal-result-actions"><button class="text-button" data-action="signal-pattern">Vzorové zapojení ↗</button>'+(won?'<button class="text-button" data-action="replay">Stejná síť ↺</button>':'')+(!cleared?'<button class="text-button" data-action="signal-choose">Jiná zakázka ↗</button><button class="text-button" data-action="signal-random">Jiný rozvod ↻</button>':'')+'</div>';
+  }
   function overlay(){
     const c=active(),g=game(),m=meta[current];let kind=!c.started?(current==='defender'?'':'welcome'):g.paused?'paused':['won','lost','round-won','briefing'].includes(g.phase)?g.phase:'';
     const key=current+':'+kind+':'+(g.round||0)+':'+(g.wave||0)+':'+(g.code||'');if(key===overlayKey)return;overlayKey=key;$('board-overlay').hidden=!kind;if(!kind)return;
     let html='',extraClass='';
-    if(kind==='welcome'&&current==='verify')html='<div class="overlay-icon" aria-hidden="true">'+g.desk.glyph+'</div><p class="eyebrow">'+(g.daily?'DNEŠNÍ VYDÁNÍ · STEJNÉ ZADÁNÍ PRO VŠECHNY':g.desk.label)+'</p><h2>'+g.desk.name+'</h2><p>'+g.desk.description+'</p><div class="verify-welcome-spec"><span>'+g.total+' ZPRÁV</span><span>'+(g.practice?'BEZ ČASOVAČE':g.desk.seconds+' SEKUND')+'</span><span>'+g.desk.checks+' DOHLEDÁNÍ</span></div><p>Čti titulek i podklady. <b>Ještě ověřit</b>, nebo <b>Může ven</b>? Při vysvětlení čas stojí. Detail ti napoví za '+(g.practice?'20 bodů z případné správné odpovědi':'8 sekund a 20 bodů z případné správné odpovědi')+'.</p><button class="primary-button" data-action="start">Převzít službu →</button><span class="overlay-caption">80 VARIANT · 8 TÉMAT · JEDEN NEVYŽÁDANÝ KVÍDO</span>';
+    if(current==='signal'&&kind!=='paused'){html=signalOverlay(kind);extraClass=' signal-overlay-card';}
+    else if(kind==='welcome'&&current==='verify')html='<div class="overlay-icon" aria-hidden="true">'+g.desk.glyph+'</div><p class="eyebrow">'+(g.daily?'DNEŠNÍ VYDÁNÍ · STEJNÉ ZADÁNÍ PRO VŠECHNY':g.desk.label)+'</p><h2>'+g.desk.name+'</h2><p>'+g.desk.description+'</p><div class="verify-welcome-spec"><span>'+g.total+' ZPRÁV</span><span>'+(g.practice?'BEZ ČASOVAČE':g.desk.seconds+' SEKUND')+'</span><span>'+g.desk.checks+' DOHLEDÁNÍ</span></div><p>Čti titulek i podklady. <b>Ještě ověřit</b>, nebo <b>Může ven</b>? Při vysvětlení čas stojí. Detail ti napoví za '+(g.practice?'20 bodů z případné správné odpovědi':'8 sekund a 20 bodů z případné správné odpovědi')+'.</p><button class="primary-button" data-action="start">Převzít službu →</button><span class="overlay-caption">80 VARIANT · 8 TÉMAT · JEDEN NEVYŽÁDANÝ KVÍDO</span>';
     else if(kind==='welcome')html='<div class="overlay-icon" aria-hidden="true">'+m.icon+'</div><p class="eyebrow">MALÁ HRA. VELKÁ VĚC.</p><h2>'+m.welcome+'</h2><p>'+m.welcomeText+'</p><button class="primary-button" data-action="start">'+m.start+' <span aria-hidden="true">→</span></button><span class="overlay-caption">MYŠ · DOTYK · KLÁVESNICE</span>';
     else if(kind==='paused')html='<div class="overlay-icon" aria-hidden="true">Ⅱ</div><p class="eyebrow">ODBOROVĚ SCHVÁLENÉ NADECHNUTÍ</p><h2>Jsme tu pořád.</h2><p>Hra stojí. Kvído hledá svůj hrnek. Až budeš připravený, můžeme pokračovat.</p><button class="primary-button" data-action="resume">Pokračovat <span aria-hidden="true">▶</span></button>';
     else if(kind==='briefing'){
@@ -1001,8 +1232,8 @@
   function metrics(){const g=game();let labels,values,icons_,tag;
     if(current==='defender'){labels=['SÍLA SIGNÁLU','PODPORA','VLNA'];values=[g.health+'<span> %</span>',format(g.money),g.wave+'<span> / '+g.waveCount+'</span>'];icons_=['◉','✳','≋'];tag=g.phase==='build'?'PŘÍPRAVA':g.phase==='wave'?'VYSÍLÁME':g.phase==='briefing'?'PORADA':g.phase==='won'?'UDRŽENO':'DOHRÁNO';$('health-track').hidden=false;$('health-track').firstElementChild.style.width=g.health+'%';$('health-track').firstElementChild.style.background=g.health>40?'#edfa45':'#ff6b4a';}
     else if(current==='verify'){labels=[g.practice?'ČAS NA KÁVU':'ZBÝVÁ ČASU','SPRÁVNĚ','ZPRÁVA'];values=[g.practice?'∞':Math.ceil(g.remaining)+'<span> s</span>',g.correct+'<span> / '+g.total+'</span>',Math.min(g.index+1,g.total)+'<span> / '+g.total+'</span>'];icons_=['◷','✓','▤'];tag=g.phase==='won'?'DOHRÁNO':g.phase==='lost'?'UZÁVĚRKA':g.feedback?'ČTEME KONTEXT':g.card?.boss?'UZÁVĚRKOVÝ CHYTÁK':g.phase==='ready'?'PŘÍPRAVA':'VE SLUŽBĚ';$('health-track').hidden=true;}
-    else{labels=['ZBÝVÁ ČASU','OTOČENÍ','OKRUH'];values=[Math.ceil(g.remaining)+'<span> s</span>',format(g.moves),(g.round+1)+'<span> / 3</span>'];icons_=['◷','↻','≋'];tag=g.solved?'SPOJENO':'LADÍME';$('health-track').hidden=true;}
-    labels.forEach((v,i)=>{setText('metric-label-'+(i+1),v);setHTML('metric-value-'+(i+1),values[i]);setText('metric-icon-'+(i+1),icons_[i]);});setText('metric-tag',g.paused?'PAUZA':tag);const record=current==='defender'?defenderRecords[recordKey(g)]?.score:current==='verify'?verifyProfile.records[verifyRecordKey(g)]?.score:best[current];setText('best-score',record?format(record)+' b.':'—');setText('best-score-label',current==='verify'?(g.practice?'REKORD BEZ ČASOVAČE':'REKORD TÉTO REDAKCE'):'TVŮJ REKORD');
+    else{labels=[g.practice?'ČAS NA KÁVU':'ZBÝVÁ ČASU','TAHY','PŘIJÍMAČE'];values=[g.practice?'∞':Math.ceil(g.remaining)+'<span> s</span>',format(g.moves),g.online+'<span> / '+g.targets.length+'</span>'];icons_=['◷','↻','≋'];tag=g.phase==='lost'?'TICHO':g.solved?'SPOJENO':g.phase==='ready'?'PŘÍPRAVA':'LADÍME';$('health-track').hidden=true;}
+    labels.forEach((v,i)=>{setText('metric-label-'+(i+1),v);setHTML('metric-value-'+(i+1),values[i]);setText('metric-icon-'+(i+1),icons_[i]);});setText('metric-tag',g.paused?'PAUZA':tag);const record=current==='defender'?defenderRecords[recordKey(g)]?.score:current==='verify'?verifyProfile.records[verifyRecordKey(g)]?.score:g.mode==='campaign'?signalProfile.campaign[signalRecordKey(g)]?.score:signalProfile.records[signalRecordKey(g)];setText('best-score',record?format(record)+' b.':'—');setText('best-score-label',current==='verify'?(g.practice?'REKORD BEZ ČASOVAČE':'REKORD TÉTO REDAKCE'):current==='signal'?(g.mode==='daily'?'REKORD DNE':g.practice?'REKORD BEZ ČASOVAČE':g.mode==='campaign'?'REKORD ZAKÁZKY':'REKORD V OBLASTI'):'TVŮJ REKORD');
   }
   function controls(){const c=active(),g=game(),finished=['won','lost'].includes(g.phase),b=$('wave-button');
     if(!c.started){b.disabled=current==='defender';b.innerHTML=current==='defender'?'Postav obranu na +':'<span aria-hidden="true">▶</span> Začít hrát';}
@@ -1012,7 +1243,7 @@
     if(finished)b.disabled=true;
     $('pause-button').disabled=!c.started||finished||['round-won','briefing'].includes(g.phase);setText('pause-button',g.paused?'▶':'Ⅱ');$('pause-button').setAttribute('aria-label',g.paused?'Pokračovat ve hře':'Pozastavit hru');
     $('speed-button').disabled=!c.started||finished;$('speed-button').classList.toggle('active',c.speed===2);setText('speed-button',c.speed+'×');$('speed-button').setAttribute('aria-label','Rychlost hry: '+c.speed+'×');
-    if(current==='signal')$('signal-restart-round').disabled=!c.started||g.phase!=='playing'||g.paused;
+    if(current==='signal'){const locked=!c.started||g.phase!=='playing'||g.paused;$('signal-restart-round').disabled=locked;$('signal-direction').disabled=locked;$('signal-undo').disabled=locked||!g.undoStack.length;$('signal-hint').disabled=locked||g.hintsLeft<=0||!!g.hint;setText('signal-direction',c.direction===1?'↻ Otáčet doprava':'↶ Otáčet doleva');setText('signal-hint-count',g.hintsLeft);}
     if(current==='defender'){$('flock-button').disabled=!c.started||g.phase!=='wave'||g.paused||!g.enemies.length||g.panicCharges<=0||g.skillCooldown>0;setText('flock-count',g.panicCharges);setText('flock-hint',g.skillCooldown>0?'Kavky si rovnají peří: '+Math.ceil(g.skillCooldown)+' s.':g.panicCharges?'Zastaví protivníky a zobne do nich. Po 4. vlně přijde posila.':'Zobáky vyčerpány. Porada může přivolat posily.');}
   }
   function towers(){
@@ -1038,12 +1269,35 @@
   }
   const portNames={1:'sever',2:'východ',4:'jih',8:'západ'};
   function pipeSVG(mask){let d='';for(const [bit,x,y] of [[1,50,0],[2,100,50],[4,50,100],[8,0,50]])if(mask&bit)d+='M50 50 L'+x+' '+y+' ';return '<svg viewBox="0 0 100 100" aria-hidden="true"><path class="pipe-shadow" d="'+d+'"/><path class="pipe-line" d="'+d+'"/><circle class="pipe-center" cx="50" cy="50" r="9"/></svg>';}
-  function renderSignal(){const g=controllers.signal.engine,grid=$('pipe-grid');if(!grid.children.length){for(let i=0;i<25;i++){const b=document.createElement('button');b.className='pipe-tile';b.dataset.tile=i;grid.appendChild(b);}}
-    for(let i=0;i<25;i++){const b=grid.children[i],m=g.tiles[i],connected=g.connected.has(i);if(b.dataset.mask!==String(m)){b.innerHTML=pipeSVG(m);b.dataset.mask=m;}b.classList.toggle('connected',connected);b.setAttribute('aria-label','Řádek '+(Math.floor(i/5)+1)+', sloupec '+(i%5+1)+'. Spojení '+Object.keys(portNames).filter(v=>m&Number(v)).map(v=>portNames[v]).join(' a ')+'. '+(connected?'Signál připojen.':'Čeká na spojení.'));b.disabled=g.phase!=='playing'||g.paused;}
-    setText('circuit-number','OKRUH '+String(g.round+1).padStart(2,'0'));$('signal-target').classList.toggle('reached',g.solved);alignSignalEnds();
+  function signalCoordinate(index,size){return String.fromCharCode(65+Math.floor(index/size))+(index%size+1);}
+  function renderSignal(){
+    const c=controllers.signal,g=c.engine,grid=$('pipe-grid');renderSignalSetup();
+    if(grid.children.length!==g.tiles.length){grid.replaceChildren();for(let i=0;i<g.tiles.length;i++){const button=document.createElement('button');button.className='pipe-tile';button.dataset.tile=i;grid.appendChild(button);}}
+    grid.style.gridTemplateColumns='repeat('+g.size+',minmax(0,1fr))';
+    if(g.phase==='playing'&&!g.canTurn(c.focus))c.focus=g.source;
+    for(let i=0;i<g.tiles.length;i++){
+      const button=grid.children[i],mask=g.tiles[i],relay=g.relays.indexOf(i),wall=g.walls.has(i),locked=g.locked.has(i),art=[mask,relay,wall,locked].join(':');
+      if(button.dataset.art!==art){button.innerHTML=(wall?'<span class="pipe-cabinet" aria-hidden="true">×</span>':pipeSVG(mask))+'<small class="pipe-coordinate" aria-hidden="true">'+signalCoordinate(i,g.size)+'</small>'+(locked?'<span class="pipe-fixed" aria-hidden="true">▣</span>':'')+(relay>=0?'<span class="pipe-relay" aria-hidden="true">R'+(relay+1)+'</span>':'');button.dataset.art=art;}
+      button.classList.toggle('connected',g.connected.has(i));button.classList.toggle('wall',wall);button.classList.toggle('locked',locked);button.classList.toggle('relay',relay>=0);button.classList.toggle('hinted',g.hint?.index===i);
+      const label=signalCoordinate(i,g.size)+'. '+(wall?'Skříň, překážka.':(relay>=0?'Povinné relé R'+(relay+1)+'. ':'')+(locked?'Pevný spoj, neotáčí se. ':'')+'Spojení '+Object.keys(portNames).filter(v=>mask&Number(v)).map(v=>portNames[v]).join(' a ')+'. '+(g.connected.has(i)?'Signál připojen.':'Čeká na signál.'));
+      button.setAttribute('aria-label',label);button.title=label;button.disabled=!c.started||!g.canTurn(i);button.tabIndex=i===c.focus?0:-1;
+    }
+    $('signal-source').setAttribute('aria-label','Studio, vstup na '+signalCoordinate(g.source,g.size)+'.');
+    setText('signal-board-area',g.area.name.toUpperCase()+' · '+g.size+'×'+g.size);setText('circuit-number','OKRUH '+(g.round+1)+' / '+g.roundCount);setText('signal-job-title',g.job.name);
+    setHTML('signal-targets',g.targets.map((t,i)=>'<div class="signal-end target-end '+(t.online?'reached':'')+'" data-row="'+t.row+'" role="img" aria-label="Přijímač P'+(i+1)+': '+t.name+', výstup na '+signalCoordinate(t.index,g.size)+'. '+(t.online?'Připojen.':'Čeká na signál.')+'"><span aria-hidden="true">'+(i+1)+'</span><small>P'+(i+1)+'</small></div>').join(''));
+    setHTML('signal-board-status','<span class="'+(g.online===g.targets.length?'all-live':'')+'">PŘIJÍMAČE '+g.online+'/'+g.targets.length+'</span>'+(g.relays.length?'<span class="'+(g.relaysOnline===g.relays.length?'all-live':'')+'">RELÉ '+g.relaysOnline+'/'+g.relays.length+'</span>':'')+'<span>PEVNÉ SPOJE: '+g.locked.size+'</span>');
+    setText('signal-brief',g.job.brief);setText('signal-quip',g.quip);setText('signal-score',format(g.score));setText('signal-baseline',g.baseline+' tahů');
+    setHTML('signal-target-status',g.targets.map((t,i)=>'<div class="signal-receiver '+(t.online?'online':'')+'"><b>P'+(i+1)+'</b><span>'+t.name+'</span><small>'+(t.online?'V ÉTERU':'ČEKÁ')+'</small></div>').join('')+g.relays.map((index,i)=>'<div class="signal-receiver '+(g.connected.has(index)?'online':'')+'"><b>R'+(i+1)+'</b><span>Relé '+signalCoordinate(index,g.size)+'</span><small>'+(g.connected.has(index)?'PŘIPOJENO':'ČEKÁ')+'</small></div>').join(''));
+    setText('signal-assist-rule',g.hintsLeft+' ze 2 nápověd zbývá. Každá stojí 50 bodů. Restart vrátí čas, ponechá spotřebované nápovědy a stojí 40 bodů. Zpět se počítá jako další tah.');
+    $('signal-inline-hint').hidden=!g.hint;
+    if(g.hint)setText('signal-inline-hint','Kvído ukazuje '+signalCoordinate(g.hint.index,g.size)+': '+Math.abs(g.hint.turns)+'× '+(g.hint.turns<0?'doleva':'doprava')+'. Je to krok k jednomu známému zapojení.');
   }
-  function alignSignalEnds(){if(current!=='signal')return;const tile=$('pipe-grid').firstElementChild;if(!tile)return;const g=controllers.signal.engine,h=tile.getBoundingClientRect().height,gap=parseFloat(getComputedStyle($('pipe-grid')).gap)||0;for(const [id,row] of [['signal-source',g.sourceRow],['signal-target',g.targetRow]]){const circle=$(id).firstElementChild.getBoundingClientRect().height;$(id).style.top=row*(h+gap)+(h-circle)/2+'px';}}
-  function render(force=false){metrics();controls();if(current==='defender')towers();else if(current==='verify')renderVerify();else renderSignal();overlay();}
+  function alignSignalEnds(){
+    if(current!=='signal')return;const grid=$('pipe-grid'),tile=grid.firstElementChild;if(!tile)return;
+    const g=controllers.signal.engine,h=tile.getBoundingClientRect().height;if(!h)return;const style=getComputedStyle(grid),gap=parseFloat(style.gap)||0,border=parseFloat(style.borderTopWidth)||0;
+    for(const [end,row] of [[$('signal-source'),g.sourceRow],...[...$('signal-targets').children].map(e=>[e,Number(e.dataset.row)])]){const circle=end.firstElementChild.getBoundingClientRect().height;end.style.top=border+row*(h+gap)+(h-circle)/2+'px';}
+  }
+  function render(force=false){metrics();controls();if(current==='defender')towers();else if(current==='verify')renderVerify();else renderSignal();overlay();if(current==='signal')alignSignalEnds();}
   $('tower-options').innerHTML=Object.entries(TOWERS).map(([type,t],i)=>'<button class="tower-option '+(i===0?'selected':'')+'" data-tower="'+type+'" aria-pressed="'+(i===0)+'" title="'+t.description+'"><span class="tower-icon" style="--tower-color:'+t.color+'">'+icons[type]+'</span><span><strong>'+t.name+'</strong><small>'+t.tag+'</small></span><span class="tower-cost">'+t.cost+' ✳</span><kbd>'+(i+1)+'</kbd></button>').join('');
   $('tower-options').addEventListener('click',e=>{const b=e.target.closest('[data-tower]');if(!b)return;const c=controllers.defender;c.view.selectedType=b.dataset.tower;c.view.selectedTower=null;render();});
   $('tower-detail').addEventListener('click',e=>{const up=e.target.closest('[data-upgrade]'),sell=e.target.closest('[data-sell]'),target=e.target.closest('[data-target]');if(target){const g=controllers.defender.engine,t=g.towers.find(t=>t.id===Number(target.dataset.target));if(t){const modes=Object.keys(TARGET_MODES);g.setTarget(t.id,modes[(modes.indexOf(t.target)+1)%modes.length]);}}if(up)controllers.defender.engine.upgrade(Number(up.dataset.upgrade));if(sell){controllers.defender.engine.sell(Number(sell.dataset.sell));controllers.defender.view.selectedTower=null;}events();render();});
@@ -1051,8 +1305,19 @@
   const canvas=$('defender-canvas');canvas.width=960*Math.min(devicePixelRatio||1,2);canvas.height=576*Math.min(devicePixelRatio||1,2);
   function pointerSlot(e){const r=canvas.getBoundingClientRect(),x=(e.clientX-r.left)/r.width*960,y=(e.clientY-r.top)/r.height*576;let index=-1,distance=Math.max(33,22*960/r.width);controllers.defender.engine.slots.forEach(([a,b],i)=>{const d=Math.hypot(x-a,y-b);if(d<distance){index=i;distance=d;}});return index;}
   canvas.addEventListener('pointermove',e=>{const c=controllers.defender,r=canvas.getBoundingClientRect(),x=(e.clientX-r.left)/r.width*960,y=(e.clientY-r.top)/r.height*576;c.view.hoverSlot=pointerSlot(e);c.view.hoverEnemy=c.engine.enemies.find(n=>Math.hypot(n.x-x,n.y-y)<24)?.id||null;});canvas.addEventListener('pointerleave',()=>{controllers.defender.view.hoverSlot=-1;controllers.defender.view.hoverEnemy=null;});canvas.addEventListener('click',e=>{const i=pointerSlot(e);if(i>=0)pickSlot(i);});
-  $('pipe-grid').addEventListener('click',e=>{const b=e.target.closest('[data-tile]');if(!b)return;game().turn(Number(b.dataset.tile));events();render();});
-  $('pipe-grid').addEventListener('keydown',e=>{const b=e.target.closest('[data-tile]');if(!b)return;const i=Number(b.dataset.tile),delta={ArrowLeft:-1,ArrowRight:1,ArrowUp:-5,ArrowDown:5}[e.key];if(delta){e.preventDefault();e.stopPropagation();const next=i+delta;if(next>=0&&next<25&&(Math.abs(delta)===5||Math.floor(next/5)===Math.floor(i/5)))$('pipe-grid').children[next].focus();}});
+  function focusSignalTile(){const c=controllers.signal;if(c.engine.phase==='playing')$('pipe-grid').children[c.focus]?.focus({preventScroll:true});else $('board-overlay').querySelector('.primary-button')?.focus({preventScroll:true});}
+  function turnSignal(index,direction){if(current!=='signal')return;const c=controllers.signal;if(!c.engine.turn(index,direction??c.direction))return;c.focus=index;events();render();focusSignalTile();}
+  function undoSignal(){if(current!=='signal')return;const c=controllers.signal,index=c.engine.undoStack.at(-1)?.i;if(!c.engine.undo())return;c.focus=index;events();render();focusSignalTile();}
+  function hintSignal(){if(current!=='signal')return;const c=controllers.signal,hint=c.engine.askHint();if(!hint)return;c.focus=hint.index;events();render();$('pipe-grid').children[c.focus]?.focus({preventScroll:true});}
+  function nextSignalRound(){if(current!=='signal'||!game().next())return;controllers.signal.focus=game().source;overlayKey='';render();focusSignalTile();}
+  $('pipe-grid').addEventListener('click',e=>{const b=e.target.closest('[data-tile]');if(b)turnSignal(Number(b.dataset.tile),e.shiftKey?-controllers.signal.direction:controllers.signal.direction);});
+  $('pipe-grid').addEventListener('contextmenu',e=>{const b=e.target.closest('[data-tile]');if(b){e.preventDefault();turnSignal(Number(b.dataset.tile),-controllers.signal.direction);}});
+  $('pipe-grid').addEventListener('keydown',e=>{
+    const b=e.target.closest('[data-tile]');if(!b)return;const c=controllers.signal,g=c.engine,i=Number(b.dataset.tile),step={ArrowLeft:-1,ArrowRight:1,ArrowUp:-g.size,ArrowDown:g.size}[e.key];
+    if(e.key==='Enter'){e.preventDefault();e.stopPropagation();turnSignal(i,e.shiftKey?-c.direction:c.direction);return;}
+    if(step){e.preventDefault();e.stopPropagation();let next=i+step;while(next>=0&&next<g.tiles.length&&(Math.abs(step)===g.size||Math.floor(next/g.size)===Math.floor(i/g.size))){if(g.canTurn(next)){c.focus=next;render();focusSignalTile();break;}next+=step;}}
+  });
+  $('signal-direction').addEventListener('click',()=>{controllers.signal.direction*=-1;render();});$('signal-undo').addEventListener('click',undoSignal);$('signal-hint').addEventListener('click',hintSignal);
   function answer(value){if(current!=='verify')return;const g=game();if(!g.submit(value))return;rememberVerifyCard(g.card);events();render();$('next-story').focus({preventScroll:true});}
   function advanceVerify(){if(current!=='verify'||!game().next())return;events();render();if(game().phase==='playing')$('news-card').focus({preventScroll:true});else $('board-overlay').querySelector('.primary-button')?.focus({preventScroll:true});}
   function inspectVerify(){if(current!=='verify'||!game().inspect())return;events();render();}
@@ -1060,23 +1325,25 @@
   $('hold-story').addEventListener('click',()=>answer(false));$('publish-story').addEventListener('click',()=>answer(true));$('next-story').addEventListener('click',advanceVerify);$('verify-inspect').addEventListener('click',inspectVerify);
   $('wave-button').addEventListener('click',primaryAction);$('pause-button').addEventListener('click',togglePause);$('reset-button').addEventListener('click',()=>reset());
   $('speed-button').addEventListener('click',()=>{active().speed=active().speed===1?2:1;render();});
-  $('signal-restart-round').addEventListener('click',()=>{if(current!=='signal')return;const g=game();if(!active().started||g.phase!=='playing'||g.paused)return;g.generate();overlayKey='';render();toast('Okruh znovu naladěn.');});
+  $('signal-restart-round').addEventListener('click',()=>{if(current!=='signal')return;const g=game();if(!active().started||g.phase!=='playing'||g.paused)return;g.restartRound();controllers.signal.focus=g.source;events();overlayKey='';render();focusSignalTile();});
   $('sound-button').addEventListener('click',()=>{sound=!sound;$('sound-button').setAttribute('aria-pressed',String(sound));$('sound-button').setAttribute('aria-label',sound?'Vypnout zvuk':'Zapnout zvuk');$('sound-button').title=sound?'Vypnout zvuk':'Zapnout zvuk';$('sound-button').innerHTML='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4Z" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="'+(sound?'M17 8q6 4 0 8m-1-6q3 2 0 4':'m17 9 5 6m0-6-5 6')+'" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>';if(sound)note(550,.12);});
   document.querySelectorAll('[data-game]').forEach((b,i,array)=>{b.addEventListener('click',()=>selectGame(b.dataset.game));b.addEventListener('keydown',e=>{if(['ArrowLeft','ArrowRight'].includes(e.key)){e.preventDefault();const next=(i+(e.key==='ArrowRight'?1:2))%3;selectGame(array[next].dataset.game);array[next].focus();}});});
-  $('board-overlay').addEventListener('click',e=>{const b=e.target.closest('[data-action]');if(!b)return;const action=b.dataset.action;if(action==='start')start();if(action==='resume'){game().paused=false;overlayKey='';render();}if(action==='replay'){reset(true);start();}if(action==='new-shift'){reset();start();}if(action==='verify-review')openDialog(verifyReview(),'ROZBOR SMĚNY');if(action==='verify-choose'){reset();$('verify-desk-picker').open=true;$('verify-setup').scrollIntoView({behavior:'smooth',block:'start'});}if(action==='choose-map'){reset();$('defender-map-picker').open=true;$('defender-setup').scrollIntoView({behavior:'smooth',block:'start'});}if(action==='bonus'){game().chooseBonus(b.dataset.bonus);events();overlayKey='';render();}if(action==='next-game'){const names=Object.keys(controllers);selectGame(names[(names.indexOf(current)+1)%3]);}if(action==='next-round'){game().next();overlayKey='';render();}});
+  $('board-overlay').addEventListener('click',e=>{const b=e.target.closest('[data-action]');if(!b)return;const action=b.dataset.action;if(action==='start')start();if(action==='resume'){game().paused=false;overlayKey='';render();}if(action==='replay'){reset(true);start();}if(action==='new-shift'){reset();start();}if(action==='verify-review')openDialog(verifyReview(),'ROZBOR SMĚNY');if(action==='verify-choose'){reset();$('verify-desk-picker').open=true;$('verify-setup').scrollIntoView({behavior:'smooth',block:'start'});}if(action==='choose-map'){reset();$('defender-map-picker').open=true;$('defender-setup').scrollIntoView({behavior:'smooth',block:'start'});}if(action==='bonus'){game().chooseBonus(b.dataset.bonus);events();overlayKey='';render();}if(action==='next-game'){const names=Object.keys(controllers);selectGame(names[(names.indexOf(current)+1)%3]);}if(action==='next-round')nextSignalRound();if(action==='signal-next-job')signalNextJob();if(action==='signal-pattern')openDialog(signalPattern(),'VZOROVÉ ZAPOJENÍ');if(action==='signal-random'){const g=game();newSignal({mode:'random',areaId:g.area.id,level:g.job.level,practice:g.practice});start();}if(action==='signal-choose'){const g=game();newSignal({areaId:g.area.id,level:g.job.level,practice:g.practice});$('signal-area-picker').open=true;$('signal-setup').scrollIntoView({behavior:'smooth',block:'start'});}});
   const help={
     defender:'<h2>Jak udržet Kavky v éteru</h2><ol><li>Vyber Ověřovnu, Reportéra nebo Komunitu. Kliknutím na stanoviště <b>+</b> ji postavíš.</li><li>Spusť vlnu. Obrana zasahuje automaticky.</li><li>Za zastavený tlak získáš podporu. Kliknutím na postavenou obranu ji můžeš vylepšit nebo prodat.</li><li>Přežij všech osm vln s alespoň částí signálu. Kombinuj dosah reportérů se zpomalením komunity.</li></ol><p>Klávesy <b>1–3</b> vybírají obranu, <b>šipky</b> stanoviště, <b>Enter</b> staví nebo vybírá. <b>Mezerník</b> spustí další vlnu nebo pozastaví hru. Tlačítkem <b>1× / 2×</b> měníš rychlost. <b>K</b> přivolá nálet: 45 bodů zásahu a 2,2 sekundy zastavení. Začínáš se dvěma nálety, po čtvrté vlně přibude jeden.</p><p>Po vlnách 2, 4 a 6 si vybereš jeden trvalý bonus. U obrany můžeš měnit cíl: nejblíž cíli, nejsilnější nebo nejrychlejší. Všechny mapy jsou dostupné od začátku. Zlatá kavka vyžaduje alespoň 95 % signálu, stříbrná 60 %. Rekordy se ukládají zvlášť pro scénu i obtížnost.</p><p>Stejná směna opakuje stejné vlny i nabídky bonusů. Jiná směna je promíchá. Dnešní výzva má během jednoho dne stejné zadání.</p>',
     verify:'<h2>Razítko není argument.</h2><p>Vyber jednu ze čtyř redakcí. Čeká tě 8–12 zpráv a 110–120 sekund na rozhodování. Můžeš zapnout <b>Bez časovače</b>; tato varianta má vlastní rekordy. Všech 80 variant je smyšlených.</p><p>Čti titulek i podklady. <b>Ještě ověřit (F)</b> znamená, že zpráva v této podobě potřebuje práci. <b>Může ven (J)</b> znamená, že je doložená a správně vymezená. Stejný titulek má dvě verze podkladů: nespoléhej na paměť. Někdy je správné vydat předběžný výzkum s jasným omezením, jindy zadržet pravdivý text, který zbytečně odhaluje osobní údaje.</p><p><b>Dohledat detail (D)</b> doplní jednu indicii. Počet dohledání je omezený, stojí 8 sekund a ubere 20 bodů z případné správné odpovědi. Bez časovače se odečítají jen body. Rozhodnout lze už z původních podkladů. Při vysvětlení čas stojí; <b>Enter</b> pokračuje.</p><p>Správně: 100 bodů + 15 za každý předchozí krok současné série, nejvýše +60. Chyba sérii přeruší. Zlato získáš za dokončenou směnu s alespoň 90 % správně, stříbro za 75 %, bronz za 60 %. Odznaky a odehrané varianty najdeš ve spisovně.</p><p><b>Jiná směna</b> promíchá zprávy a upřednostní déle nehrané spisy. <b>Stejná směna</b> zopakuje totožné zadání. <b>Dnešní vydání</b> je společné zadání pro české kalendářní datum a používá časovač. Kód odlišuje losování; import cizího kódu hra zatím neumí. Po směně si otevři rozbor všech zpráv.</p>',
-    signal:'<h2>Doveď signál až k lidem.</h2><p>Kliknutím otočíš dílek o 90° po směru hodinových ručiček. Spoj studio vlevo s veřejností vpravo. Živý signál poznáš podle zelené barvy.</p><p>Ne všechny dílky musíš využít. Na každý ze tří okruhů máš 90 sekund. Za dokončený okruh získáš 300 bodů a 5 bodů za každou zbývající sekundu. Po mapě se můžeš pohybovat šipkami, otáčet Enterem.</p>'
+    signal:'<h2>Kabel sám sebe nezapojí.</h2><p>Vyber oblast a jednu ze 24 zakázek. Všechny jsou dostupné od začátku. Kliknutí nebo Enter otočí dílek o 90°. Tlačítkem směru zvolíš otáčení doleva či doprava; Shift s kliknutím nebo Enterem směr obrátí. Šipky přesouvají fokus a přeskakují skříně a pevné dílky.</p><p>Připoj studio vlevo ke <b>všem přijímačům vpravo současně</b>. Povinná relé <b>R1–R3</b> musejí být také napojená na studio. Křižovatky větví signál do všech připojených ramen. Pevný dílek se neotáčí a už má správnou orientaci. Skříň je překážka. Ostatní dílky nemusíš využít; otevřené odbočky nevadí.</p><p><b>Z / Zpět</b> vrátí poslední otočení, ale počítá se jako další tah. <b>H / Zavolat Kvída</b> zvýrazní jeden dílek a poradí otočení k jedné známé cestě. Na okruh jsou dvě nápovědy, každá odečítá 50 bodů. Restart okruhu vrátí původní natočení i čas, stojí 40 bodů a neobnoví spotřebované nápovědy. <b>P</b> pozastaví hru.</p><p><b>Tři hvězdy:</b> bez pomoci a restartu, počet tahů nejvýše jako vzor. <b>Dvě:</b> nejvýše jedna nápověda a restart, počet tahů do vyšší z hodnot vzor + 4 nebo 1,6násobek vzoru zaokrouhlený nahoru. <b>Jedna:</b> za dokončení. Vzor není nutně nejkratší cesta. Základ je 500 bodů plus až 250 za úspornost, poté se odečítají nápovědy a restarty; minimum za dokončení je 100 bodů.</p><p><b>Jiný rozvod</b> vygeneruje tři nové sítě v oblasti. <b>Dnešní přenos</b> má tři různé oblasti a během českého kalendářního dne stejné zadání pro všechny. V zakázkách i losovaných sítích můžeš vypnout časovač; rekordy a medaile se vedou zvlášť. Denní přenos používá časovač vždy. Mezi okruhy čas stojí, stejné zadání lze po konci celé opakovat. Kód odlišuje losování, import cizího kódu zatím není součástí hry.</p>'
   };
   function openDialog(content,eyebrow,wide=false){if($('info-dialog').open)return;dialogPause={name:current,paused:game().paused};game().paused=true;setText('dialog-eyebrow',eyebrow);$('info-dialog').classList.toggle('wide-dialog',wide);$('dialog-content').innerHTML=content;$('info-dialog').showModal();render();}
   const about='<h2>Malé hry za velkou věc.</h2><p>Vysíláme dál je autorská série her na podporu nezávislých médií veřejné služby. Jejich smyslem je přístup k ověřeným informacím, kultuře, vzdělávání a hlasům z celé společnosti.</p><p>V každé hře pomáhá něco jiného: silná redakce, kritické myšlení nebo propojení s veřejností. Herní škrty, šum a tlak jsou zjednodušené metafory.</p><p>Podklad k aktuální debatě: <a href="https://www.ebu.ch/news/2026/10/concern-over-fast-tracked-debate-on-czech-public-service-media-funding" target="_blank" rel="noopener noreferrer">společné stanovisko EBU a dalších organizací z 23. října 2026</a>.</p><p>Nezávislý fanouškovský projekt. Není produktem České televize ani Českého rozhlasu. Hry fungují bez účtu; rekordy si pamatuje jen tvůj prohlížeč.</p>';
   $('about-button').addEventListener('click',()=>openDialog(about,'O PROJEKTU'));$('footer-about').addEventListener('click',()=>openDialog(about,'PROČ HRAJEME'));$('help-button').addEventListener('click',()=>openDialog(help[current],'JAK HRÁT'));
   $('close-dialog').addEventListener('click',()=>$('info-dialog').close());$('info-dialog').addEventListener('click',e=>{if(e.target===$('info-dialog')){const r=$('info-dialog').getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)$('info-dialog').close();}});$('info-dialog').addEventListener('close',()=>{if(dialogPause){controllers[dialogPause.name].engine.paused=dialogPause.paused;dialogPause=null;}overlayKey='';render();});
   document.addEventListener('keydown',e=>{if($('info-dialog').open||e.ctrlKey||e.metaKey||e.altKey||['INPUT','TEXTAREA','SELECT'].includes(e.target.tagName))return;if(e.target.closest('[role="tablist"]'))return;if(e.target.tagName==='BUTTON'&&[' ','Enter'].includes(e.key))return;const c=active(),g=game();
+    if(current==='signal'&&e.key.toLowerCase()==='p'){e.preventDefault();togglePause();return;}
     if(e.key===' '){e.preventDefault();if(!c.started)start();else if(current==='defender'&&g.phase==='build'&&!g.paused)primaryAction();else togglePause();return;}
     if((!c.started&&current!=='defender')||g.paused||['won','lost','round-won','briefing'].includes(g.phase))return;
     if(current==='defender'){if(e.key.toLowerCase()==='k'){g.callFlock();events();render();}if(['1','2','3'].includes(e.key)){c.view.selectedType=Object.keys(TOWERS)[Number(e.key)-1];c.view.selectedTower=null;render();}if(['ArrowLeft','ArrowUp','ArrowRight','ArrowDown'].includes(e.key)){e.preventDefault();const delta=['ArrowLeft','ArrowUp'].includes(e.key)?-1:1;c.view.hoverSlot=(Math.max(0,c.view.hoverSlot)+delta+g.slots.length)%g.slots.length;canvas.focus();}if(e.key==='Enter'){e.preventDefault();pickSlot(Math.max(0,c.view.hoverSlot));}}
+    if(current==='signal'){if(e.key.toLowerCase()==='h')hintSignal();if(e.key.toLowerCase()==='z')undoSignal();}
     if(current==='verify'){if(e.key.toLowerCase()==='f')answer(false);if(e.key.toLowerCase()==='j')answer(true);if(e.key.toLowerCase()==='d')inspectVerify();if(e.key==='Enter'&&g.feedback){e.preventDefault();advanceVerify();}}
   });
   document.addEventListener('visibilitychange',()=>{lastFrame=0;if(document.hidden&&active().started&&!['won','lost'].includes(game().phase)){game().paused=true;overlayKey='';render();}});
@@ -1096,7 +1363,16 @@
   $('verify-new').addEventListener('click',()=>newVerify({deskId:controllers.verify.engine.deskId,practice:controllers.verify.engine.practice}));
   $('verify-daily').addEventListener('click',()=>newVerify(verifyDailyChallenge()));
   $('verify-notebook').addEventListener('click',()=>openDialog(verifyNotebook(),'SPISOVNA / LOKÁLNÍ PAMĚŤ'));
+  $('signal-areas').innerHTML=Object.values(SIGNAL_AREAS).map(a=>'<button class="signal-area" data-area="'+a.id+'" aria-pressed="false" style="--area-color:'+a.color+'"><i aria-hidden="true">'+a.glyph+'</i><strong>'+a.name+'</strong><small>'+a.size+' × '+a.size+' · ZAPOJENO 0/6</small></button>').join('');
+  $('signal-areas').addEventListener('click',e=>{const button=e.target.closest('[data-area]');if(!button||button.disabled)return;const g=controllers.signal.engine,jobs=SIGNAL_JOBS.filter(j=>j.areaId===button.dataset.area),job=jobs.find(j=>!signalProfile.campaign[j.id+':'+signalModeKey(g)]?.stars)||jobs[0];newSignal({areaId:job.areaId,level:job.level,practice:g.practice});$('signal-area-picker').open=true;});
+  $('signal-jobs').addEventListener('click',e=>{const button=e.target.closest('[data-job]');if(!button||button.disabled)return;const job=SIGNAL_JOBS.find(j=>j.id===button.dataset.job);newSignal({areaId:job.areaId,level:job.level,practice:controllers.signal.engine.practice});});
+  $('signal-practice').addEventListener('change',()=>{const g=controllers.signal.engine;newSignal({areaId:g.area.id,level:g.job.level,mode:g.mode==='daily'?'campaign':g.mode,seed:g.seed,practice:$('signal-practice').checked});});
+  $('signal-random').addEventListener('click',()=>{const g=controllers.signal.engine;newSignal({mode:'random',areaId:g.area.id,level:g.job.level,practice:g.practice});});
+  $('signal-daily').addEventListener('click',()=>newSignal(signalDailyChallenge()));
+  $('signal-logbook').addEventListener('click',()=>openDialog(signalLogbook(),'PROVOZNÍ KNÍŽKA / LOKÁLNÍ PAMĚŤ'));
+  $('signal-area-picker').open=!matchMedia('(max-width:540px)').matches;controllers.signal.focus=controllers.signal.engine.source;
   const gameFromHash=()=>({kavky:'defender',overeno:'verify',signal:'signal'})[location.hash.slice(1)];
+  window.addEventListener('storage',e=>{if(e.key==='signal-provoz-v3'){readSignalProfile();if(current==='signal')render();}});
   window.addEventListener('hashchange',()=>{const name=gameFromHash();if(name&&name!==current)selectGame(name);});
   $('verify-desk-picker').open=!matchMedia('(max-width:540px)').matches;
   $('defender-map-picker').open=!matchMedia('(max-width:540px)').matches;selectGame(gameFromHash()||'defender');requestAnimationFrame(frame);

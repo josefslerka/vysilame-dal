@@ -4,14 +4,15 @@ const assert=require('node:assert/strict');
 const vm=require('node:vm');
 const root=path.join(__dirname,'..'),html=fs.readFileSync(path.join(root,'hry.html'),'utf8');
 const scripts=[...html.matchAll(/<script>([\s\S]*?)<\/script>/g)];
-assert.equal(scripts.length,5,'all five game scripts must be embedded');
+assert.equal(scripts.length,6,'all six game scripts must be embedded');
 scripts.forEach((script,i)=>new vm.Script(script[1],{filename:`embedded-${i}.js`}));
-assert.equal([...html.matchAll(/<style>/g)].length,3);
+assert.equal([...html.matchAll(/<style>/g)].length,4);
 const sandbox=vm.createContext({});
-scripts.slice(0,3).forEach(script=>vm.runInContext(script[1],sandbox));
+scripts.slice(0,4).forEach(script=>vm.runInContext(script[1],sandbox));
 assert.equal(typeof sandbox.MediaGames.Verify,'function','the portable edition must resolve the separate verification engine');
 const game=new sandbox.MediaGames.Verify(42);game.start();while(game.phase==='playing'){game.submit(game.card.ready);game.next();}
 assert.equal(game.score,1450);assert.equal(game.phase,'won');
+const signal=new sandbox.MediaGames.Signal({practice:true});signal.start();for(const i of signal.required){while(signal.phase==='playing'&&signal.tiles[i]!==signal.solution[i])signal.turn(i,sandbox.MediaGames.rotationTo(signal.tiles[i],signal.solution[i])<0?-1:1);}assert.equal(signal.phase,'won');assert.equal(signal.history[0].score,750);
 assert.doesNotMatch(html,/<script[^>]+src=/i);
 assert.doesNotMatch(html,/<link[^>]+rel="stylesheet"/i);
 const markup=html.replace(/<script>[\s\S]*?<\/script>/g,'');
@@ -21,4 +22,4 @@ const ids=[...markup.matchAll(/\bid="([^"]+)"/g)].map(x=>x[1]),known=new Set(ids
 assert.equal(known.size,ids.length,'HTML IDs must be unique');
 const app=fs.readFileSync(path.join(root,'app.js'),'utf8');
 for(const ref of app.matchAll(/\$\('([^']+)'\)/g))assert.ok(known.has(ref[1]),`missing UI element ${ref[1]}`);
-console.log(`Portable HTML: 5 valid embedded scripts, 3 styles, ${ids.length} unique IDs; complete verification shift without external runtime assets.`);
+console.log(`Portable HTML: 6 valid embedded scripts, 4 styles, ${ids.length} unique IDs; complete verification shift and signal puzzle without external runtime assets.`);

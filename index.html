@@ -10,8 +10,10 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="defender.css">
   <link rel="stylesheet" href="verify.css">
+  <link rel="stylesheet" href="signal.css">
   <script src="defender.js" defer></script>
   <script src="verify.js" defer></script>
+  <script src="signal.js" defer></script>
   <script src="engine.js" defer></script>
   <script src="draw.js" defer></script>
   <script src="app.js" defer></script>
@@ -57,6 +59,12 @@
         <p class="verify-shift-rule" id="verify-shift-rule"></p>
       </section>
 
+      <section class="signal-setup" id="signal-setup" aria-label="Výběr technické zakázky" hidden>
+        <details id="signal-area-picker" open><summary><span><strong id="signal-picker-title">OBLAST PŘENOSU</strong><small id="signal-progress">ZAPOJENO 0 / 24</small></span><span class="picker-arrow" aria-hidden="true">⌄</span></summary><div id="signal-areas" class="signal-areas" role="group" aria-label="Vyber oblast přenosu"></div><div class="signal-jobs" id="signal-jobs" role="group" aria-label="Vyber zakázku"></div></details>
+        <div class="signal-shift-controls"><label><input type="checkbox" id="signal-practice"> Bez časovače</label><button id="signal-random" class="shift-button">↻ Jiný rozvod · 3 okruhy</button><button id="signal-daily" class="shift-button">◷ Dnešní přenos</button><span id="signal-code" class="shift-code"></span></div>
+        <p class="signal-job-rule" id="signal-job-rule"></p>
+      </section>
+
       <div class="game-metrics" aria-label="Stav hry">
         <div class="metric"><span class="metric-icon" id="metric-icon-1" aria-hidden="true">◉</span><span><small id="metric-label-1">SÍLA SIGNÁLU</small><strong id="metric-value-1">100<span> %</span></strong></span><div class="health-track" id="health-track"><i></i></div></div>
         <div class="metric"><span class="metric-icon support-icon" id="metric-icon-2" aria-hidden="true">✳</span><span><small id="metric-label-2">PODPORA</small><strong id="metric-value-2">200</strong></span></div>
@@ -83,14 +91,18 @@
               <span class="fiction-note">Smyšlené situace. Skutečné redakční návyky.</span>
             </section>
             <section id="signal-view" class="signal-view" aria-label="Propojování signálu" hidden>
-              <div class="signal-map-label"><span>STUDIO → POSLUCHAČI</span><span id="circuit-number">OKRUH 01</span></div>
-              <div class="signal-puzzle"><div class="signal-end source-end" id="signal-source"><span aria-hidden="true">◉</span><small>STUDIO</small></div><div class="pipe-grid" id="pipe-grid" role="group" aria-label="Otáčej dílky a vytvoř souvislou cestu signálu"></div><div class="signal-end target-end" id="signal-target"><span aria-hidden="true">⌂</span><small>VEŘEJNOST</small></div></div>
-              <p class="signal-tip">Každým otočením o kousek blíž.</p>
+              <div class="signal-map-label"><span id="signal-board-area">OBECNÍ ROZHLAS</span><span id="circuit-number">OKRUH 01</span></div>
+              <h2 class="signal-job-title" id="signal-job-title">Slepice ve vysílání</h2>
+              <div class="signal-puzzle"><div class="signal-input-column"><div class="signal-end source-end" id="signal-source" role="img"><span aria-hidden="true">◉</span><small>STUDIO</small></div></div><div class="pipe-grid" id="pipe-grid" role="group" aria-label="Otáčej dílky a vytvoř souvislou cestu signálu"></div><div class="signal-output-list" id="signal-targets" aria-label="Přijímače"></div></div>
+              <div class="signal-board-status" id="signal-board-status" aria-live="polite"></div>
+              <div class="signal-inline-hint" id="signal-inline-hint" role="status" hidden></div>
+              <div class="signal-editor"><b aria-hidden="true">KRÁ</b><p id="signal-quip"></p></div>
             </section>
             <div class="board-overlay" id="board-overlay"></div>
           </div>
           <div class="control-bar"><div class="main-controls"><button id="wave-button" class="primary-button"><span aria-hidden="true">▶</span> Spustit vlnu</button><button id="pause-button" class="icon-button" aria-label="Pozastavit hru" title="Pauza (mezerník)">Ⅱ</button><button id="speed-button" class="speed-button" aria-label="Rychlost hry: normální">1×</button></div><div class="secondary-controls"><button id="sound-button" class="icon-button" aria-label="Zapnout zvuk" aria-pressed="false" title="Zapnout zvuk"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4Z" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m17 9 5 6m0-6-5 6" stroke="currentColor" stroke-width="1.8"/></svg></button><button id="reset-button" class="icon-button" aria-label="Nová hra" title="Nová hra">↺</button><button id="help-button" class="icon-button" aria-label="Jak hrát" title="Jak hrát">?</button></div></div>
           <div class="defender-action-bar" id="defender-action-bar"><button class="flock-button" id="flock-button"><span aria-hidden="true">⌁</span> Kavčí nálet <kbd>K</kbd><b id="flock-count">2</b></button><span id="flock-hint">Zastaví protivníky na 2 sekundy. Zobáky bez portfeje.</span></div>
+          <div class="signal-action-bar" id="signal-action-bar" hidden><button class="shift-button" id="signal-direction">↻ Otáčet doprava</button><button class="shift-button" id="signal-undo">↶ Zpět <kbd>Z</kbd></button><button class="shift-button" id="signal-hint">⌕ Zavolat Kvída <kbd>H</kbd><span id="signal-hint-count">2</span></button></div>
           <p class="keyboard-hint" id="keyboard-hint"><span><kbd>1</kbd><kbd>2</kbd><kbd>3</kbd> vyber obranu</span><span><kbd>←</kbd><kbd>→</kbd> stanoviště <kbd>Enter</kbd> postav</span><span><kbd>mezerník</kbd> další vlna / pauza</span></p>
         </div>
 
@@ -112,7 +124,15 @@
             <ol class="editor-rules"><li><span>01</span><div><strong>Čti i podklady.</strong><p>Stejný titulek může mít různé důkazy.</p></div></li><li><span>02</span><div><strong>Drž rozsah.</strong><p>„V anketě“ není „v celé republice“.</p></div></li><li><span>03</span><div><strong>Pak se nadechni.</strong><p>Při vysvětlení čas stojí. Káva může téct.</p></div></li></ol>
             <button id="verify-notebook" class="text-button verify-notebook">Spisovna a odznaky ↗</button>
           </div>
-          <div id="signal-tools" class="tool-panel" hidden><div class="sidebar-heading"><h2>Ve spojení</h2><span>FM 03</span></div><p class="sidebar-intro">Otoč dílky a doveď nepřerušený signál ze studia k veřejnosti.</p><div class="signal-legend"><span class="wire-sample connected"></span><div><strong>Živý signál</strong><p>Navazuje na studio.</p></div><span class="wire-sample"></span><div><strong>Čeká na spojení</strong><p>Otoč kliknutím nebo Enterem.</p></div></div><div class="field-note"><span class="note-label">TŘI OKRUHY</span><p>Na každý máš 90 sekund. Začni u studia vlevo a postupuj po zelené lince.</p><button id="signal-restart-round" class="text-button">Znovu tento okruh ↺</button></div></div>
+          <div id="signal-tools" class="tool-panel" hidden>
+            <div class="sidebar-heading"><h2>Technický protokol</h2><span>P300</span></div><p class="sidebar-intro" id="signal-brief"></p>
+            <div class="signal-target-status" id="signal-target-status"></div>
+            <div class="signal-score-line"><span>BODY<strong id="signal-score">0</strong></span><span>VZOROVÉ ZAPOJENÍ<strong id="signal-baseline">0 tahů</strong></span></div>
+            <p class="signal-benchmark-note">Počet tahů pro jednu známou cestu. Lepší řešení může existovat.</p>
+            <div class="signal-key"><p><i class="key-live"></i><span><b>Živý signál</b> vede ze studia.</span></p><p><i class="key-relay">R</i><span><b>Přepojovač</b> musí být také připojený.</span></p><p><i class="key-lock">▣</i><span><b>Pevný spoj</b> je správně natočený.</span></p><p><i class="key-wall">×</i><span><b>Skříň</b> se obejde. Nepřemístí.</span></p></div>
+            <div class="field-note"><span class="note-label">SERVISNÍ ZÁSAH</span><p id="signal-assist-rule"></p><button id="signal-restart-round" class="text-button">Znovu tento okruh ↺</button></div>
+            <button id="signal-logbook" class="text-button signal-logbook">Provozní knížka a odznaky ↗</button>
+          </div>
           <div class="best-score"><span id="best-score-label">TVŮJ REKORD</span><strong id="best-score">—</strong><small>Ukládá se v tomto prohlížeči.</small></div>
         </aside>
       </div>

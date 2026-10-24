@@ -8,7 +8,7 @@ Vzhled vychází z televizní režie, teletextu a starých arkád: signální ž
 
 - **Kavky Defender:** čtyři mapy, osm vln, jedenáct protivníků včetně dvou bossů, tři obtížnosti a kavka Kvído s nevyžádanými komentáři. Podrobnosti níže.
 - **[Ověřeno!](https://josefslerka.github.io/vysilame-dal/#overeno):** čtyři redakce, 80 variant podkladů, osm témat a Kvídovy nevyžádané poznámky. Denní vydání, dohledávání detailů, razítka a rozbor zpráv. Podrobnosti níže.
-- **Drž signál:** tři rotační hlavolamy. Otoč dílky a propoj studio vlevo s veřejností vpravo. Na každý okruh je 90 sekund. Kliknutí nebo Enter otáčí, šipky přesouvají fokus po mřížce.
+- **[Drž signál](https://josefslerka.github.io/vysilame-dal/#signal):** 24 technických zakázek, čtyři oblasti a další losované sítě. Více přijímačů, povinná relé, pevné spoje, skříně, denní přenos a Kvído s fakturou za konzultace. Podrobnosti níže.
 
 Při přepnutí na jinou hru nebo opuštění karty se rozehraná hra pozastaví. Tlačítko „?“ otevírá pravidla. Projekt nepoužívá skutečná loga ČT ani ČRo a není jejich oficiální hrou.
 
@@ -48,6 +48,25 @@ Zvol **Ještě ověřit (F)**, nebo **Může ven (J)**. Dohledání detailu **(D
 
 Po dohrání otevři **Rozbor zpráv**, zopakuj **Stejnou směnu** se stejnými podklady a pořadím, nebo spusť **Jinou směnu**. **Dnešní vydání** používá stejné zadání pro všechny podle kalendářního data v časovém pásmu Europe/Prague a vždy běží s časovačem. Nezávisí na místní historii odehraných zpráv. Kód rozlišuje losování; import zadání z kódu není součástí hry. Přímý odkaz `#overeno` otevírá Ověřeno!, `#kavky` obranu a `#signal` hlavolam.
 
+**Drž signál — technická pohotovost**
+
+| Oblast | Šest zakázek |
+| --- | --- |
+| Obecní rozhlas | 4 × 4, jeden přijímač, postupně první pevné spoje a relé |
+| Městský uzel | 5 × 5, dva až tři přijímače, větvení, relé a první překážky |
+| Přenos z terénu | 6 × 6, tři až šest skříní, až tři přijímače a dvě relé |
+| Noční rozvaděč | 6 × 6, dva až tři přijímače, až tři relé a pět pevných spojů |
+
+Všech 24 zakázek je dostupných od začátku. Každá má stálé zadání a vlastní medaile i rekord, takže můžeš zlepšit postup. **Jiný rozvod** vygeneruje tři nové sítě v aktuální oblasti, včetně jiné struktury cest a větvení. **Dnešní přenos** má tři různé oblasti, stejné zadání pro všechny podle data v Europe/Prague a vždy běží s časovačem. Mezi okruhy čas stojí. **Stejná síť** po konci zopakuje celé zadání. Kód odlišuje losování; import cizího kódu není součástí hry.
+
+Spoj studio vlevo se všemi přijímači vpravo **současně**. Každé relé **R** musí také dostávat signál ze studia. Křižovatky vedou signál do všech připojených ramen; některé dílky mohou zůstat nevyužité a volné odbočky nevadí. Pevné spoje s malou značkou jsou správně natočené a neotáčejí se. Skříně se nedají přesouvat ani použít jako vodič. Počítačem vygenerované zapojení vždy obsahuje platnou cestu ke všem cílům, hra ovšem přijme i jiné funkční řešení.
+
+Kliknutí nebo Enter otáčí dílek o čtvrt otáčky. Tlačítko směru přepíná doleva/doprava, Shift s kliknutím nebo Enterem směr obrací. Šipky přesouvají fokus a přeskakují nepohyblivé dílky. **Z / Zpět** vrátí poslední otočení a počítá se jako další tah. **H / Zavolat Kvída** označí dílek a doporučí otočení k jedné známé cestě. Na okruh jsou dvě nápovědy po 50 bodech. Opakovaný dotaz na stejnou zobrazenou nápovědu se znovu neúčtuje. Restart vrátí původní natočení a čas, stojí 40 bodů a nedoplňuje spotřebované nápovědy. **P** pozastaví hru.
+
+Čas na okruh vychází z oblasti (120 / 150 / 200 / 210 sekund) a přidává 10 sekund za každou další zakázku oblasti. **Bez časovače** má vlastní záznamy i medaile. Tři hvězdy získáš bez nápovědy a restartu při počtu tahů nejvýše jako vzorové zapojení. Dvě dovolují nejvýše jednu nápovědu a restart a počet tahů do vyšší z hodnot vzor + 4 nebo 1,6násobek vzoru zaokrouhlený nahoru. Jedna je za dokončení. Vzor je jedna známá cesta, nemusí být nejkratší.
+
+Za okruh je 500 bodů plus až 250 podle úspornosti, s odečtením nápověd a restartů; minimum za dokončení je 100. Série tří okruhů sčítá body a přidělí medaili podle nejnižšího výsledku okruhu. V **Provozní knížce** najdeš postup ve 24 zakázkách a sedm odznaků. Záznamy zůstávají v tomto prohlížeči v klíči `signal-provoz-v3`; posledních 31 denních rekordů se uchovává odděleně. Staré souhrnné skóre původní tříokruhové hry se s novými medailemi nesrovnává.
+
 Zdrojové soubory jsou rozdělené podle účelu:
 
 | Soubor | Obsah |
@@ -58,13 +77,16 @@ Zdrojové soubory jsou rozdělené podle účelu:
 | defender.js | Pravidla Kavky Defender, mapy, protivníci, vlny a denní zadání |
 | verify.js | Spisy a jejich varianty, směny, denní vydání a pravidla Ověřeno! |
 | verify.css | Rozpis služeb, redakční pošta, razítka a rozbory |
-| engine.js | Hlavolamy a společný export herních jader |
+| signal.js | Generátor sítí, 24 zakázek, relé, pravidla, denní přenos a medaile |
+| signal.css | Technický panel, sítě 4–6 řad, medaile a provozní knížka |
+| engine.js | Společný export tří herních jader |
 | draw.js | Čtyři kreslené mapy, protivníci a animace na canvasu |
 | app.js | Ovládání, zvuk, nabídky a propojení s rozhraním |
 | bundle.cjs | Vytvoření přenositelného hry.html |
 | qa/engines.test.cjs | Společné ověření všech tří her |
 | qa/defender.test.cjs | Schopnosti, ekonomika, mapy, replay a simulace celých směn |
 | qa/verify.test.cjs | 1 200 zadání, 80 variant, denní vydání, bodování, dohledání a razítka |
+| qa/signal.test.cjs | 1 314 dokončených hlavolamů, generátor, konektivita, relé, replay a ovládání |
 
 Po úpravě zdrojů spusť z této složky:
 
