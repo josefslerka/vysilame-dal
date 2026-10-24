@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#161919">
+  <meta name="description" content="Malé hry za velkou věc. Braň Kavčí hory, ověřuj zprávy a propoj signál v trojici her na podporu nezávislé veřejné služby.">
+  <title>Vysíláme dál. — Kavky Defender a další malé hry</title>
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="defender.css">
+  <script src="defender.js" defer></script>
+  <script src="engine.js" defer></script>
+  <script src="draw.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#game-title">Přejít ke hře</a>
+  <div class="site-shell">
+    <header class="masthead">
+      <a href="#" class="brand" aria-label="Vysíláme dál — začátek">
+        <svg class="brand-mark" viewBox="0 0 44 44" aria-hidden="true"><path d="M7 23a15 15 0 0 1 30 0M12 23a10 10 0 0 1 20 0M17 23a5 5 0 0 1 10 0" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="m22 24-6 15h12Z" fill="currentColor"/><circle cx="22" cy="23" r="3" fill="currentColor"/></svg>
+        <span>VYSÍLÁME DÁL<span class="brand-dot">.</span><small>HRY / VEŘEJNÁ SLUŽBA / KRÁ</small></span>
+      </a>
+      <div class="masthead-right"><span class="edition"><span class="live-dot"></span> P100 · ZKUŠEBNÍ VYSÍLÁNÍ</span><button class="text-button" id="about-button">O projektu <span aria-hidden="true">↗</span></button></div>
+    </header>
+
+    <nav class="game-tabs" role="tablist" aria-label="Vyber si hru">
+      <button id="tab-defender" role="tab" aria-selected="true" aria-controls="game-panel" data-game="defender" class="game-tab active"><span class="tab-number">01</span><span class="tab-title">Kavky Defender<small>TOWER DEFENSE</small></span><span class="tab-arrow" aria-hidden="true">↗</span></button>
+      <button id="tab-verify" role="tab" aria-selected="false" aria-controls="game-panel" data-game="verify" class="game-tab"><span class="tab-number">02</span><span class="tab-title">Ověřeno!<small>REDAKČNÍ STŮL</small></span><span class="tab-arrow" aria-hidden="true">↗</span></button>
+      <button id="tab-signal" role="tab" aria-selected="false" aria-controls="game-panel" data-game="signal" class="game-tab"><span class="tab-number">03</span><span class="tab-title">Drž signál<small>ROZVADĚČ</small></span><span class="tab-arrow" aria-hidden="true">↗</span></button>
+    </nav>
+
+    <main id="game-panel" role="tabpanel" aria-labelledby="tab-defender">
+      <div class="game-intro">
+        <div><p class="eyebrow" id="game-kicker">P101 / STRATEGICKÁ OBRANA VYSÍLÁNÍ</p><h1 id="game-title">KAVKY <span>DEFENDER</span></h1><p class="game-description" id="game-description">Škrty jdou po kabelu. Ty jdeš po nich.</p></div>
+        <div class="intro-note"><svg viewBox="0 0 120 100" shape-rendering="crispEdges" aria-hidden="true"><path d="M12 78h12V51h9V31h12V16h33v8h15v19h19v8H91v18H79v13H62v10H40V82H24v9H8Z" fill="#1d2830" stroke="#d9e4c9" stroke-width="3"/><path d="M43 42h20v9H53v22H36V57h7Z" fill="#50656b"/><path d="M63 29h20v14H63Z" fill="#f4f4dc"/><path d="M75 30h7v11h-7Z" fill="#101717"/><path d="m88 44 24 3-24 9Z" fill="#edfa45" stroke="#121a20" stroke-width="2"/><path d="M46 83v12H32m35-12v12h14" fill="none" stroke="#edfa45" stroke-width="4"/><path d="M76 66h25v21H76Zm25 4h8v12h-8" fill="#83b5db" stroke="#121a20" stroke-width="3"/><path d="M82 57v-9m9 10v-9" stroke="#f4f4dc" stroke-width="2"/></svg><span id="intro-note">REŽIE, POZOR.<br>MÁME TU ŠKRTY.</span></div>
+      </div>
+
+      <section class="defender-setup" id="defender-setup" aria-label="Scéna a výzva pro Kavky Defender">
+        <details id="defender-map-picker" open>
+          <summary><span><strong id="map-picker-title">OBLAST VYSÍLÁNÍ</strong><small id="campaign-progress">ZACHRÁNĚNO 0 / 4</small></span><span class="picker-arrow" aria-hidden="true">⌄</span></summary>
+          <div class="map-list" id="map-list" role="group" aria-label="Vyber herní scénu"></div>
+        </details>
+        <div class="shift-controls"><label for="difficulty-select">TEMPO SMĚNY <select id="difficulty-select"><option value="easy">Na pohodu</option><option value="normal" selected>Redakční provoz</option><option value="hard">Krizový štáb</option></select></label><button id="daily-button" class="shift-button">◷ Dnešní výzva</button><button id="new-shift-button" class="shift-button">↻ Jiná směna</button><span id="shift-code" class="shift-code"></span><button id="bestiary-button" class="text-button">Atlas škodné</button></div>
+        <p class="map-rule" id="map-rule"></p>
+      </section>
+
+      <div class="game-metrics" aria-label="Stav hry">
+        <div class="metric"><span class="metric-icon" id="metric-icon-1" aria-hidden="true">◉</span><span><small id="metric-label-1">SÍLA SIGNÁLU</small><strong id="metric-value-1">100<span> %</span></strong></span><div class="health-track" id="health-track"><i></i></div></div>
+        <div class="metric"><span class="metric-icon support-icon" id="metric-icon-2" aria-hidden="true">✳</span><span><small id="metric-label-2">PODPORA</small><strong id="metric-value-2">200</strong></span></div>
+        <div class="metric"><span class="metric-icon" id="metric-icon-3" aria-hidden="true">≋</span><span><small id="metric-label-3">VLNA</small><strong id="metric-value-3">0<span> / 8</span></strong></span><span class="metric-tag" id="metric-tag">PŘÍPRAVA</span></div>
+      </div>
+
+      <div class="workspace">
+        <div class="play-column">
+          <div class="board-wrap" id="board-wrap">
+            <canvas id="defender-canvas" width="960" height="576" tabindex="0" aria-label="Herní mapa. Klávesy 1–3 vyberou obranu, šipky stanoviště, Enter staví, K přivolá kavčí nálet."></canvas>
+            <section id="verify-view" class="verify-view" aria-label="Ověřování zpráv" hidden>
+              <div class="news-card" id="news-card"><div class="news-card-top"><span><span class="live-dot"></span> REDAKČNÍ STŮL</span><span id="story-number">01 / 08</span></div><p class="story-label">ZPRÁVA K VYDÁNÍ</p><h2 id="story-headline"></h2><div class="source-box"><span class="source-symbol" aria-hidden="true">↳</span><div><small>CO ZATÍM VÍME</small><p id="story-source"></p></div></div><div class="verify-feedback" id="verify-feedback" hidden></div><div class="verify-choices" id="verify-choices"><button id="hold-story" class="choice hold"><span aria-hidden="true">↺</span> Ještě ověřit<kbd>F</kbd></button><button id="publish-story" class="choice publish"><span aria-hidden="true">✓</span> Může ven<kbd>J</kbd></button></div><button id="next-story" class="primary-button next-story" hidden>Další zpráva <span aria-hidden="true">→</span></button></div>
+              <span class="fiction-note">Smyšlené situace. Skutečné redakční návyky.</span>
+            </section>
+            <section id="signal-view" class="signal-view" aria-label="Propojování signálu" hidden>
+              <div class="signal-map-label"><span>STUDIO → POSLUCHAČI</span><span id="circuit-number">OKRUH 01</span></div>
+              <div class="signal-puzzle"><div class="signal-end source-end" id="signal-source"><span aria-hidden="true">◉</span><small>STUDIO</small></div><div class="pipe-grid" id="pipe-grid" role="group" aria-label="Otáčej dílky a vytvoř souvislou cestu signálu"></div><div class="signal-end target-end" id="signal-target"><span aria-hidden="true">⌂</span><small>VEŘEJNOST</small></div></div>
+              <p class="signal-tip">Každým otočením o kousek blíž.</p>
+            </section>
+            <div class="board-overlay" id="board-overlay"></div>
+          </div>
+          <div class="control-bar"><div class="main-controls"><button id="wave-button" class="primary-button"><span aria-hidden="true">▶</span> Spustit vlnu</button><button id="pause-button" class="icon-button" aria-label="Pozastavit hru" title="Pauza (mezerník)">Ⅱ</button><button id="speed-button" class="speed-button" aria-label="Rychlost hry: normální">1×</button></div><div class="secondary-controls"><button id="sound-button" class="icon-button" aria-label="Zapnout zvuk" aria-pressed="false" title="Zapnout zvuk"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4Z" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m17 9 5 6m0-6-5 6" stroke="currentColor" stroke-width="1.8"/></svg></button><button id="reset-button" class="icon-button" aria-label="Nová hra" title="Nová hra">↺</button><button id="help-button" class="icon-button" aria-label="Jak hrát" title="Jak hrát">?</button></div></div>
+          <div class="defender-action-bar" id="defender-action-bar"><button class="flock-button" id="flock-button"><span aria-hidden="true">⌁</span> Kavčí nálet <kbd>K</kbd><b id="flock-count">2</b></button><span id="flock-hint">Zastaví protivníky na 2 sekundy. Zobáky bez portfeje.</span></div>
+          <p class="keyboard-hint" id="keyboard-hint"><span><kbd>1</kbd><kbd>2</kbd><kbd>3</kbd> vyber obranu</span><span><kbd>←</kbd><kbd>→</kbd> stanoviště <kbd>Enter</kbd> postav</span><span><kbd>mezerník</kbd> další vlna / pauza</span></p>
+        </div>
+
+        <aside class="sidebar" aria-label="Nástroje a pravidla">
+          <div id="defender-tools" class="tool-panel">
+            <div class="sidebar-heading"><h2>Tvoje obrana</h2><span>01—03</span></div>
+            <p class="sidebar-intro">Vyber jednotku. Pošli ji na <span class="inline-pad">+</span>.</p>
+            <div class="tower-options" id="tower-options"></div>
+            <div id="tower-detail" class="tower-detail" hidden></div>
+            <div class="wave-preview"><span class="note-label" id="wave-preview-label">PŘÍŠTÍ VLNA</span><strong id="wave-preview-title"></strong><div id="wave-preview-list"></div></div>
+            <div class="field-note crow-note"><span class="crow-note-icon" aria-hidden="true">⌁</span><span class="note-label">KVÍDO / REŽIE</span><p id="defender-tip">Začni u zatáček. Rozpočet zatáčky neumí.</p></div>
+          </div>
+          <div id="verify-tools" class="tool-panel" hidden><div class="sidebar-heading"><h2>Než to pustíš ven</h2><span>CHECK</span></div><p class="sidebar-intro">Za titulkem je vždycky ještě jeden krok.</p><ol class="editor-rules"><li><span>01</span><div><strong>Najdi původ.</strong><p>Kdo je zdroj a může to vědět?</p></div></li><li><span>02</span><div><strong>Čti kontext.</strong><p>Sedí datum, místo a rozsah tvrzení?</p></div></li><li><span>03</span><div><strong>Přiznej nejistotu.</strong><p>Tip ještě není ověřená zpráva.</p></div></li></ol><div class="field-note"><span class="note-label">PRAVIDLO HRY</span><p>Máš 60 sekund čistého času na osm zpráv. Při vysvětlení se čas zastaví.</p></div></div>
+          <div id="signal-tools" class="tool-panel" hidden><div class="sidebar-heading"><h2>Ve spojení</h2><span>FM 03</span></div><p class="sidebar-intro">Otoč dílky a doveď nepřerušený signál ze studia k veřejnosti.</p><div class="signal-legend"><span class="wire-sample connected"></span><div><strong>Živý signál</strong><p>Navazuje na studio.</p></div><span class="wire-sample"></span><div><strong>Čeká na spojení</strong><p>Otoč kliknutím nebo Enterem.</p></div></div><div class="field-note"><span class="note-label">TŘI OKRUHY</span><p>Na každý máš 90 sekund. Začni u studia vlevo a postupuj po zelené lince.</p><button id="signal-restart-round" class="text-button">Znovu tento okruh ↺</button></div></div>
+          <div class="best-score"><span>TVŮJ REKORD</span><strong id="best-score">—</strong><small>Ukládá se v tomto prohlížeči.</small></div>
+        </aside>
+      </div>
+
+      <div class="below-board" id="defender-legend"><div><span class="legend-title">8 VLN · 11 DRUHŮ ŠKODNÉ</span><span class="enemy-key"><i class="enemy-cut"></i> Škrt</span><span class="enemy-key"><i class="enemy-noise"></i> Šum</span><span class="enemy-key"><i class="enemy-pressure"></i> Tlak</span></div><p>Všechny postavy jsou smyšlené. Bohužel i rozpočet.</p></div>
+    </main>
+
+    <footer><p>Nezávislá média. Svobodná hra.</p><span>Autorský projekt · není produktem ČT ani ČRo</span><button class="text-button" id="footer-about">Proč hrajeme ↗</button></footer>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <dialog id="info-dialog"><div class="dialog-header"><span id="dialog-eyebrow">VYSÍLÁME DÁL.</span><button id="close-dialog" class="icon-button" aria-label="Zavřít">×</button></div><div id="dialog-content"></div></dialog>
+</body>
+</html>
