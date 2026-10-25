@@ -26,6 +26,16 @@ check('map routes, bounds and distinct layouts',()=>{
   }
   assert.equal(layouts.size,4);
 });
+check('44px touch targets fit every map at the 640px mobile detail size',()=>{
+  const scale=640/960,half=22;
+  for(const map of Object.values(MAPS)){
+    const points=map.slots.map(([x,y])=>[x*scale,y*scale]);
+    points.forEach(([x,y],i)=>{
+      assert.ok(x>=half&&x<=640-half&&y>=half&&y<=384-half,`${map.id}: target ${i+1} leaves the map`);
+      for(let j=i+1;j<points.length;j++)assert.ok(Math.abs(x-points[j][0])>=44||Math.abs(y-points[j][1])>=44,`${map.id}: targets ${i+1} and ${j+1} overlap`);
+    });
+  }
+});
 check('replay seeds, daily stability and two entrances',()=>{
   assert.deepEqual(makeWaves(42,'kavky'),makeWaves(42,'kavky'));
   assert.notDeepEqual(makeWaves(42,'kavky'),makeWaves(43,'kavky'));

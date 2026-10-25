@@ -73,8 +73,14 @@
 
       <div class="workspace">
         <div class="play-column">
+          <div class="defender-map-toolbar" id="defender-map-toolbar" hidden><div><strong id="defender-map-name">Kavčí hory</strong><span id="defender-map-hint">Mapu posuň prstem. Klepni na +.</span></div><button id="defender-map-zoom" class="shift-button" aria-pressed="false">Celá mapa</button></div>
           <div class="board-wrap" id="board-wrap">
-            <canvas id="defender-canvas" width="960" height="576" tabindex="0" aria-label="Herní mapa. Klávesy 1–3 vyberou obranu, šipky stanoviště, Enter staví, K přivolá kavčí nálet."></canvas>
+            <div class="defender-map-viewport" id="defender-map-viewport"><div class="defender-map-scene" id="defender-map-scene">
+              <canvas id="defender-canvas" width="960" height="576" tabindex="0" aria-label="Herní mapa. Klávesy 1–3 vyberou obranu, šipky stanoviště, Enter staví, K přivolá kavčí nálet."></canvas>
+              <div class="defender-map-labels" id="defender-map-labels" hidden></div>
+              <div class="defender-map-slots" id="defender-map-slots" role="group" aria-label="Stanoviště obrany" hidden></div>
+              <button class="defender-overview-open" id="defender-overview-open" aria-label="Přiblížit mapu v tomto místě" hidden><span>Klepni na mapu pro detail ↗</span></button>
+            </div></div>
             <section id="verify-view" class="verify-view" aria-label="Ověřování zpráv" hidden>
               <div class="verify-desk-strip"><span id="verify-desk-label">RANNÍ SMĚNA</span><span id="verify-chain">SÉRIE 0</span></div>
               <div class="news-card" id="news-card">
@@ -100,18 +106,24 @@
             </section>
             <div class="board-overlay" id="board-overlay"></div>
           </div>
+          <div class="defender-touch-panel" id="defender-touch-panel" hidden><p id="defender-touch-hint" role="status">Vyber obranu a klepni na + v mapě.</p></div>
+          <div class="game-controls">
           <div class="control-bar"><div class="main-controls"><button id="wave-button" class="primary-button"><span aria-hidden="true">▶</span> Spustit vlnu</button><button id="pause-button" class="icon-button" aria-label="Pozastavit hru" title="Pauza (mezerník)">Ⅱ</button><button id="speed-button" class="speed-button" aria-label="Rychlost hry: normální">1×</button></div><div class="secondary-controls"><button id="sound-button" class="icon-button" aria-label="Zapnout zvuk" aria-pressed="false" title="Zapnout zvuk"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4Z" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m17 9 5 6m0-6-5 6" stroke="currentColor" stroke-width="1.8"/></svg></button><button id="reset-button" class="icon-button" aria-label="Nová hra" title="Nová hra">↺</button><button id="help-button" class="icon-button" aria-label="Jak hrát" title="Jak hrát">?</button></div></div>
           <div class="defender-action-bar" id="defender-action-bar"><button class="flock-button" id="flock-button"><span aria-hidden="true">⌁</span> Kavčí nálet <kbd>K</kbd><b id="flock-count">2</b></button><span id="flock-hint">Zastaví protivníky na 2 sekundy. Zobáky bez portfeje.</span></div>
+          </div>
           <div class="signal-action-bar" id="signal-action-bar" hidden><button class="shift-button" id="signal-direction">↻ Otáčet doprava</button><button class="shift-button" id="signal-undo">↶ Zpět <kbd>Z</kbd></button><button class="shift-button" id="signal-hint">⌕ Zavolat Kvída <kbd>H</kbd><span id="signal-hint-count">2</span></button></div>
           <p class="keyboard-hint" id="keyboard-hint"><span><kbd>1</kbd><kbd>2</kbd><kbd>3</kbd> vyber obranu</span><span><kbd>←</kbd><kbd>→</kbd> stanoviště <kbd>Enter</kbd> postav</span><span><kbd>mezerník</kbd> další vlna / pauza</span></p>
         </div>
 
         <aside class="sidebar" aria-label="Nástroje a pravidla">
           <div id="defender-tools" class="tool-panel">
-            <div class="sidebar-heading"><h2>Tvoje obrana</h2><span>01—03</span></div>
-            <p class="sidebar-intro">Vyber jednotku. Pošli ji na <span class="inline-pad">+</span>.</p>
-            <div class="tower-options" id="tower-options"></div>
-            <div id="tower-detail" class="tower-detail" hidden></div>
+            <div class="sidebar-heading defender-sidebar-heading"><h2>Tvoje obrana</h2><span>01—03</span></div>
+            <p class="sidebar-intro defender-sidebar-intro">Vyber jednotku. Pošli ji na <span class="inline-pad">+</span>.</p>
+            <div id="defender-armory-home"><div id="defender-armory">
+              <div class="tower-options" id="tower-options"></div>
+              <div id="defender-placement" class="defender-placement" hidden><div><strong id="defender-placement-title"></strong><span id="defender-placement-note"></span></div><button class="primary-button" id="defender-build">Postavit</button><button class="icon-button" id="defender-cancel" aria-label="Zrušit výběr stanoviště">×</button></div>
+              <div id="tower-detail" class="tower-detail" hidden></div>
+            </div></div>
             <div class="wave-preview"><span class="note-label" id="wave-preview-label">PŘÍŠTÍ VLNA</span><strong id="wave-preview-title"></strong><div id="wave-preview-list"></div></div>
             <div class="field-note crow-note"><span class="crow-note-icon" aria-hidden="true">⌁</span><span class="note-label">KVÍDO / REŽIE</span><p id="defender-tip">Začni u zatáček. Rozpočet zatáčky neumí.</p></div>
           </div>

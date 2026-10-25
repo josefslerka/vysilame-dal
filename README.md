@@ -6,6 +6,8 @@ Otevři soubor **hry.html** v běžném prohlížeči. Obsahuje všechny tři hr
 
 Vzhled vychází z televizní režie, teletextu a starých arkád: signální žlutá, číslované kanály, mechanická tlačítka a vlastní pixelové postavy. Kavky Defender se otevírá rovnou na mapě. První stavba automaticky zahájí směnu; vlnu potom spustíš zvlášť. Na telefonu otevřeš další mapy klepnutím na název aktuální mapy.
 
+Na mobilu a menším tabletu má Kavky Defender posouvatelný detail mapy a velká číslovaná stanoviště. Obranu vyber pod mapou, klepni na `+` a potvrď **Postavit**. Samotný výběr místa podporu neutratí; plán lze zrušit křížkem. **Celá mapa** ukáže přehled, klepnutí do něj přiblíží vybrané místo. Klepnutím na postavenou obranu otevřeš její vylepšení, prodej a prioritu cílení. Důležité popisky jsou vykreslené jako běžný text; hra respektuje i rozlišení displeje.
+
 - **Kavky Defender:** čtyři mapy, osm vln, jedenáct protivníků včetně dvou bossů, tři obtížnosti a kavka Kvído s nevyžádanými komentáři. Podrobnosti níže.
 - **[Ověřeno!](https://josefslerka.github.io/vysilame-dal/#overeno):** čtyři redakce, 80 variant podkladů, osm témat a Kvídovy nevyžádané poznámky. Denní vydání, dohledávání detailů, razítka a rozbor zpráv. Podrobnosti níže.
 - **[Drž signál](https://josefslerka.github.io/vysilame-dal/#signal):** 24 technických zakázek, čtyři oblasti a další losované sítě. Více přijímačů, povinná relé, pevné spoje, skříně, denní přenos a Kvído s fakturou za konzultace. Podrobnosti níže.

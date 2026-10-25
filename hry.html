@@ -62,7 +62,12 @@
 .crow-note-icon{display:none}.crow-note .note-label{font-size:9px;color:#8fae80}.crow-note p{font-size:12px;line-height:1.5;margin-bottom:0;color:#ecf3df}
 .target-button{width:100%;min-height:34px;padding:7px;text-align:left;background:#bdc9af;border:2px solid #34452b;font:700 11px var(--mono);color:#21321b;margin:0 0 8px}.target-button:disabled{opacity:.5}
 .is-defender .board-wrap:has(.board-overlay:not([hidden])){aspect-ratio:auto}
-.is-defender .board-wrap:has(.board-overlay:not([hidden])) #defender-canvas{position:absolute;top:50%;transform:translateY(-50%);height:auto;aspect-ratio:5/3}
+.defender-map-scene{position:relative;width:100%;aspect-ratio:5/3}
+#defender-canvas{height:auto;aspect-ratio:5/3}
+.is-defender .board-wrap:has(.board-overlay:not([hidden])) .defender-map-viewport{position:absolute;inset:0;pointer-events:none}
+.is-defender .board-wrap:has(.board-overlay:not([hidden])) .defender-map-scene{position:absolute;top:50%;transform:translateY(-50%)}
+.tower-detail-heading{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:8px}
+.tower-detail-heading h3{margin:0}.tower-detail-heading .icon-button{flex:none;font-size:19px}
 .is-defender .board-overlay:not([hidden]){position:relative;min-height:360px}
 .briefing-card{width:min(460px,100%);padding:21px}.briefing-card h2{font-size:28px}.briefing-card>p:not(.eyebrow){font-size:12px;margin-bottom:14px}
 .bonus-choices{display:grid;gap:8px}.bonus-choice{display:flex;align-items:center;gap:11px;width:100%;padding:11px;border:2px solid #5e7650;background:#dbe6ce;color:#193014;text-align:left}
@@ -80,6 +85,83 @@
 @media(max-width:1100px){.map-card{grid-template-columns:50px minmax(0,1fr);gap:6px;padding:5px}.map-card>svg{width:50px;height:34px}.map-card-heading b{font-size:10px}.map-list{padding:0 10px 8px}.shift-controls{gap:8px;padding:7px 10px}.shift-code{margin-left:0}.shift-controls .text-button{margin-left:auto}.shift-controls>label{font-size:9px}.shift-controls select{max-width:164px}.map-rule{font-size:10px;padding:8px 10px}.defender-action-bar>span{font-size:9px}.wave-preview{margin-top:13px;padding-top:11px}.preview-enemy{font-size:10px}.crow-note p{font-size:11px}.crow-note .note-label{font-size:8px}.enemy-file{padding:14px}.enemy-file h3{font-size:17px}}
 @media(max-width:850px){.defender-setup{margin-bottom:11px}.map-card>svg{width:50px;height:33px}.map-card{gap:6px}.map-card-heading b{font-size:10px}.crow-note{padding-left:43px}.crow-note p{font-size:12px;min-height:0}.crow-note .note-label{font-size:10px}.wave-preview>strong{display:inline;margin-left:12px}.wave-preview>div{margin-top:10px}.preview-enemy{font-size:11px}.enemy-album{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:540px){.defender-setup details>summary{padding:9px}.defender-setup summary>span:first-child{gap:5px}.defender-setup summary strong{font-size:10px}.defender-setup summary small{font-size:9px}.map-list{grid-template-columns:repeat(2,minmax(0,1fr));padding:0 8px 7px;gap:1px}.map-card{grid-template-columns:53px minmax(0,1fr);padding:6px!important;min-height:46px;border:0;background:#2b362b}.map-card>svg{width:53px;height:33px}.map-card-heading b{font-size:10px}.map-medals{font-size:11px;margin-top:1px}.shift-controls{padding:8px;gap:7px}.shift-controls>label{width:100%;justify-content:space-between;font-size:10px}.shift-controls select{max-width:208px;flex:1;height:33px;font-size:11px}.shift-button{flex:1;font-size:10px;min-height:33px}.shift-code{order:4;flex:1;width:auto;font-size:9px}.shift-controls .text-button{order:5;font-size:10px;margin-left:auto}.map-rule{padding:8px;font-size:10px;line-height:1.5}.defender-action-bar{gap:9px;padding:0 8px 7px}.flock-button{font-size:10px;gap:5px;padding:7px;min-height:35px}.flock-button kbd{display:none}.defender-action-bar>span{font-size:9px;line-height:1.45}.flock-button b{min-width:17px;font-size:10px}.wave-preview>strong{font-size:12px;margin-left:10px}.preview-enemy{font-size:10px}.crow-note .note-label{font-size:9px}.crow-note p{font-size:11px}.briefing-card{padding:19px 13px}.briefing-card h2{font-size:26px}.briefing-card>p:not(.eyebrow){font-size:11px}.bonus-choice{padding:9px;gap:9px}.bonus-choice strong{font-size:13px}.bonus-choice small{font-size:11px}.bonus-choice em{font-size:10px}.bonus-icon{width:26px;height:30px;font-size:20px}.result-actions{gap:15px}.result-medals{font-size:25px}.result-actions>.text-button{font-size:10px}.enemy-file{padding:12px}.enemy-file h3{font-size:16px}.enemy-file:before{font-size:8px;right:9px;top:13px}.enemy-portrait{width:64px;height:64px;padding:3px}#dialog-content .enemy-file p{font-size:10px}.enemy-album{margin-top:19px}}
+
+/* Mobilní režie: čitelný text a skutečná tlačítka nad mapou. */
+@media(max-width:850px){
+  .is-defender .board-wrap{aspect-ratio:auto}
+  .is-defender .defender-map-toolbar{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px;background:#242c27;border-bottom:2px solid #101710}
+  .defender-map-toolbar strong{display:block;font:700 15px/1.3 var(--mono);color:#f5f7e8}
+  .defender-map-toolbar span{display:block;font:13px/1.4 var(--mono);color:#c4d0ba;margin-top:4px}
+  .defender-map-toolbar .shift-button{flex:none;font-size:13px;min-height:44px;padding:8px}
+  .is-defender .defender-map-viewport{height:320px;height:clamp(224px,40svh,384px);overflow:auto;overscroll-behavior-x:contain;scrollbar-color:#dbe6ce #263628;scrollbar-width:thin}
+  .is-defender .defender-map-scene{width:max(640px,100%)}
+  .is-defender #defender-canvas{pointer-events:none}
+  .is-defender .defender-map-viewport.is-overview{height:auto;overflow:hidden}
+  .is-defender .is-overview .defender-map-scene{width:100%}
+  .defender-map-slots,.defender-map-labels{position:absolute;inset:0;pointer-events:none}
+  .defender-map-slots{z-index:2}
+  .defender-map-slot{position:absolute;transform:translate(-50%,-50%);display:grid;place-content:center;width:44px;height:44px;min-width:44px;min-height:44px;padding:0;border:2px solid #14202a;background:var(--slot-color);color:#14202a;box-shadow:inset 2px 2px #fffce7,inset -2px -2px #8b9685;pointer-events:auto;touch-action:manipulation}
+  .defender-map-slot>b{font:700 26px/1 var(--mono);margin-bottom:8px}
+  .defender-map-slot>span{position:absolute;right:2px;bottom:1px;font:700 12px/1 var(--mono)}
+  .defender-map-slot>svg{width:29px;height:29px;margin-top:-3px}
+  .defender-map-slot.occupied>span{left:2px;right:auto;top:1px;bottom:auto;font-size:10px;background:#14202a;color:#fffce7;padding:1px}
+  .defender-map-slot>em{position:absolute;right:2px;bottom:1px;font:700 12px/1 var(--mono);background:#14202a;color:#fffce7;padding:2px}
+  .defender-map-slot.selected{outline:3px solid #edfa45;outline-offset:2px}
+  .defender-map-labels{z-index:1}
+  .defender-entry-label,.defender-station-label,.defender-coffee-label{position:absolute;background:#14202a;color:#fffce7;padding:3px 5px;font:700 12px/1.2 var(--mono);white-space:nowrap}
+  .defender-station-label{right:5px;top:65.3%}
+  .defender-coffee-label{transform:translate(-50%,-50%);background:#edfa45;color:#14202a}
+  .defender-overview-open{position:absolute;inset:0;z-index:3;display:flex;align-items:flex-end;justify-content:center;border:0;background:none;padding:8px;width:100%;color:#fffce7}
+  .defender-overview-open>span{background:#14202a;padding:7px 10px;font:700 13px/1.4 var(--mono)}
+  .defender-touch-panel{padding:8px 10px 10px;border-top:2px solid #101710;background:#242c27}
+  #defender-touch-hint{font:13px/1.45 var(--mono);margin:0 0 8px;color:#e5eedc;min-height:19px}
+  .is-defender .tower-options{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
+  .is-defender .tower-option{display:grid;grid-template-columns:1fr auto;gap:5px;min-height:74px;padding:7px;align-items:center}
+  .is-defender .tower-icon{width:28px;height:29px;grid-column:1;grid-row:1}
+  .is-defender .tower-option>span:nth-child(2){grid-column:1/-1;grid-row:2}
+  .is-defender .tower-option strong{font-size:13px;line-height:1.3}
+  .is-defender .tower-option small,.is-defender .tower-option kbd{display:none}
+  .is-defender .tower-cost{position:static;grid-column:2;grid-row:1;align-self:center;margin:0;font-size:12px}
+  .defender-placement{display:grid;grid-template-columns:minmax(0,1fr) 112px 44px;align-items:center;gap:6px;margin-top:8px;padding-top:8px;border-top:1px solid #6f786f}
+  .defender-placement strong,.defender-placement-note{font:700 13px/1.4 var(--mono);color:#fffce7;display:block}
+  .defender-placement>div>span{display:block;font:12px/1.4 var(--mono);color:#c4d0ba;margin-top:3px}
+  .is-defender .defender-placement .primary-button{padding:6px;font-size:13px;white-space:normal}
+  .is-defender .primary-button,.is-defender .icon-button,.is-defender .speed-button,.is-defender .target-button,.is-defender .sell-button{min-height:44px}
+  .is-defender .icon-button,.is-defender .speed-button{min-width:44px;width:44px;height:44px;font-size:16px}
+  .is-defender .tower-detail{margin-top:8px;padding:10px}
+  .is-defender .tower-detail h3{font-size:15px;line-height:1.3}
+  .is-defender .tower-detail p{font-size:13px;line-height:1.5}
+  .is-defender .target-button,.is-defender .detail-actions button{font-size:13px}
+  .is-defender .game-controls{display:grid;grid-template-columns:minmax(0,1fr) repeat(5,44px);gap:8px;padding:8px 10px;background:#353d36;border-top:2px solid #101710}
+  .is-defender .control-bar,.is-defender .main-controls,.is-defender .secondary-controls,.is-defender .defender-action-bar{display:contents}
+  .is-defender #wave-button{grid-column:1/5;grid-row:1;font-size:13px;padding:8px}
+  .is-defender #pause-button{grid-column:5;grid-row:1}.is-defender #speed-button{grid-column:6;grid-row:1}
+  .is-defender #flock-button{grid-column:1/4;grid-row:2;min-height:44px;font-size:13px;white-space:normal;justify-content:center;padding:6px;gap:5px}
+  .is-defender #flock-button kbd{display:none}.is-defender #flock-count{font-size:12px}
+  .is-defender #sound-button{grid-column:4;grid-row:2}.is-defender #reset-button{grid-column:5;grid-row:2}.is-defender #help-button{grid-column:6;grid-row:2}
+  .is-defender #flock-hint,.is-defender #keyboard-hint,.is-defender .defender-sidebar-heading,.is-defender .defender-sidebar-intro{display:none}
+  .is-defender .sidebar{padding:12px}
+  .is-defender .wave-preview{margin:0;padding:0;border:0}.is-defender .wave-preview>strong{font-size:15px;display:block;margin:5px 0 8px}
+  .is-defender .note-label,.is-defender .preview-enemy{font-size:12px}.is-defender .preview-enemy i{width:24px;height:24px;font-size:13px}
+  .is-defender .crow-note .note-label{font-size:11px}.is-defender .crow-note p{font-size:14px;line-height:1.5}
+  .is-defender .best-score>span,.is-defender .best-score small{font-size:12px;line-height:1.5}
+  .is-defender .metric small{font-size:10px}.is-defender .metric strong{font-size:26px}
+  .is-defender .defender-setup details>summary{min-height:48px;padding:10px}
+  .is-defender .defender-setup summary strong{font-size:13px}.is-defender .defender-setup summary small{font-size:11px}
+  .is-defender .map-list{grid-template-columns:repeat(2,minmax(0,1fr));gap:4px}
+  .is-defender .map-card{min-height:60px;border:0;padding:7px!important}
+  .is-defender .map-card-heading b{font-size:12px}.is-defender .map-medals{font-size:12px}
+  .is-defender .shift-controls{gap:8px;padding:10px}.is-defender .shift-controls>label{width:100%;font-size:12px;justify-content:space-between}
+  .is-defender .shift-controls select{height:44px;max-width:none;font-size:16px;flex:1;min-width:0}
+  .is-defender .shift-controls .shift-button{min-height:44px;font-size:13px;flex:1}
+  .is-defender .shift-code{font-size:11px}.is-defender .shift-controls .text-button{min-height:44px;font-size:13px;padding:10px 0}
+  .is-defender .map-rule{font-size:13px;line-height:1.5;padding:10px}
+  .is-defender .bonus-choice{min-height:64px}.is-defender .bonus-choice strong{font-size:15px}.is-defender .bonus-choice small{font-size:13px}.is-defender .bonus-choice em{font-size:12px}
+  .is-defender .overlay-card p{font-size:13px}.is-defender .overlay-card .text-button{min-height:44px;font-size:13px}
+  .is-defender .enemy-album{grid-template-columns:1fr}#dialog-content .enemy-file p{font-size:13px}
+}
+
+@media(max-width:850px){.defender-unit-status{position:absolute;right:-7px;top:-10px;display:grid;place-content:center;width:20px;height:20px;border:1px solid #14202a;background:#d6c6ed;color:#14202a;font:700 13px/1 var(--mono);font-style:normal}}
 
 </style>
   <style>
@@ -201,8 +283,14 @@
 
       <div class="workspace">
         <div class="play-column">
+          <div class="defender-map-toolbar" id="defender-map-toolbar" hidden><div><strong id="defender-map-name">Kavčí hory</strong><span id="defender-map-hint">Mapu posuň prstem. Klepni na +.</span></div><button id="defender-map-zoom" class="shift-button" aria-pressed="false">Celá mapa</button></div>
           <div class="board-wrap" id="board-wrap">
-            <canvas id="defender-canvas" width="960" height="576" tabindex="0" aria-label="Herní mapa. Klávesy 1–3 vyberou obranu, šipky stanoviště, Enter staví, K přivolá kavčí nálet."></canvas>
+            <div class="defender-map-viewport" id="defender-map-viewport"><div class="defender-map-scene" id="defender-map-scene">
+              <canvas id="defender-canvas" width="960" height="576" tabindex="0" aria-label="Herní mapa. Klávesy 1–3 vyberou obranu, šipky stanoviště, Enter staví, K přivolá kavčí nálet."></canvas>
+              <div class="defender-map-labels" id="defender-map-labels" hidden></div>
+              <div class="defender-map-slots" id="defender-map-slots" role="group" aria-label="Stanoviště obrany" hidden></div>
+              <button class="defender-overview-open" id="defender-overview-open" aria-label="Přiblížit mapu v tomto místě" hidden><span>Klepni na mapu pro detail ↗</span></button>
+            </div></div>
             <section id="verify-view" class="verify-view" aria-label="Ověřování zpráv" hidden>
               <div class="verify-desk-strip"><span id="verify-desk-label">RANNÍ SMĚNA</span><span id="verify-chain">SÉRIE 0</span></div>
               <div class="news-card" id="news-card">
@@ -228,18 +316,24 @@
             </section>
             <div class="board-overlay" id="board-overlay"></div>
           </div>
+          <div class="defender-touch-panel" id="defender-touch-panel" hidden><p id="defender-touch-hint" role="status">Vyber obranu a klepni na + v mapě.</p></div>
+          <div class="game-controls">
           <div class="control-bar"><div class="main-controls"><button id="wave-button" class="primary-button"><span aria-hidden="true">▶</span> Spustit vlnu</button><button id="pause-button" class="icon-button" aria-label="Pozastavit hru" title="Pauza (mezerník)">Ⅱ</button><button id="speed-button" class="speed-button" aria-label="Rychlost hry: normální">1×</button></div><div class="secondary-controls"><button id="sound-button" class="icon-button" aria-label="Zapnout zvuk" aria-pressed="false" title="Zapnout zvuk"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4Z" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m17 9 5 6m0-6-5 6" stroke="currentColor" stroke-width="1.8"/></svg></button><button id="reset-button" class="icon-button" aria-label="Nová hra" title="Nová hra">↺</button><button id="help-button" class="icon-button" aria-label="Jak hrát" title="Jak hrát">?</button></div></div>
           <div class="defender-action-bar" id="defender-action-bar"><button class="flock-button" id="flock-button"><span aria-hidden="true">⌁</span> Kavčí nálet <kbd>K</kbd><b id="flock-count">2</b></button><span id="flock-hint">Zastaví protivníky na 2 sekundy. Zobáky bez portfeje.</span></div>
+          </div>
           <div class="signal-action-bar" id="signal-action-bar" hidden><button class="shift-button" id="signal-direction">↻ Otáčet doprava</button><button class="shift-button" id="signal-undo">↶ Zpět <kbd>Z</kbd></button><button class="shift-button" id="signal-hint">⌕ Zavolat Kvída <kbd>H</kbd><span id="signal-hint-count">2</span></button></div>
           <p class="keyboard-hint" id="keyboard-hint"><span><kbd>1</kbd><kbd>2</kbd><kbd>3</kbd> vyber obranu</span><span><kbd>←</kbd><kbd>→</kbd> stanoviště <kbd>Enter</kbd> postav</span><span><kbd>mezerník</kbd> další vlna / pauza</span></p>
         </div>
 
         <aside class="sidebar" aria-label="Nástroje a pravidla">
           <div id="defender-tools" class="tool-panel">
-            <div class="sidebar-heading"><h2>Tvoje obrana</h2><span>01—03</span></div>
-            <p class="sidebar-intro">Vyber jednotku. Pošli ji na <span class="inline-pad">+</span>.</p>
-            <div class="tower-options" id="tower-options"></div>
-            <div id="tower-detail" class="tower-detail" hidden></div>
+            <div class="sidebar-heading defender-sidebar-heading"><h2>Tvoje obrana</h2><span>01—03</span></div>
+            <p class="sidebar-intro defender-sidebar-intro">Vyber jednotku. Pošli ji na <span class="inline-pad">+</span>.</p>
+            <div id="defender-armory-home"><div id="defender-armory">
+              <div class="tower-options" id="tower-options"></div>
+              <div id="defender-placement" class="defender-placement" hidden><div><strong id="defender-placement-title"></strong><span id="defender-placement-note"></span></div><button class="primary-button" id="defender-build">Postavit</button><button class="icon-button" id="defender-cancel" aria-label="Zrušit výběr stanoviště">×</button></div>
+              <div id="tower-detail" class="tower-detail" hidden></div>
+            </div></div>
             <div class="wave-preview"><span class="note-label" id="wave-preview-label">PŘÍŠTÍ VLNA</span><strong id="wave-preview-title"></strong><div id="wave-preview-list"></div></div>
             <div class="field-note crow-note"><span class="crow-note-icon" aria-hidden="true">⌁</span><span class="note-label">KVÍDO / REŽIE</span><p id="defender-tip">Začni u zatáček. Rozpočet zatáčky neumí.</p></div>
           </div>
@@ -899,7 +993,7 @@
   function bird(c,x,y,size=1,flap=0){c.save();c.translate(x,y);c.scale(size,size);poly(c,[[-13,5],[-7,-2],[-5,-10],[3,-10],[3,-16],[12,-16],[17,-9],[23,-7],[15,-3],[13,5],[5,11],[-2,10],[-13,14]],ink,null);box(c,8,-12,5,5,white,null);box(c,10,-11,2,3,ink,null);if(flap)poly(c,[[-5,-2],[-15,-15-flap*5],[4,-3],[12,7]],'#4b5d60',null);else box(c,-4,-1,9,6,'#455759',null);line(c,[[0,10],[0,15],[-4,15]],ink,2);line(c,[[7,10],[8,15],[12,15]],ink,2);c.restore();}
   function sign(c,x,y,first,second,w=144){box(c,x+5,y+6,w,43,'#3b4b3a55',null);box(c,x,y,w,41,white);box(c,x,y,w,6,yellow,null);text(c,first,x+w/2,y+21,11,ink,'center');text(c,second,x+w/2,y+34,11,ink,'center');}
   function house(c,x,y,w=52,color=white){box(c,x+4,y+9,w,42,'#24372b44',null);box(c,x,y,w,40,color);poly(c,[[x-5,y],[x+w/2,y-23],[x+w+5,y]],'#bd5d44');box(c,x+9,y+10,12,12,'#507d98');box(c,x+w-18,y+17,11,23,'#6b5b46');}
-  function background(c,g){
+  function background(c,g,compact=false){
     const p=palettes[g.map.theme],night=g.map.theme==='night',city=g.map.theme==='city';
     box(c,0,0,960,576,p.ground,null);
     for(let i=0;i<170;i++){const x=(i*137+30)%952,y=(i*71+36)%568;box(c,x,y,4+(i%4)*2,2,p.patch,null);}
@@ -911,20 +1005,20 @@
       line(c,[[22,543],[936,543]],'#455653',2);line(c,[[22,554],[936,554]],'#455653',2);
       box(c,727,524,114,27,'#d95b43');box(c,727,524,114,6,white,null);
       for(let x=737;x<814;x+=18)box(c,x,533,12,10,'#334f73');box(c,819,533,15,18,'#b8c7bd');
-      circle(c,749,554,5,ink);circle(c,819,554,5,ink);text(c,'12',714,544,14,white,'right');
+      circle(c,749,554,5,ink);circle(c,819,554,5,ink);if(!compact)text(c,'12',714,544,14,white,'right');
     }else if(g.map.theme==='region'){
       for(const [x,y,w,h] of [[232,230,78,77],[465,164,92,60],[511,438,79,60],[742,483,145,49]]){
         box(c,x,y,w,h,'#d3b873');for(let yy=y+7;yy<y+h;yy+=12)line(c,[[x+5,yy],[x+w-5,yy]],'#ac904e',2);
       }
       house(c,40,65,46);house(c,900,78,44,'#dbe2c8');house(c,337,512,43);
-      text(c,'KOLÁČE →',550,520,14,'#485836');
+      if(!compact)text(c,'KOLÁČE →',550,520,14,'#485836');
     }else if(night){
       for(let i=0;i<42;i++){const x=(i*137+31)%950,y=(i*59+12)%570;box(c,x,y,i%3===0?4:2,i%3===0?4:2,i%3===0?'#e2e4ab':'#657fa0',null);}
       poly(c,[[871,27],[897,27],[897,35],[909,35],[909,65],[897,65],[897,73],[871,73],[871,65],[859,65],[859,35],[871,35]],'#ece9b1',null);
       box(c,885,27,26,30,p.ground,null);box(c,899,47,12,18,p.ground,null);
     }else{
       box(c,285,254,99,65,'#8da863',null);box(c,315,235,35,105,'#8da863',null);
-      sign(c,285,261,'ZÁKAZ KRMENÍ','LOBBISTŮ',130);
+      if(!compact)sign(c,285,261,'ZÁKAZ KRMENÍ','LOBBISTŮ',130);
       for(const [x,y]of [[568,505],[590,515],[552,526]])bird(c,x,y,.8);
       box(c,521,478,30,13,'#a99d68');line(c,[[524,491],[524,499],[547,499],[547,491]],ink,2);
     }
@@ -932,23 +1026,23 @@
     g.map.paths.forEach(path=>line(c,path,p.road,66));
     c.save();c.setLineDash([12,14]);g.map.paths.forEach(path=>line(c,path,p.dash,2));c.restore();
     g.map.trees.forEach(t=>tree(c,...t,p));
-    if(g.map.coffee){const f=g.map.coffee;c.save();c.setLineDash([5,8]);circle(c,f.x,f.y,f.radius,'#f5ed430a','#c2bd6277',2);c.restore();box(c,f.x-21,f.y-25,42,49,'#b7b9aa');box(c,f.x-17,f.y-19,34,16,'#2d3d49');box(c,f.x-14,f.y-15,15,5,yellow,null);box(c,f.x+6,f.y-14,7,7,'#fa7555');box(c,f.x-14,f.y+3,28,17,ink);box(c,f.x-7,f.y+6,12,12,white);line(c,[[f.x+5,f.y+8],[f.x+10,f.y+8],[f.x+10,f.y+13],[f.x+5,f.y+13]],white,2);text(c,'KÁVOVAR',f.x,f.y+42,14,yellow,'center');}
-    box(c,16,16,Math.max(185,g.map.short.length*8+21),27,ink);text(c,g.map.short,26,35,14,white);
-    g.map.paths.forEach((path,i)=>{const fromRight=path[0][0]>900,x=fromRight?901:24,y=path[0][1]-40;text(c,g.map.paths.length>1?'VSTUP '+(i+1):'VSTUP',x,y,12,night?white:ink,fromRight?'right':'left');poly(c,fromRight?[[914,y+11],[931,y+3],[931,y+19]]:[[26,y+3],[43,y+11],[26,y+19]],'#ee6447');});
-    if(g.wave===0){box(c,19,543,438,22,ink);text(c,'VYBER OBRANU. KLIKNI NA +. SPUSŤ VLNU.',28,558,12,yellow);}
-    else{box(c,380,17,210,27,ink);text(c,g.phase==='wave'?'VLNA '+g.wave+' / 8  •  ON AIR':g.phase==='briefing'?'REDAKČNÍ PORADA':'PŘESTÁVKA NA KÁVU',485,35,12,yellow,'center');}
+    if(g.map.coffee){const f=g.map.coffee;c.save();c.setLineDash([5,8]);circle(c,f.x,f.y,f.radius,'#f5ed430a','#c2bd6277',2);c.restore();box(c,f.x-21,f.y-25,42,49,'#b7b9aa');box(c,f.x-17,f.y-19,34,16,'#2d3d49');box(c,f.x-14,f.y-15,15,5,yellow,null);box(c,f.x+6,f.y-14,7,7,'#fa7555');box(c,f.x-14,f.y+3,28,17,ink);box(c,f.x-7,f.y+6,12,12,white);line(c,[[f.x+5,f.y+8],[f.x+10,f.y+8],[f.x+10,f.y+13],[f.x+5,f.y+13]],white,2);if(!compact)text(c,'KÁVOVAR',f.x,f.y+42,14,yellow,'center');}
+    if(!compact){box(c,16,16,Math.max(185,g.map.short.length*8+21),27,ink);text(c,g.map.short,26,35,14,white);}
+    g.map.paths.forEach((path,i)=>{const fromRight=path[0][0]>900,x=fromRight?901:24,y=path[0][1]-40;if(!compact)text(c,g.map.paths.length>1?'VSTUP '+(i+1):'VSTUP',x,y,12,night?white:ink,fromRight?'right':'left');poly(c,fromRight?[[914,y+11],[931,y+3],[931,y+19]]:[[26,y+3],[43,y+11],[26,y+19]],'#ee6447');});
+    if(!compact){if(g.wave===0){box(c,19,543,438,22,ink);text(c,'VYBER OBRANU. KLIKNI NA +. SPUSŤ VLNU.',28,558,12,yellow);}
+    else{box(c,380,17,210,27,ink);text(c,g.phase==='wave'?'VLNA '+g.wave+' / 8  •  ON AIR':g.phase==='briefing'?'REDAKČNÍ PORADA':'PŘESTÁVKA NA KÁVU',485,35,12,yellow,'center');}}
   }
-  function station(c,g,time){
+  function station(c,g,time,compact=false){
     c.save();c.translate(850,294);
     box(c,-61,13,151,70,'#101b2a55',null);box(c,-66,7,144,68,'#d8decf');box(c,-66,7,144,12,'#364f8b',null);
     box(c,-66,62,144,13,'#abb9a8',null);box(c,-17,31,30,44,'#243e63');box(c,-12,36,9,31,'#72a3bd');
     for(const x of [-55,-35,27,47]){box(c,x,28,12,24,'#365e83');line(c,[[x,40],[x+12,40]],'#e4ebdb',2);}
-    box(c,-49,-18,95,26,white);text(c,g.mapId==='vinohrady'?'ROZHLAS':'TELEVIZE',-2,-1,15,ink,'center');
+    if(!compact){box(c,-49,-18,95,26,white);text(c,g.mapId==='vinohrady'?'ROZHLAS':'TELEVIZE',-2,-1,15,ink,'center');}
     box(c,-18,-31,32,13,'#8b9c9d');line(c,[[-1,-31],[-1,-82]],ink,4);line(c,[[-16,-66],[14,-66]],ink,4);line(c,[[-11,-77],[9,-77]],ink,4);
     box(c,-6,-88,10,8,g.health>35?'#f6533e':yellow);
     if(g.health>0&&Math.floor(time*2)%2===0){line(c,[[-18,-91],[-26,-97]],yellow,3);line(c,[[15,-91],[23,-97]],yellow,3);}
-    box(c,29,-39,50,23,g.health>0?'#ed5340':ink);text(c,g.health>0?'ON AIR':'TICHO',54,-23,12,white,'center');
-    box(c,-66,82,144,23,ink);text(c,'VEŘEJNÁ SLUŽBA',6,98,13,white,'center');bird(c,73,3,.75);
+    if(!compact){box(c,29,-39,50,23,g.health>0?'#ed5340':ink);text(c,g.health>0?'ON AIR':'TICHO',54,-23,12,white,'center');}
+    if(!compact){box(c,-66,82,144,23,ink);text(c,'VEŘEJNÁ SLUŽBA',6,98,13,white,'center');}bird(c,73,3,.75);
     c.restore();
   }
   function tower(c,t,selected,g){
@@ -973,7 +1067,7 @@
     c.restore();
   }
   function feet(c,age,r,color=ink){const step=Math.floor(age*5)%2?3:-3;box(c,-r+1,r-1,7,7+step,color,null);box(c,r-8,r-1,7,7-step,color,null);}
-  function enemy(c,e,portrait=false){
+  function enemy(c,e,portrait=false,labelScale=1){
     const big=!!e.boss,r=big?28:['pressure','lobby','form'].includes(e.type)?17:e.type==='fragment'?9:e.type==='noise'?13:15;
     c.save();c.translate(Math.round(e.x/2)*2,Math.round(e.y/2)*2);
     box(c,-r+2,r+5,r*2,6,'#14242455',null);
@@ -1008,7 +1102,7 @@
     }else{
       feet(c,e.age,17);box(c,-8,-24,17,9,'#9cb0b5');box(c,-18,-17,37,34,e.color);line(c,[[-18,-5],[19,-5]],ink,3);box(c,-3,-8,7,8,'#f7da63');
     }
-    if(big&&!portrait){box(c,-70,-76,140,22,ink);text(c,e.short.toUpperCase(),0,-60,12,white,'center');}
+    if(big&&!portrait){const w=Math.max(140,(e.short.length*8+16)*labelScale);box(c,-w/2,-54-22*labelScale,w,22*labelScale,ink);text(c,e.short.toUpperCase(),0,-54-6*labelScale,12*labelScale,white,'center');}
     if(!portrait&&(e.hp<e.maxHp||big)){const w=big?56:30,y=big?-53:-r-12;box(c,-w/2-1,y-1,w+2,7,ink,null);box(c,-w/2,y,w*Math.max(0,e.hp/e.maxHp),5,big?'#f26547':'#ecf366',null);}
     c.restore();
   }
@@ -1020,12 +1114,12 @@
     const width=Math.max(1,Math.round(bounds.width*ratio)),height=Math.max(1,Math.round(bounds.height*ratio));
     if(canvas.width!==width)canvas.width=width;
     if(canvas.height!==height)canvas.height=height;
-    const c=canvas.getContext('2d');c.setTransform(width/960,0,0,height/576,0,0);c.imageSmoothingEnabled=false;background(c,g);
+    const c=canvas.getContext('2d');c.setTransform(width/960,0,0,height/576,0,0);c.imageSmoothingEnabled=false;background(c,g,view.mobile);
     const active=g.towers.find(t=>t.id===view.selectedTower),hover=Number.isInteger(view.hoverSlot)?view.hoverSlot:-1;
     if(active){const s=g.stats(active);c.save();c.setLineDash([7,6]);circle(c,active.x,active.y,s.range,'#f5ed4315',yellow,2);c.restore();}
     else if(hover>=0&&!g.occupied(hover)){const[x,y]=g.slots[hover],s=g.stats({type:view.selectedType,level:1,x,y});c.save();c.setLineDash([7,6]);circle(c,x,y,s.range,'#f5ed4315',yellow,2);c.restore();}
-    g.slots.forEach(([x,y],i)=>{if(g.occupied(i))return;const on=i===hover;box(c,x-23,y-23,46,46,'#182c252c',on?yellow:'#d1dbc3',2);box(c,x-19,y-19,38,38,on?yellow:'#e6e7c4',ink,2);line(c,[[x-8,y],[x+8,y]],ink,4);line(c,[[x,y-8],[x,y+8]],ink,4);if(on){box(c,x-13,y+29,26,19,ink);text(c,String(i+1).padStart(2,'0'),x,y+43,12,yellow,'center');}});
-    g.towers.forEach(t=>tower(c,t,t.id===view.selectedTower,g));g.enemies.forEach(e=>enemy(c,e));station(c,g,time);
+    if(!view.mobile||view.overview)g.slots.forEach(([x,y],i)=>{if(g.occupied(i))return;const on=i===hover;box(c,x-23,y-23,46,46,'#182c252c',on?yellow:'#d1dbc3',2);box(c,x-19,y-19,38,38,on?yellow:'#e6e7c4',ink,2);line(c,[[x-8,y],[x+8,y]],ink,4);line(c,[[x,y-8],[x,y+8]],ink,4);if(on){box(c,x-13,y+29,26,19,ink);text(c,String(i+1).padStart(2,'0'),x,y+43,12,yellow,'center');}});
+    if(!view.mobile||view.overview)g.towers.forEach(t=>tower(c,t,t.id===view.selectedTower,g));g.enemies.forEach(e=>enemy(c,e,false,view.mobile?Math.max(1,960/bounds.width):1));station(c,g,time,view.mobile);
     for(const s of g.shots){const angle=Math.atan2(s.target.y-s.y,s.target.x-s.x);line(c,[[s.x-Math.cos(angle)*12,s.y-Math.sin(angle)*12],[s.x,s.y]],ink,4);box(c,s.x-3,s.y-3,7,7,TOWERS[s.towerType].color,ink,1);}
     for(const e of g.effects){const f=e.age/e.life;c.save();c.globalAlpha=1-f;if(e.type==='flock'){for(let i=0;i<14;i++)bird(c,-110+f*1250-i*42,70+(i%4)*105+Math.sin(f*20+i)*15,1.7,Math.floor(f*15)%2);c.restore();continue;}
       if(e.type==='hit'){line(c,[[e.x-12,e.y-12],[e.x-4,e.y-4]],yellow,4);line(c,[[e.x+5,e.y+5],[e.x+13,e.y+13]],white,4);}else{text(c,e.text,e.x,e.y-25-f*25,18,e.type==='leak'?'#ff5a3d':white,'center');}c.restore();}
@@ -1048,6 +1142,7 @@
   'use strict';
   const {Defender,Verify,Signal,TOWERS,MAPS,DIFFICULTIES,ENEMIES,BONUSES,TARGET_MODES,WAVE_NAMES,dailyChallenge,VERIFY_DESKS,VERIFY_CATEGORIES,VERIFY_FILES,VERIFY_BADGES,verifyDailyChallenge,SIGNAL_AREAS,SIGNAL_JOBS,SIGNAL_BADGES,signalDailyChallenge}=window.MediaGames;
   const $=id=>document.getElementById(id);
+  const defenderPhone=matchMedia('(max-width:850px)');
   const format=n=>Math.round(n).toLocaleString('cs-CZ');
   const icons={
     verify:'<svg viewBox="0 0 32 32" shape-rendering="crispEdges" aria-hidden="true"><path d="M8 16h18v13H8Z" fill="#416282" stroke="#14202a" stroke-width="2"/><path d="M11 3h13v12H11Z" fill="#fffce7" stroke="#14202a" stroke-width="2"/><path d="M10 2h15v4H10Zm-1 6h7v5H9Zm10 0h7v5h-7Z" fill="#14202a"/><path d="M16 10h3" stroke="#14202a" stroke-width="2"/><path d="M4 20h11v10H4Z" fill="#fffce7" stroke="#14202a" stroke-width="2"/><circle cx="23" cy="22" r="5" fill="#e5f041" stroke="#14202a" stroke-width="2"/><path d="m26 26 5 5" stroke="#14202a" stroke-width="3"/></svg>',
@@ -1154,7 +1249,7 @@
     setText('campaign-progress',locked?'Rozehraná směna. Novou začneš tlačítkem ↻.':'ZACHRÁNĚNO '+won+' / 4');
     setText('map-rule',g.map.name+' — '+g.map.rule);
   }
-  function newDefender(options){const c=controllers.defender;c.engine=new Defender(options);c.started=false;c.speed=1;c.view={selectedType:'verify',selectedTower:null,hoverSlot:-1,hoverEnemy:null};overlayKey='';$('defender-map-picker').open=!matchMedia('(max-width:540px)').matches;render(true);}
+  function newDefender(options){const c=controllers.defender;c.engine=new Defender(options);c.started=false;c.speed=1;c.view={selectedType:'verify',selectedTower:null,hoverSlot:-1,hoverEnemy:null};overlayKey='';$('defender-map-picker').open=!defenderPhone.matches;render(true);}
   function atlas(){return '<h2>Kdo nám leze do éteru?</h2><p>Jedenáct druhů smyšlené škodné. V přírodě by se měly krmit. Tady stačí důsledné otázky.</p><div class="enemy-album">'+Object.entries(ENEMIES).map(([id,e])=>'<article class="enemy-file"><img class="enemy-portrait" src="'+window.MediaDraw.portrait(id)+'" alt=""><h3>'+e.name+'</h3><p class="enemy-quip">„'+e.quip+'“</p><p>'+e.ability+'</p><p class="enemy-counter"><strong>Co na něj:</strong> '+e.counter+'</p></article>').join('')+'</div>';}
   function newVerify(options={}){const c=controllers.verify;c.engine=new Verify({recent:verifyProfile.recent,...options});c.started=false;c.speed=1;overlayKey='';$('verify-desk-picker').open=!matchMedia('(max-width:540px)').matches;render(true);}
   function renderVerifySetup(){
@@ -1191,6 +1286,7 @@
     $('game-panel').setAttribute('aria-labelledby','tab-'+name);
     setText('game-kicker',meta[name].kicker);setHTML('game-title',meta[name].title);setHTML('game-description',meta[name].description);setHTML('intro-note',meta[name].note);setHTML('keyboard-hint',meta[name].hint);
     $('defender-canvas').hidden=name!=='defender';$('verify-view').hidden=name!=='verify';$('signal-view').hidden=name!=='signal';
+    $('defender-map-viewport').hidden=name!=='defender';$('defender-map-toolbar').hidden=name!=='defender'||!defenderPhone.matches;$('defender-touch-panel').hidden=name!=='defender'||!defenderPhone.matches;
     for(const id of Object.keys(controllers))$(id+'-tools').hidden=id!==name;
     $('defender-legend').hidden=name!=='defender';$('speed-button').hidden=name!=='defender';$('defender-setup').hidden=name!=='defender';$('defender-action-bar').hidden=name!=='defender';$('verify-setup').hidden=name!=='verify';$('signal-setup').hidden=name!=='signal';$('signal-action-bar').hidden=name!=='signal';document.body.classList.toggle('is-defender',name==='defender');document.body.classList.toggle('is-verify',name==='verify');document.body.classList.toggle('is-signal',name==='signal');
     document.title=({defender:'Kavky Defender',verify:'Ověřeno!',signal:'Drž signál'})[name]+' — Vysíláme dál.';
@@ -1198,7 +1294,7 @@
     render(true);requestAnimationFrame(alignSignalEnds);
   }
   function start(){active().started=true;if(current!=='defender')game().start();else{$('defender-map-picker').open=false;game().quip=game().say('welcome');}if(current==='verify')$('verify-desk-picker').open=false;if(current==='signal'){$('signal-area-picker').open=false;controllers.signal.focus=game().source;}game().paused=false;overlayKey='';render(true);if(current==='signal')$('pipe-grid').children[game().source]?.focus({preventScroll:true});note(440,.1);if(current==='defender')toast('Redakce má službu. Postav obrany a spusť vlnu.');}
-  function reset(same=false){const c=active();if(current==='verify'){const g=c.engine;newVerify(same===true?g.options:{deskId:g.deskId,practice:g.practice});return;}else if(current==='signal'){const g=c.engine;newSignal(same===true?g.options:{mode:'random',areaId:g.area.id,level:g.job.level,practice:g.practice});return;}else{const g=c.engine;c.engine=new Defender(same===true?g.options:{mapId:g.mapId,difficulty:g.difficulty});c.view={selectedType:'verify',selectedTower:null,hoverSlot:-1,hoverEnemy:null};$('defender-map-picker').open=!matchMedia('(max-width:540px)').matches;}c.started=false;c.speed=1;overlayKey='';render(true);}
+  function reset(same=false){const c=active();if(current==='verify'){const g=c.engine;newVerify(same===true?g.options:{deskId:g.deskId,practice:g.practice});return;}else if(current==='signal'){const g=c.engine;newSignal(same===true?g.options:{mode:'random',areaId:g.area.id,level:g.job.level,practice:g.practice});return;}else{const g=c.engine;c.engine=new Defender(same===true?g.options:{mapId:g.mapId,difficulty:g.difficulty});c.view={selectedType:'verify',selectedTower:null,hoverSlot:-1,hoverEnemy:null};$('defender-map-picker').open=!defenderPhone.matches;}c.started=false;c.speed=1;overlayKey='';render(true);}
   function togglePause(){if(!active().started||['won','lost','round-won','briefing'].includes(game().phase))return;game().paused=!game().paused;overlayKey='';render(true);}
   function primaryAction(){const g=game();if(!active().started){start();return;}if(g.paused)return;if(current==='defender')g.startWave();else if(current==='verify'&&g.feedback)g.next();else if(current==='signal'&&g.phase==='round-won'){nextSignalRound();return;}events();overlayKey='';render(true);}
   function signalOverlay(kind){
@@ -1249,13 +1345,48 @@
     $('pause-button').disabled=!c.started||finished||['round-won','briefing'].includes(g.phase);setText('pause-button',g.paused?'▶':'Ⅱ');$('pause-button').setAttribute('aria-label',g.paused?'Pokračovat ve hře':'Pozastavit hru');
     $('speed-button').disabled=!c.started||finished;$('speed-button').classList.toggle('active',c.speed===2);setText('speed-button',c.speed+'×');$('speed-button').setAttribute('aria-label','Rychlost hry: '+c.speed+'×');
     if(current==='signal'){const locked=!c.started||g.phase!=='playing'||g.paused;$('signal-restart-round').disabled=locked;$('signal-direction').disabled=locked;$('signal-undo').disabled=locked||!g.undoStack.length;$('signal-hint').disabled=locked||g.hintsLeft<=0||!!g.hint;setText('signal-direction',c.direction===1?'↻ Otáčet doprava':'↶ Otáčet doleva');setText('signal-hint-count',g.hintsLeft);}
-    if(current==='defender'){$('flock-button').disabled=!c.started||g.phase!=='wave'||g.paused||!g.enemies.length||g.panicCharges<=0||g.skillCooldown>0;setText('flock-count',g.panicCharges);setText('flock-hint',g.skillCooldown>0?'Kavky si rovnají peří: '+Math.ceil(g.skillCooldown)+' s.':g.panicCharges?'Zastaví protivníky a zobne do nich. Po 4. vlně přijde posila.':'Zobáky vyčerpány. Porada může přivolat posily.');}
+    if(current==='defender'){$('flock-button').disabled=!c.started||g.phase!=='wave'||g.paused||!g.enemies.length||g.panicCharges<=0||g.skillCooldown>0;setText('flock-count',g.skillCooldown>0?Math.ceil(g.skillCooldown)+'s':g.panicCharges);$('flock-button').setAttribute('aria-label','Kavčí nálet. '+(g.skillCooldown>0?'Připraven za '+Math.ceil(g.skillCooldown)+' sekund.':'Zbývá '+g.panicCharges+' použití.'));setText('flock-hint',g.skillCooldown>0?'Kavky si rovnají peří: '+Math.ceil(g.skillCooldown)+' s.':g.panicCharges?'Zastaví protivníky a zobne do nich. Po 4. vlně přijde posila.':'Zobáky vyčerpány. Porada může přivolat posily.');}
+  }
+  function centerDefenderMap(x=480,y=288){
+    const viewport=$('defender-map-viewport'),scene=$('defender-map-scene');
+    viewport.scrollTo({left:x/960*scene.offsetWidth-viewport.clientWidth/2,top:y/576*scene.offsetHeight-viewport.clientHeight/2,behavior:'auto'});
+  }
+  function defenderMapOverview(overview,point){
+    const v=controllers.defender.view;v.overview=overview;render();
+    requestAnimationFrame(()=>{if(overview)$('defender-map-viewport').scrollTo(0,0);else centerDefenderMap(point?.x,point?.y);});
+  }
+  function renderDefenderPhone(){
+    const c=controllers.defender,g=c.engine,v=c.view,mobile=defenderPhone.matches,overview=mobile&&!!v.overview;
+    if(v.mobile!==mobile){v.hoverSlot=-1;v.hoverEnemy=null;}v.mobile=mobile;$('defender-map-toolbar').hidden=!mobile;$('defender-touch-panel').hidden=!mobile;
+    const home=mobile?$('defender-touch-panel'):$('defender-armory-home'),armory=$('defender-armory');
+    if(armory.parentElement!==home)home.appendChild(armory);
+    $('defender-map-viewport').classList.toggle('is-overview',overview);
+    $('defender-map-slots').hidden=!mobile||overview;$('defender-map-labels').hidden=!mobile;$('defender-overview-open').hidden=!overview;
+    $('defender-canvas').tabIndex=mobile?-1:0;$('defender-canvas').setAttribute('aria-hidden',String(mobile));
+    if(!mobile){v.touchSlot=null;$('defender-placement').hidden=true;return;}
+    v.hoverSlot=Number.isInteger(v.touchSlot)?v.touchSlot:-1;
+    setText('defender-map-name',g.map.name);setText('defender-map-hint',overview?'Přehled celé mapy. Klepnutím přiblížíš.':'Mapu posuň prstem. Klepni na +.');
+    setText('defender-map-zoom',overview?'Zpět na detail':'Celá mapa');$('defender-map-zoom').setAttribute('aria-pressed',String(overview));
+    setHTML('defender-map-labels',g.map.paths.map((path,i)=>'<span class="defender-entry-label" style="'+(path[0][0]>900?'right':'left')+':6px;top:calc('+((path[0][1]-25)/576*100)+'% - 12px)">VSTUP'+(g.map.paths.length>1?' '+(i+1):'')+'</span>').join('')+'<span class="defender-station-label">VEŘEJNÁ SLUŽBA</span>'+(g.map.coffee?'<span class="defender-coffee-label" style="left:'+(g.map.coffee.x/960*100)+'%;top:'+((g.map.coffee.y+32)/576*100)+'%">KÁVOVAR</span>':''));
+    const slots=$('defender-map-slots');
+    if(slots.dataset.map!==g.mapId){slots.replaceChildren();g.slots.forEach(([x,y],i)=>{const b=document.createElement('button');b.className='defender-map-slot';b.dataset.slot=i;b.style.left=x/960*100+'%';b.style.top=y/576*100+'%';slots.appendChild(b);});slots.dataset.map=g.mapId;requestAnimationFrame(()=>$('defender-map-viewport').scrollTo(0,0));}
+    const locked=g.paused||!['build','wave'].includes(g.phase);
+    for(const b of slots.children){const i=Number(b.dataset.slot),t=g.occupied(i),number=String(i+1).padStart(2,'0'),selected=t?t.id===v.selectedTower:v.touchSlot===i,stats=t&&g.stats(t),status=stats?.jammed?'!':stats?.coffee?'☕':'',state=t?t.type+':'+t.level+':'+status:'empty';
+      if(b.dataset.state!==state){b.innerHTML=(t?icons[t.type]:'<b aria-hidden="true">+</b>')+'<span aria-hidden="true">'+number+'</span>'+(t?'<em aria-hidden="true">'+t.level+'</em>':'')+(status?'<i class="defender-unit-status" aria-hidden="true">'+status+'</i>':'');b.dataset.state=state;}
+      b.classList.toggle('occupied',!!t);b.classList.toggle('selected',selected);b.style.setProperty('--slot-color',t?TOWERS[t.type].color:'#e6e7c4');b.disabled=locked;b.setAttribute('aria-pressed',String(selected));b.setAttribute('aria-label','Stanoviště '+number+': '+(t?TOWERS[t.type].name+', úroveň '+t.level+'. '+(stats.jammed?'Papírování A38 zpomaluje. ':stats.coffee?'Kofein aktivní. ':'')+'Otevřít obranu.':'volné. Naplánovat stavbu.'));
+    }
+    if(!g.paused&&locked)v.touchSlot=null;
+    const pending=Number.isInteger(v.touchSlot)&&!g.occupied(v.touchSlot);
+    $('defender-placement').hidden=!pending;
+    setText('defender-touch-hint',v.selectedTower?'Vybraná obrana. Vylepši ji nebo změň cíl.':pending?'Stanoviště vybráno. Stavbu potvrď dole.':TOWERS[v.selectedType].tag+'. Vyber + v mapě.');
+    if(pending){const cost=g.cost(v.selectedType);setText('defender-placement-title',String(v.touchSlot+1).padStart(2,'0')+' · '+TOWERS[v.selectedType].name);setText('defender-placement-note',g.money<cost?'Chybí '+format(cost-g.money)+' podpory.':'Dosah '+Math.round(g.stats({type:v.selectedType,level:1}).range));setText('defender-build','Postavit · '+cost+' ✳');$('defender-build').disabled=locked||g.money<cost;}
   }
   function towers(){
     const c=controllers.defender,g=c.engine;renderDefenderSetup();
     for(const button of $('tower-options').children){const type=button.dataset.tower;button.classList.toggle('selected',c.view.selectedType===type&&!c.view.selectedTower);button.classList.toggle('unaffordable',g.money<g.cost(type));button.setAttribute('aria-pressed',String(c.view.selectedType===type&&!c.view.selectedTower));}
+    renderDefenderPhone();
     const t=g.towers.find(t=>t.id===c.view.selectedTower);$('tower-detail').hidden=!t;
-    if(t){const d=g.stats(t),cost=g.upgradeCost(t),locked=g.paused||!['build','wave'].includes(g.phase);setHTML('tower-detail','<h3>'+d.name+' · úroveň '+t.level+'/3</h3><p>Dosah '+Math.round(d.range)+' · zásah '+Math.round(d.damage)+'<br>Zastaveno: '+t.kills+(d.coffee?' · ☕ kofein aktivní':'')+(d.jammed?' · papírování A38!':'')+'</p><button class="target-button" data-target="'+t.id+'" '+(locked?'disabled':'')+'>Přednost: '+TARGET_MODES[t.target]+' ↻</button><div class="detail-actions"><button class="primary-button" data-upgrade="'+t.id+'" '+(t.level>=3||g.money<cost||locked?'disabled':'')+'>'+(t.level>=3?'Maximum':'Vylepšit · '+cost+' ✳')+'</button><button class="sell-button" data-sell="'+t.id+'" '+(locked?'disabled':'')+'>Prodat · '+Math.round(t.spent*.65)+'</button></div>');}
+    if(t){const d=g.stats(t),cost=g.upgradeCost(t),locked=g.paused||!['build','wave'].includes(g.phase);setHTML('tower-detail','<div class="tower-detail-heading"><h3>'+d.name+' · úroveň '+t.level+'/3</h3><button class="icon-button" data-close-tower aria-label="Zavřít detail obrany">×</button></div><p>Dosah '+Math.round(d.range)+' · zásah '+Math.round(d.damage)+'<br>Zastaveno: '+t.kills+(d.coffee?' · ☕ kofein aktivní':'')+(d.jammed?' · papírování A38!':'')+'</p><button class="target-button" data-target="'+t.id+'" '+(locked?'disabled':'')+'>Přednost: '+TARGET_MODES[t.target]+' ↻</button><div class="detail-actions"><button class="primary-button" data-upgrade="'+t.id+'" '+(t.level>=3||g.money<cost||locked?'disabled':'')+'>'+(t.level>=3?'Maximum':'Vylepšit · '+cost+' ✳')+'</button><button class="sell-button" data-sell="'+t.id+'" '+(locked?'disabled':'')+'>Prodat · '+Math.round(t.spent*.65)+'</button></div>');}
     const preview=g.preview();setText('wave-preview-label',g.phase==='wave'?'PRÁVĚ V ÉTERU':'PŘÍŠTÍ VLNA');setText('wave-preview-title',g.phase==='won'?'Konec směny. Krá.':g.phase==='wave'?WAVE_NAMES[g.wave-1]:WAVE_NAMES[g.wave]||'Signál se odmlčel.');
     const data=g.phase==='wave'?Object.values(g.enemies.reduce((all,e)=>{if(!all[e.type])all[e.type]={...ENEMIES[e.type],type:e.type,count:0};all[e.type].count++;return all;},{})):preview;
     setHTML('wave-preview-list',data.map(e=>'<span class="preview-enemy" title="'+e.name+': '+e.ability+'"><i style="background:'+e.color+'">'+e.glyph+'</i>'+e.count+'× '+e.short+'</span>').join('')||'<span class="preview-empty">Ani tlačítko „odpovědět všem“ už nic nepřivolá.</span>');
@@ -1305,11 +1436,25 @@
   function render(force=false){metrics();controls();if(current==='defender')towers();else if(current==='verify')renderVerify();else renderSignal();overlay();if(current==='signal')alignSignalEnds();}
   $('tower-options').innerHTML=Object.entries(TOWERS).map(([type,t],i)=>'<button class="tower-option '+(i===0?'selected':'')+'" data-tower="'+type+'" aria-pressed="'+(i===0)+'" title="'+t.description+'"><span class="tower-icon" style="--tower-color:'+t.color+'">'+icons[type]+'</span><span><strong>'+t.name+'</strong><small>'+t.tag+'</small></span><span class="tower-cost">'+t.cost+' ✳</span><kbd>'+(i+1)+'</kbd></button>').join('');
   $('tower-options').addEventListener('click',e=>{const b=e.target.closest('[data-tower]');if(!b)return;const c=controllers.defender;c.view.selectedType=b.dataset.tower;c.view.selectedTower=null;render();});
-  $('tower-detail').addEventListener('click',e=>{const up=e.target.closest('[data-upgrade]'),sell=e.target.closest('[data-sell]'),target=e.target.closest('[data-target]');if(target){const g=controllers.defender.engine,t=g.towers.find(t=>t.id===Number(target.dataset.target));if(t){const modes=Object.keys(TARGET_MODES);g.setTarget(t.id,modes[(modes.indexOf(t.target)+1)%modes.length]);}}if(up)controllers.defender.engine.upgrade(Number(up.dataset.upgrade));if(sell){controllers.defender.engine.sell(Number(sell.dataset.sell));controllers.defender.view.selectedTower=null;}events();render();});
+  $('tower-detail').addEventListener('click',e=>{if(e.target.closest('[data-close-tower]')){controllers.defender.view.selectedTower=null;controllers.defender.view.hoverSlot=-1;render();return;}const up=e.target.closest('[data-upgrade]'),sell=e.target.closest('[data-sell]'),target=e.target.closest('[data-target]');if(target){const g=controllers.defender.engine,t=g.towers.find(t=>t.id===Number(target.dataset.target));if(t){const modes=Object.keys(TARGET_MODES);g.setTarget(t.id,modes[(modes.indexOf(t.target)+1)%modes.length]);}}if(up)controllers.defender.engine.upgrade(Number(up.dataset.upgrade));if(sell){controllers.defender.engine.sell(Number(sell.dataset.sell));controllers.defender.view.selectedTower=null;}events();render();});
   function pickSlot(index){const c=controllers.defender,g=c.engine;if(g.paused||!['build','wave'].includes(g.phase))return;if(!c.started)start();c.view.hoverSlot=index;const t=g.occupied(index);if(t){c.view.selectedTower=t.id;render();return;}c.view.selectedTower=null;const type=c.view.selectedType;if(g.money<g.cost(type)){toast('Na tuto obranu chybí '+(g.cost(type)-g.money)+' podpory.');return;}g.build(index,type);events();render();}
   const canvas=$('defender-canvas');
   function pointerSlot(e){const r=canvas.getBoundingClientRect(),x=(e.clientX-r.left)/r.width*960,y=(e.clientY-r.top)/r.height*576;let index=-1,distance=Math.max(33,22*960/r.width);controllers.defender.engine.slots.forEach(([a,b],i)=>{const d=Math.hypot(x-a,y-b);if(d<distance){index=i;distance=d;}});return index;}
   canvas.addEventListener('pointermove',e=>{const c=controllers.defender,r=canvas.getBoundingClientRect(),x=(e.clientX-r.left)/r.width*960,y=(e.clientY-r.top)/r.height*576;c.view.hoverSlot=pointerSlot(e);c.view.hoverEnemy=c.engine.enemies.find(n=>Math.hypot(n.x-x,n.y-y)<24)?.id||null;});canvas.addEventListener('pointerleave',()=>{controllers.defender.view.hoverSlot=-1;controllers.defender.view.hoverEnemy=null;});canvas.addEventListener('click',e=>{const i=pointerSlot(e);if(i>=0)pickSlot(i);});
+  $('defender-map-slots').addEventListener('click',e=>{
+    const b=e.target.closest('[data-slot]'),c=controllers.defender,g=c.engine;
+    if(!b||b.disabled||current!=='defender'||!defenderPhone.matches)return;
+    const i=Number(b.dataset.slot),t=g.occupied(i);c.view.touchSlot=t?null:i;c.view.selectedTower=t?.id||null;c.view.hoverSlot=i;c.view.hoverEnemy=null;render();
+    requestAnimationFrame(()=>$('defender-armory').scrollIntoView({block:'nearest',behavior:'smooth'}));
+  });
+  $('defender-build').addEventListener('click',()=>{
+    const c=controllers.defender,g=c.engine,i=c.view.touchSlot;
+    if(current!=='defender'||!defenderPhone.matches||!Number.isInteger(i)||g.paused||!['build','wave'].includes(g.phase)||g.occupied(i)||g.money<g.cost(c.view.selectedType))return;
+    c.view.touchSlot=null;pickSlot(i);c.view.hoverSlot=-1;render();
+  });
+  $('defender-cancel').addEventListener('click',()=>{const v=controllers.defender.view;v.touchSlot=null;v.hoverSlot=-1;render();});
+  $('defender-map-zoom').addEventListener('click',()=>defenderMapOverview(!controllers.defender.view.overview));
+  $('defender-overview-open').addEventListener('click',e=>{const r=$('defender-map-scene').getBoundingClientRect(),point=e.detail?{x:(e.clientX-r.left)/r.width*960,y:(e.clientY-r.top)/r.height*576}:undefined;defenderMapOverview(false,point);});
   function focusSignalTile(){const c=controllers.signal;if(c.engine.phase==='playing')$('pipe-grid').children[c.focus]?.focus({preventScroll:true});else $('board-overlay').querySelector('.primary-button')?.focus({preventScroll:true});}
   function turnSignal(index,direction){if(current!=='signal')return;const c=controllers.signal;if(!c.engine.turn(index,direction??c.direction))return;c.focus=index;events();render();focusSignalTile();}
   function undoSignal(){if(current!=='signal')return;const c=controllers.signal,index=c.engine.undoStack.at(-1)?.i;if(!c.engine.undo())return;c.focus=index;events();render();focusSignalTile();}
@@ -1335,7 +1480,7 @@
   document.querySelectorAll('[data-game]').forEach((b,i,array)=>{b.addEventListener('click',()=>selectGame(b.dataset.game));b.addEventListener('keydown',e=>{if(['ArrowLeft','ArrowRight'].includes(e.key)){e.preventDefault();const next=(i+(e.key==='ArrowRight'?1:2))%3;selectGame(array[next].dataset.game);array[next].focus();}});});
   $('board-overlay').addEventListener('click',e=>{const b=e.target.closest('[data-action]');if(!b)return;const action=b.dataset.action;if(action==='start')start();if(action==='resume'){game().paused=false;overlayKey='';render();}if(action==='replay'){reset(true);start();}if(action==='new-shift'){reset();start();}if(action==='verify-review')openDialog(verifyReview(),'ROZBOR SMĚNY');if(action==='verify-choose'){reset();$('verify-desk-picker').open=true;$('verify-setup').scrollIntoView({behavior:'smooth',block:'start'});}if(action==='choose-map'){reset();$('defender-map-picker').open=true;$('defender-setup').scrollIntoView({behavior:'smooth',block:'start'});}if(action==='bonus'){game().chooseBonus(b.dataset.bonus);events();overlayKey='';render();}if(action==='next-game'){const names=Object.keys(controllers);selectGame(names[(names.indexOf(current)+1)%3]);}if(action==='next-round')nextSignalRound();if(action==='signal-next-job')signalNextJob();if(action==='signal-pattern')openDialog(signalPattern(),'VZOROVÉ ZAPOJENÍ');if(action==='signal-random'){const g=game();newSignal({mode:'random',areaId:g.area.id,level:g.job.level,practice:g.practice});start();}if(action==='signal-choose'){const g=game();newSignal({areaId:g.area.id,level:g.job.level,practice:g.practice});$('signal-area-picker').open=true;$('signal-setup').scrollIntoView({behavior:'smooth',block:'start'});}});
   const help={
-    defender:'<h2>Jak udržet Kavky v éteru</h2><ol><li>Vyber Ověřovnu, Reportéra nebo Komunitu. Kliknutím na stanoviště <b>+</b> ji postavíš.</li><li>Spusť vlnu. Obrana zasahuje automaticky.</li><li>Za zastavený tlak získáš podporu. Kliknutím na postavenou obranu ji můžeš vylepšit nebo prodat.</li><li>Přežij všech osm vln s alespoň částí signálu. Kombinuj dosah reportérů se zpomalením komunity.</li></ol><p>Klávesy <b>1–3</b> vybírají obranu, <b>šipky</b> stanoviště, <b>Enter</b> staví nebo vybírá. <b>Mezerník</b> spustí další vlnu nebo pozastaví hru. Tlačítkem <b>1× / 2×</b> měníš rychlost. <b>K</b> přivolá nálet: 45 bodů zásahu a 2,2 sekundy zastavení. Začínáš se dvěma nálety, po čtvrté vlně přibude jeden.</p><p>Po vlnách 2, 4 a 6 si vybereš jeden trvalý bonus. U obrany můžeš měnit cíl: nejblíž cíli, nejsilnější nebo nejrychlejší. Všechny mapy jsou dostupné od začátku. Zlatá kavka vyžaduje alespoň 95 % signálu, stříbrná 60 %. Rekordy se ukládají zvlášť pro scénu i obtížnost.</p><p>Stejná směna opakuje stejné vlny i nabídky bonusů. Jiná směna je promíchá. Dnešní výzva má během jednoho dne stejné zadání.</p>',
+    defender:'<h2>Jak udržet Kavky v éteru</h2><ol><li>Vyber Ověřovnu, Reportéra nebo Komunitu. Vyber stanoviště <b>+</b>; na mobilu stavbu ještě potvrď tlačítkem <b>Postavit</b>.</li><li>Spusť vlnu. Obrana zasahuje automaticky.</li><li>Za zastavený tlak získáš podporu. Kliknutím na postavenou obranu ji můžeš vylepšit nebo prodat.</li><li>Přežij všech osm vln s alespoň částí signálu. Kombinuj dosah reportérů se zpomalením komunity.</li></ol><p>Na mobilu posouvej mapu prstem. <b>Celá mapa</b> ukáže přehled; klepnutím do něj přiblížíš vybrané místo. Obrany vybíráš pod mapou. Samotné klepnutí na stanoviště neutratí podporu a plán můžeš zrušit křížkem.</p><p>Klávesy <b>1–3</b> vybírají obranu, <b>šipky</b> stanoviště, <b>Enter</b> staví nebo vybírá. <b>Mezerník</b> spustí další vlnu nebo pozastaví hru. Tlačítkem <b>1× / 2×</b> měníš rychlost. <b>K</b> přivolá nálet: 45 bodů zásahu a 2,2 sekundy zastavení. Začínáš se dvěma nálety, po čtvrté vlně přibude jeden.</p><p>Po vlnách 2, 4 a 6 si vybereš jeden trvalý bonus. U obrany můžeš měnit cíl: nejblíž cíli, nejsilnější nebo nejrychlejší. Všechny mapy jsou dostupné od začátku. Zlatá kavka vyžaduje alespoň 95 % signálu, stříbrná 60 %. Rekordy se ukládají zvlášť pro scénu i obtížnost.</p><p>Stejná směna opakuje stejné vlny i nabídky bonusů. Jiná směna je promíchá. Dnešní výzva má během jednoho dne stejné zadání.</p>',
     verify:'<h2>Razítko není argument.</h2><p>Vyber jednu ze čtyř redakcí. Čeká tě 8–12 zpráv a 110–120 sekund na rozhodování. Můžeš zapnout <b>Bez časovače</b>; tato varianta má vlastní rekordy. Všech 80 variant je smyšlených.</p><p>Čti titulek i podklady. <b>Ještě ověřit (F)</b> znamená, že zpráva v této podobě potřebuje práci. <b>Může ven (J)</b> znamená, že je doložená a správně vymezená. Stejný titulek má dvě verze podkladů: nespoléhej na paměť. Někdy je správné vydat předběžný výzkum s jasným omezením, jindy zadržet pravdivý text, který zbytečně odhaluje osobní údaje.</p><p><b>Dohledat detail (D)</b> doplní jednu indicii. Počet dohledání je omezený, stojí 8 sekund a ubere 20 bodů z případné správné odpovědi. Bez časovače se odečítají jen body. Rozhodnout lze už z původních podkladů. Při vysvětlení čas stojí; <b>Enter</b> pokračuje.</p><p>Správně: 100 bodů + 15 za každý předchozí krok současné série, nejvýše +60. Chyba sérii přeruší. Zlato získáš za dokončenou směnu s alespoň 90 % správně, stříbro za 75 %, bronz za 60 %. Odznaky a odehrané varianty najdeš ve spisovně.</p><p><b>Jiná směna</b> promíchá zprávy a upřednostní déle nehrané spisy. <b>Stejná směna</b> zopakuje totožné zadání. <b>Dnešní vydání</b> je společné zadání pro české kalendářní datum a používá časovač. Kód odlišuje losování; import cizího kódu hra zatím neumí. Po směně si otevři rozbor všech zpráv.</p>',
     signal:'<h2>Kabel sám sebe nezapojí.</h2><p>Vyber oblast a jednu ze 24 zakázek. Všechny jsou dostupné od začátku. Kliknutí nebo Enter otočí dílek o 90°. Tlačítkem směru zvolíš otáčení doleva či doprava; Shift s kliknutím nebo Enterem směr obrátí. Šipky přesouvají fokus a přeskakují skříně a pevné dílky.</p><p>Připoj studio vlevo ke <b>všem přijímačům vpravo současně</b>. Povinná relé <b>R1–R3</b> musejí být také napojená na studio. Křižovatky větví signál do všech připojených ramen. Pevný dílek se neotáčí a už má správnou orientaci. Skříň je překážka. Ostatní dílky nemusíš využít; otevřené odbočky nevadí.</p><p><b>Z / Zpět</b> vrátí poslední otočení, ale počítá se jako další tah. <b>H / Zavolat Kvída</b> zvýrazní jeden dílek a poradí otočení k jedné známé cestě. Na okruh jsou dvě nápovědy, každá odečítá 50 bodů. Restart okruhu vrátí původní natočení i čas, stojí 40 bodů a neobnoví spotřebované nápovědy. <b>P</b> pozastaví hru.</p><p><b>Tři hvězdy:</b> bez pomoci a restartu, počet tahů nejvýše jako vzor. <b>Dvě:</b> nejvýše jedna nápověda a restart, počet tahů do vyšší z hodnot vzor + 4 nebo 1,6násobek vzoru zaokrouhlený nahoru. <b>Jedna:</b> za dokončení. Vzor není nutně nejkratší cesta. Základ je 500 bodů plus až 250 za úspornost, poté se odečítají nápovědy a restarty; minimum za dokončení je 100 bodů.</p><p><b>Jiný rozvod</b> vygeneruje tři nové sítě v oblasti. <b>Dnešní přenos</b> má tři různé oblasti a během českého kalendářního dne stejné zadání pro všechny. V zakázkách i losovaných sítích můžeš vypnout časovač; rekordy a medaile se vedou zvlášť. Denní přenos používá časovač vždy. Mezi okruhy čas stojí, stejné zadání lze po konci celé opakovat. Kód odlišuje losování, import cizího kódu zatím není součástí hry.</p>'
   };
@@ -1354,6 +1499,7 @@
   document.addEventListener('visibilitychange',()=>{lastFrame=0;if(document.hidden&&active().started&&!['won','lost'].includes(game().phase)){game().paused=true;overlayKey='';render();}});
   if(window.ResizeObserver)new ResizeObserver(alignSignalEnds).observe($('pipe-grid'));
   window.addEventListener('resize',alignSignalEnds);
+  defenderPhone.addEventListener('change',()=>{if(current==='defender')render(true);});
   function frame(now){const dt=lastFrame?Math.min((now-lastFrame)/1000,.1):0;lastFrame=now;const c=active();if(c.started&&!document.hidden)c.engine.update(dt*c.speed);events();if(current==='defender')window.MediaDraw.draw(canvas,c.engine,c.view,now/1000);if(now-lastUI>100){render();lastUI=now;}requestAnimationFrame(frame);}
   $('map-list').innerHTML=Object.values(MAPS).map((map,i)=>'<button class="map-card" data-map="'+map.id+'" aria-pressed="false">'+minimap(map)+'<span class="map-card-heading"><b>'+String(i+1).padStart(2,'0')+' / '+map.name+'</b><span class="map-medals">···</span></span><small>'+map.subtitle+'</small></button>').join('');
   $('map-list').addEventListener('click',e=>{const button=e.target.closest('[data-map]');if(!button||button.disabled)return;newDefender({mapId:button.dataset.map,difficulty:controllers.defender.engine.difficulty});});
@@ -1380,7 +1526,7 @@
   window.addEventListener('storage',e=>{if(e.key==='signal-provoz-v3'){readSignalProfile();if(current==='signal')render();}});
   window.addEventListener('hashchange',()=>{const name=gameFromHash();if(name&&name!==current)selectGame(name);});
   $('verify-desk-picker').open=!matchMedia('(max-width:540px)').matches;
-  $('defender-map-picker').open=!matchMedia('(max-width:540px)').matches;selectGame(gameFromHash()||'defender');requestAnimationFrame(frame);
+  $('defender-map-picker').open=!defenderPhone.matches;selectGame(gameFromHash()||'defender');requestAnimationFrame(frame);
 })();
 
 </script>
