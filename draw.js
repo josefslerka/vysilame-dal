@@ -130,9 +130,15 @@
     if(!portrait&&(e.hp<e.maxHp||big)){const w=big?56:30,y=big?-53:-r-12;box(c,-w/2-1,y-1,w+2,7,ink,null);box(c,-w/2,y,w*Math.max(0,e.hp/e.maxHp),5,big?'#f26547':'#ecf366',null);}
     c.restore();
   }
-  const buffer=document.createElement('canvas');buffer.width=480;buffer.height=288;const c=buffer.getContext('2d');
   function draw(canvas,g,view,time){
-    c.setTransform(.5,0,0,.5,0,0);c.imageSmoothingEnabled=false;background(c,g);
+    // Keep the 960 × 576 game coordinates, but rasterize text at display resolution.
+    // Enlarging a low-resolution intermediate canvas also enlarged antialiased glyphs.
+    const bounds=canvas.getBoundingClientRect(),ratio=root.devicePixelRatio||1;
+    if(!bounds.width||!bounds.height)return;
+    const width=Math.max(1,Math.round(bounds.width*ratio)),height=Math.max(1,Math.round(bounds.height*ratio));
+    if(canvas.width!==width)canvas.width=width;
+    if(canvas.height!==height)canvas.height=height;
+    const c=canvas.getContext('2d');c.setTransform(width/960,0,0,height/576,0,0);c.imageSmoothingEnabled=false;background(c,g);
     const active=g.towers.find(t=>t.id===view.selectedTower),hover=Number.isInteger(view.hoverSlot)?view.hoverSlot:-1;
     if(active){const s=g.stats(active);c.save();c.setLineDash([7,6]);circle(c,active.x,active.y,s.range,'#f5ed4315',yellow,2);c.restore();}
     else if(hover>=0&&!g.occupied(hover)){const[x,y]=g.slots[hover],s=g.stats({type:view.selectedType,level:1,x,y});c.save();c.setLineDash([7,6]);circle(c,x,y,s.range,'#f5ed4315',yellow,2);c.restore();}
@@ -142,7 +148,6 @@
     for(const e of g.effects){const f=e.age/e.life;c.save();c.globalAlpha=1-f;if(e.type==='flock'){for(let i=0;i<14;i++)bird(c,-110+f*1250-i*42,70+(i%4)*105+Math.sin(f*20+i)*15,1.7,Math.floor(f*15)%2);c.restore();continue;}
       if(e.type==='hit'){line(c,[[e.x-12,e.y-12],[e.x-4,e.y-4]],yellow,4);line(c,[[e.x+5,e.y+5],[e.x+13,e.y+13]],white,4);}else{text(c,e.text,e.x,e.y-25-f*25,18,e.type==='leak'?'#ff5a3d':white,'center');}c.restore();}
     const hovered=g.enemies.find(e=>e.id===view.hoverEnemy);if(hovered){const x=Math.max(120,Math.min(840,hovered.x)),y=Math.max(80,hovered.y-64);box(c,x-119,y-29,238,48,ink);text(c,hovered.name,x,y-9,14,white,'center');text(c,hovered.quip.length>33?hovered.quip.slice(0,32)+'…':hovered.quip,x,y+9,10,yellow,'center');}
-    const screen=canvas.getContext('2d');screen.setTransform(1,0,0,1,0,0);screen.imageSmoothingEnabled=false;screen.drawImage(buffer,0,0,canvas.width,canvas.height);
   }
   const portraits=new Map();
   function portrait(type){

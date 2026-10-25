@@ -47,3 +47,9 @@ Snímek mobilní kontroly je uložen v `qa/overeno-mobile.png`. Automatické kon
 - Přenosná hra má šest vložených skriptů a čtyři styly. Test spustí skutečná vložená jádra v izolovaném prostředí a dokončí Ověřeno! i hlavolam Drž signál bez načítání externích souborů. Kontrolují se i jedinečná ID a existující vazby ovládání.
 
 Mobilní kontrola proběhla v rámci, nikoli na fyzickém telefonu. Není prokázána jedinečnost ani globální optimalita vzorových řešení; rozhraní to výslovně uvádí. Dlouhodobé vyvážení obtížnosti vyžaduje další hraní.
+
+**Kavky Defender — ostrost mapy, 25. října 2026**
+
+- Mapa se nyní kreslí přímo do canvasu o velikosti zobrazené plochy násobené hustotou pixelů displeje. Odstraněno zvětšování pomocného obrázku 480 × 288, které znehodnocovalo malé písmo. Geometrie map a postav i herní souřadnice 960 × 576 zůstaly zachovány.
+- Skutečný prohlížeč: čitelnost cedulí a pokynů, stavba obrany, spuštění vlny a pauza. Změna šířky okna z 1280 na 1587 a 390 px přepočítala canvas z 948 × 569 na 1133 × 680 a 362 × 217 bodů. Kliknutí na stanoviště fungovalo i po zmenšení. Ověřeno responzivní rozložení, nikoli fyzický telefon.
+- Kontroly všech tří her, přenosného HTML a čistoty změn prošly. Přenosná verze byla znovu sestavena ze stejných zdrojů.
